@@ -37,7 +37,7 @@ TICKER=NASDAQ-AMZN casperjs test --fail-fast lib/technicals.js
 
 ## Deploy
 ```
-now deploy --public --docker
+./deploy
 ```
 
 ## Keeping now.sh alive
