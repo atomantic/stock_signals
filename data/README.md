@@ -1,0 +1,1 @@
+cookies, localstorage, results data

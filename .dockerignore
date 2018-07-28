@@ -1,0 +1,11 @@
+.git
+node_modules
+ops
+.dockerignore
+.DS_Store
+.eslintrc
+.gitignore
+dev
+Dockerfile
+README.md
+version.txt

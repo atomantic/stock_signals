@@ -1,0 +1,353 @@
+{
+  "ticker": "",
+  "results": {
+    "NASDAQ-NVDA": {
+      "day": {
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy",
+        "timestamp": 1532753485525,
+        "date": "2018/61/27"
+      }
+    },
+    "NASDAQ-PFLT": {
+      "day": {
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell",
+        "timestamp": 1532753570955,
+        "date": "2018/61/27"
+      }
+    },
+    "NASDAQ-QCOM": {
+      "day": {
+        "Oscillators": "Buy",
+        "Summary": "Strong Buy",
+        "Moving Averages": "Strong Buy",
+        "timestamp": 1532753652272,
+        "date": "2018/61/27"
+      }
+    },
+    "ASX-RIO": {
+      "day": {
+        "Oscillators": "Sell",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy",
+        "timestamp": 1532753771304,
+        "date": "2018/61/27"
+      }
+    },
+    "NASDAQ-RWLK": {
+      "day": {
+        "Oscillators": "Sell",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell",
+        "timestamp": 1532753852068,
+        "date": "2018/61/27"
+      }
+    },
+    "NASDAQ-SBUX": {
+      "day": {
+        "Oscillators": "Neutral",
+        "Summary": "Buy",
+        "Moving Averages": "Buy",
+        "timestamp": 1532751811092,
+        "date": "2018/61/27"
+      }
+    },
+    "NYSE-MUX": {
+      "day": {
+        "timestamp": 1532753363961,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
+    },
+    "NASDAQ-NFLX": {
+      "day": {
+        "timestamp": 1532753403468,
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Sell",
+        "Moving Averages": "Sell"
+      }
+    },
+    "NASDAQ-NTLA": {
+      "day": {
+        "timestamp": 1532753444288,
+        "date": "2018/61/27",
+        "Oscillators": "Neutral",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      }
+    },
+    "NYSE-REG": {
+      "day": {
+        "timestamp": 1532753692216,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
+    },
+    "AMEX-REMX": {
+      "day": {
+        "timestamp": 1532753731968,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      }
+    },
+    "NYSE-ROK": {
+      "day": {
+        "timestamp": 1532753812003,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
+    },
+    "NYSE-SBS": {
+      "day": {
+        "timestamp": 1532753893242,
+        "date": "2018/61/27",
+        "Oscillators": "Neutral",
+        "Summary": "Buy",
+        "Moving Averages": "Buy"
+      }
+    },
+    "NYSE-SJT": {
+      "day": {
+        "timestamp": 1532751861403,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      }
+    },
+    "AMEX-SLV": {
+      "day": {
+        "timestamp": 1532751906976,
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell"
+      }
+    },
+    "NYSE-SO": {
+      "day": {
+        "timestamp": 1532751951447,
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
+    },
+    "NYSE-SQ": {
+      "day": {
+        "timestamp": 1532752000040,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
+    },
+    "NASDAQ-SWKS": {
+      "day": {
+        "timestamp": 1532752093676,
+        "date": "2018/61/27",
+        "Oscillators": "Neutral",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      }
+    },
+    "NASDAQ-CGNX": {
+      "day": {
+        "timestamp": 1532752232677,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Neutral"
+      }
+    },
+    "NASDAQ-CMCSA": {
+      "day": {
+        "timestamp": 1532752328209,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
+    },
+    "AMEX-COPX": {
+      "day": {
+        "timestamp": 1532752425324,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Sell",
+        "Moving Averages": "Sell"
+      }
+    },
+    "NASDAQ-CRSP": {
+      "day": {
+        "timestamp": 1532752468095,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      }
+    },
+    "AMEX-IGRO": {
+      "day": {
+        "timestamp": 1532752779544,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NASDAQ-INTC": {
+      "day": {
+        "timestamp": 1532752820607,
+        "date": "2018/61/27",
+        "Oscillators": "Neutral",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    },
+    "NASDAQ-IPIC": {
+      "day": {
+        "timestamp": 1532752864048,
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    },
+    "NASDAQ-IRBT": {
+      "day": {
+        "timestamp": 1532752905741,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NASDAQ-JAGX": {
+      "day": {
+        "timestamp": 1532752946073,
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    },
+    "NASDAQ-LRCX": {
+      "day": {
+        "timestamp": 1532753034485,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NASDAQ-MSFT": {
+      "day": {
+        "timestamp": 1532753279819,
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Strong Buy",
+        "Moving Averages": "Strong Buy"
+      }
+    },
+    "NASDAQ-MU": {
+      "day": {
+        "timestamp": 1532753322541,
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Sell",
+        "Moving Averages": "Sell"
+      }
+    },
+    "NYSE-PFE": {
+      "day": {
+        "timestamp": 1532753527058,
+        "date": "2018/61/27",
+        "Oscillators": "Neutral",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
+    },
+    "AMEX-PLM": {
+      "day": {
+        "timestamp": 1532753611701,
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell"
+      }
+    },
+    "NASDAQ-TSLA": {
+      "day": {
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    },
+    "NASDAQ-TXN": {
+      "day": {
+        "date": "2018/61/27",
+        "Oscillators": "Sell",
+        "Summary": "Sell",
+        "Moving Averages": "Sell"
+      },
+      "week": {}
+    },
+    "NYSE-IBM": {
+      "day": {
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Sell"
+      },
+      "week": {}
+    },
+    "AMEX-IDV": {
+      "day": {
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Buy"
+      },
+      "week": {}
+    },
+    "NYSE-JNJ": {
+      "day": {
+        "date": "2018/61/27",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NYSE-MCD": {
+      "day": {
+        "date": "2018/61/27",
+        "Oscillators": "Neutral",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    }
+  }
+}
