@@ -1,6 +1,6 @@
 const cache = require('../lib/cache')
 const config = require('../config')
-// const request = require('request')
+const request = require('request')
 module.exports = [{
     method: 'GET',
     path: '/data',
@@ -18,7 +18,15 @@ module.exports = [{
     path: '/reload',
     handler: function(req, h){
       // TODO: update tickers from github:
-      return h.response(config.tickers);
+      try{
+        request('https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js', function(req, err, body){
+          var tickers = JSON.parse(body.replace('module.exports = ',''))
+          config.tickers = tickers
+          return h.response(config.tickers);
+        })
+      }catch(e){
+        console.error(e.message)
+      }
     }
   }
 ]
