@@ -69,6 +69,12 @@ function GET_LAST_TICKER(){
 }
 
 function GET_TICKER_SIGNAL(ticker, period, signal){
+  // Google Finance API requires ticker has leading market with a colon
+  // e.g. NYSEAMERICAN:BTG
+  var subTicker = ticker.split(':')
+  if(subTicker.length === 2){
+    ticker = subTicker[1]
+  }
   var tickerResults = getSignals(ticker, period)
   if(!tickerResults){
     return 'ticker?'
