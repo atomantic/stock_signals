@@ -155,7 +155,7 @@
     },
     "NASDAQ-CGNX": {
       "day": {
-        "date": 1532803455685,
+        "date": 1532807655072,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Neutral"
@@ -164,7 +164,7 @@
     },
     "NYSE-CINR": {
       "day": {
-        "date": 1532803478237,
+        "date": 1532807680067,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -173,7 +173,7 @@
     },
     "NASDAQ-CMCSA": {
       "day": {
-        "date": 1532803500747,
+        "date": 1532807705964,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -910,6 +910,6 @@
       "week": {}
     }
   },
-  "lastRun": 1532807105418,
-  "lastTicker": "NYSE-AMC"
+  "lastRun": 1532807705964,
+  "lastTicker": "NASDAQ-CMCSA"
 }
