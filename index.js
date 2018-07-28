@@ -17,13 +17,20 @@ require('./lib/process')(server)
 // I may have run this in a shorter wait period, more recently on my machine
 // or the remote server may have been killed and restarted
 // in which case, we want to start with the more up-to-date cache file
-request(process.env.JSON_CACHE, function(req, err, data){
+request(process.env.JSON_CACHE, function(err, response, body){
 	if(err){
 		throw(err)
 	}
-	if(data.lastRun > results.lastRun){
+	try{
+		var remoteCache = JSON.parse(body)
+	}catch(e){
+		throw e.message
+	}
+	log('remote lastRun:', remoteCache.lastRun)
+	log(' local lastRun:', results.lastRun)
+	if(remoteCache.lastRun > results.lastRun){
 		log('remote cache is newer, using it')
-		results = data
+		results = remoteCache
 	}
 	// Register the plugin with custom config
 	server.register([{
@@ -33,6 +40,7 @@ request(process.env.JSON_CACHE, function(req, err, data){
 				lastFinish: runner.lastFinish,
 				abort_seconds: process.env.ABORT_SECONDS,
 				pause_seconds: process.env.PAUSE_SECONDS,
+				lastTicker: results.lasstTicker,
 				lastFinishSeconds: (new Date().getTime() - runner.lastFinish) / 1000
 			},
 			env: process.env.APP_ENV,
