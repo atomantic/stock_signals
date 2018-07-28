@@ -6,7 +6,7 @@ const runner = require('./lib/runner')
 const log = require('./utils/log')
 const routes = require('./routes')
 const request = require('request')
-const results = require('./data/results')
+var results = require('./data/results')
 // Create a server with a host and port
 const server = new Hapi.Server({
 	port: 8808
