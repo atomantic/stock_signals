@@ -76,5 +76,10 @@ function GET_TICKER_SIGNAL(ticker, period, signal){
   if(!tickerResults[signal]){
     throw 'no results for signal'
   }
-  return tickerResults[signal]
+  var signalData = tickerResults[signal]
+  if(signal === 'date'){
+    dateObj = new Date(signalData);
+    signalData = dateObj.toLocaleDateString() + ' ' + dateObj.toLocaleTimeString()
+  }
+  return signalData
 }
