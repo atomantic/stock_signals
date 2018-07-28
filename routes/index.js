@@ -1,11 +1,11 @@
-const cache = require('../lib/cache')
+const results = require('../data/results')
 const config = require('../config')
 const request = require('request')
 module.exports = [{
     method: 'GET',
     path: '/data',
     handler: function(req, h){
-      return h.response(cache.results);
+      return h.response(results);
     }
   },{
     method: 'GET',

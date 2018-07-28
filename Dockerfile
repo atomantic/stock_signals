@@ -4,7 +4,8 @@ RUN npm i -g --depth=0 --silent phantomjs-prebuilt casperjs --unsafe-perm
 
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV LOG_LEVEL=info
-ENV WAITTIME=60000
+ENV ABORT_SECONDS=60
+ENV PAUSE_SECONDS=240
 
 EXPOSE 8808
 

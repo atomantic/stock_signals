@@ -17,7 +17,8 @@ server.register([{
 			options: {
 				custom: {
 					lastFinish: runner.lastFinish,
-					waitTime: process.env.WAITTIME,
+					abort_seconds: process.env.ABORT_SECONDS,
+					pause_seconds: process.env.PAUSE_SECONDS,
 					lastFinishSeconds: (new Date().getTime() - runner.lastFinish) / 1000
 				},
 				env: process.env.APP_ENV,
@@ -29,7 +30,7 @@ server.register([{
 	])
 	.then(() => routes.forEach(route => server.route(route)))
 	.then(() => server.start())
-	.then(() => log('Server running at:', server.info.uri))
+	.then(() => log('Server running at:', server.info.uri ))
 	.then(() => runner.run() )
 	.catch(err => {
 		console.error(`Error starting server: ${err}`)
