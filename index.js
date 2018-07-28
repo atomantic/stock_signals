@@ -36,6 +36,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 	server.register([{
 		plugin: require('hapi-and-healthy'),
 		options: {
+			usage: false,
 			custom: {
 				lastFinish: runner.lastFinish,
 				abort_seconds: process.env.ABORT_SECONDS,

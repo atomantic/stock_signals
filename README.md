@@ -44,5 +44,5 @@ now deploy --public --docker
 now.sh will expire a container if it isn't being hit regularly
 hit it by leaving a running job like this:
 ```
-watch -n 60 curl https://tradingviewrunner-atqvfxzfec.now.sh/service-status
+watch -n 60 curl https://signals.now.sh/
 ```
