@@ -2,7 +2,7 @@
   "results": {
     "NASDAQ-EKSO": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803772081,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Sell"
@@ -11,7 +11,7 @@
     },
     "NYSE-TEVA": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805143777,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Sell"
@@ -20,7 +20,7 @@
     },
     "AMEX-IDV": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804288156,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -29,7 +29,7 @@
     },
     "AMEX-IGRO": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804310545,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -38,7 +38,7 @@
     },
     "NASDAQ-INTC": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804333101,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -47,7 +47,7 @@
     },
     "NASDAQ-IPIC": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804355688,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -56,7 +56,7 @@
     },
     "NASDAQ-IRBT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804377940,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -65,7 +65,7 @@
     },
     "NASDAQ-JAGX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804400742,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -74,7 +74,7 @@
     },
     "NYSE-JNJ": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804422995,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -83,7 +83,7 @@
     },
     "NASDAQ-LRCX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804445483,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -92,7 +92,7 @@
     },
     "NASDAQ-ARTNA": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803297353,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -101,7 +101,7 @@
     },
     "NASDAQ-AVGO": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803319778,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -110,7 +110,7 @@
     },
     "NYSE-AWK": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803342543,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -119,7 +119,7 @@
     },
     "AMEX-BTG": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803365364,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -128,7 +128,7 @@
     },
     "NYSE-C": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803387958,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -137,7 +137,7 @@
     },
     "NASDAQ-CELG": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803410289,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -146,7 +146,7 @@
     },
     "NYSE-CF": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803433062,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -155,7 +155,7 @@
     },
     "NASDAQ-CGNX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803455685,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Neutral"
@@ -164,7 +164,7 @@
     },
     "NYSE-CINR": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803478237,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -173,7 +173,7 @@
     },
     "NASDAQ-CMCSA": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803500747,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -182,7 +182,7 @@
     },
     "NYSE-CMP": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803523348,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -191,7 +191,7 @@
     },
     "AMEX-COPX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803545923,
         "Oscillators": "Buy",
         "Summary": "Sell",
         "Moving Averages": "Sell"
@@ -200,7 +200,7 @@
     },
     "NASDAQ-CRSP": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803568749,
         "Oscillators": "Buy",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -209,7 +209,7 @@
     },
     "NYSE-CWT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803591445,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -218,7 +218,7 @@
     },
     "NYSE-D": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803614112,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -227,7 +227,7 @@
     },
     "NYSE-DAL": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803636794,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -236,7 +236,7 @@
     },
     "NYSE-DIS": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803659677,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -245,7 +245,7 @@
     },
     "NYSE-DUK": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803682189,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -254,7 +254,7 @@
     },
     "NASDAQ-DVY": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803704973,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -263,7 +263,7 @@
     },
     "NYSE-ECR": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803727289,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -272,7 +272,7 @@
     },
     "NYSE-EGO": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803749639,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -281,7 +281,7 @@
     },
     "NYSE-ETN": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803816627,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -290,7 +290,7 @@
     },
     "NYSE-EXG": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803838961,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -299,7 +299,7 @@
     },
     "NYSE-EXK": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803861306,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Sell"
@@ -308,7 +308,7 @@
     },
     "NYSE-F": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803883699,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -317,7 +317,7 @@
     },
     "NASDAQ-FB": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803905683,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -326,7 +326,7 @@
     },
     "NYSE-GE": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803972393,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -335,7 +335,7 @@
     },
     "NYSE-GG": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803994810,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -344,7 +344,7 @@
     },
     "NASDAQ-GILD": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804017199,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -353,7 +353,7 @@
     },
     "NYSE-GME": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804039885,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -362,7 +362,7 @@
     },
     "NASDAQ-GOOG": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804062445,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -371,7 +371,7 @@
     },
     "NASDAQ-GOOGL": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804084766,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -380,7 +380,7 @@
     },
     "NYSE-HASI": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804107147,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Neutral"
@@ -389,7 +389,7 @@
     },
     "NYSE-HBM": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804131043,
         "Oscillators": "Buy",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -398,7 +398,7 @@
     },
     "NASDAQ-HOLI": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804220956,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -407,7 +407,7 @@
     },
     "AMEX-IAU": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804243419,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -416,7 +416,7 @@
     },
     "NYSE-IBM": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804265807,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Sell"
@@ -425,7 +425,7 @@
     },
     "NYSE-MCD": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804467979,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -434,7 +434,7 @@
     },
     "NYSE-MDT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804490221,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -443,7 +443,7 @@
     },
     "NYSE-MMM": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804512712,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -452,7 +452,7 @@
     },
     "NYSE-MOS": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804535273,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -461,7 +461,7 @@
     },
     "NASDAQ-MSFT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804556984,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -470,7 +470,7 @@
     },
     "NASDAQ-MU": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804579498,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Sell"
@@ -479,7 +479,7 @@
     },
     "NYSE-MUX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804602570,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -488,7 +488,7 @@
     },
     "NASDAQ-NFLX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804625038,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Sell"
@@ -497,7 +497,7 @@
     },
     "NASDAQ-NTLA": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804647432,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -506,7 +506,7 @@
     },
     "NASDAQ-NVDA": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804670163,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -515,7 +515,7 @@
     },
     "NYSE-PFE": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804692834,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -524,7 +524,7 @@
     },
     "NASDAQ-PFLT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804715643,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -533,7 +533,7 @@
     },
     "AMEX-PLM": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804737917,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -542,7 +542,7 @@
     },
     "NASDAQ-QCOM": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804760417,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -551,7 +551,7 @@
     },
     "NYSE-REG": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804782779,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -560,7 +560,7 @@
     },
     "AMEX-REMX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804805278,
         "Oscillators": "Buy",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -569,7 +569,7 @@
     },
     "ASX-RIO": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804827262,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -578,7 +578,7 @@
     },
     "NYSE-ROK": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804849847,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -587,7 +587,7 @@
     },
     "NASDAQ-RWLK": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804872222,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -596,7 +596,7 @@
     },
     "NYSE-SBS": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804894580,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -605,7 +605,7 @@
     },
     "NASDAQ-SBUX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804917014,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -614,7 +614,7 @@
     },
     "NYSE-SJT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804939710,
         "Oscillators": "Buy",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -623,7 +623,7 @@
     },
     "TSX-ENB": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803794291,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -632,7 +632,7 @@
     },
     "TSX-FTS": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803927702,
         "Oscillators": "Buy",
         "Summary": "Sell",
         "Moving Averages": "Sell"
@@ -641,7 +641,7 @@
     },
     "NYSE-FTV": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803950081,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -650,7 +650,7 @@
     },
     "AMEX-HDV": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804153385,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -659,7 +659,7 @@
     },
     "NYSE-HL": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804176015,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -668,7 +668,7 @@
     },
     "NYSE-HMY": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804198464,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -677,7 +677,7 @@
     },
     "AMEX-SLV": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804962441,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -686,7 +686,7 @@
     },
     "NYSE-SO": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532804984859,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -695,7 +695,7 @@
     },
     "NYSE-SQ": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805007304,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -704,7 +704,7 @@
     },
     "AMEX-SVXY": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805030127,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Neutral"
@@ -713,7 +713,7 @@
     },
     "NASDAQ-SWKS": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805052666,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -722,7 +722,7 @@
     },
     "NYSE-SXCP": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805074990,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -731,7 +731,7 @@
     },
     "NYSE-T": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805097956,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -740,7 +740,7 @@
     },
     "NYSE-TECK": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805120722,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -749,7 +749,7 @@
     },
     "NASDAQ-TSLA": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805166402,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -758,7 +758,7 @@
     },
     "NASDAQ-TXN": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532805188913,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Sell"
@@ -767,7 +767,7 @@
     },
     "NYSE-VALE": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532802956232,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -776,7 +776,7 @@
     },
     "AMEX-VHT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532802981006,
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
@@ -785,7 +785,7 @@
     },
     "AMEX-VIG": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803003427,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -794,7 +794,7 @@
     },
     "NASDAQ-VKTX": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803026360,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -803,7 +803,7 @@
     },
     "AMEX-VYM": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803049051,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -812,7 +812,7 @@
     },
     "NASDAQ-VYMI": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803071740,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -821,7 +821,7 @@
     },
     "NYSE-WPM": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803094050,
         "Oscillators": "Sell",
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
@@ -830,7 +830,7 @@
     },
     "NYSE-WTR": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803116596,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -839,7 +839,7 @@
     },
     "NASDAQ-AAPL": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803161442,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -848,7 +848,7 @@
     },
     "NYSE-AIT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803184217,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -857,7 +857,7 @@
     },
     "NYSE-ALB": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803206784,
         "Oscillators": "Sell",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -866,7 +866,7 @@
     },
     "NASDAQ-AMAT": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803229784,
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Buy"
@@ -875,7 +875,7 @@
     },
     "NYSE-AMC": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803252238,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
@@ -884,14 +884,32 @@
     },
     "NASDAQ-AMZN": {
       "day": {
-        "date": "2018/7/28",
+        "date": 1532803274618,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
       "week": {}
+    },
+    "AMEX-UAMY": {
+      "day": {
+        "date": 1532802857129,
+        "Oscillators": "Sell",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "AMEX-XPL": {
+      "day": {
+        "date": 1532803139186,
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
     }
   },
-  "lastRun": 1532797137939,
-  "lastTicker": "NYSE-SBS"
+  "lastRun": 1532805188913,
+  "lastTicker": "NASDAQ-TXN"
 }
