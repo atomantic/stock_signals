@@ -90,7 +90,7 @@ module.exports = [
     "NYSE-TEVA",
     "NASDAQ-TSLA",
     "NASDAQ-TXN",
-    "NASDAQ-UAMY",
+    "AMEX-UAMY",
     "NASDAQ-USLV",
     "NYSE-VALE",
     "AMEX-VHT",
@@ -100,5 +100,5 @@ module.exports = [
     "NASDAQ-VYMI",
     "NYSE-WPM",
     "NYSE-WTR",
-    "NASDAQ-XPL"
+    "AMEX-XPL"
 ]

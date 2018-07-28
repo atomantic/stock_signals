@@ -5,7 +5,7 @@ RUN npm i -g --depth=0 --silent phantomjs-prebuilt casperjs --unsafe-perm
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV LOG_LEVEL=info
 ENV ABORT_SECONDS=60
-ENV PAUSE_SECONDS=240
+ENV PAUSE_SECONDS=15
 ENV JSON_CACHE=https://api.myjson.com/bins/19fs22
 
 EXPOSE 8808

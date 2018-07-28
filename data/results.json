@@ -746,8 +746,152 @@
         "Moving Averages": "Strong Buy"
       },
       "week": {}
+    },
+    "NASDAQ-TSLA": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    },
+    "NASDAQ-TXN": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Sell",
+        "Summary": "Sell",
+        "Moving Averages": "Sell"
+      },
+      "week": {}
+    },
+    "NYSE-VALE": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Buy",
+        "Summary": "Strong Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "AMEX-VHT": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Buy",
+        "Summary": "Strong Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "AMEX-VIG": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Neutral",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NASDAQ-VKTX": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Neutral",
+        "Summary": "Buy",
+        "Moving Averages": "Buy"
+      },
+      "week": {}
+    },
+    "AMEX-VYM": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NASDAQ-VYMI": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Buy"
+      },
+      "week": {}
+    },
+    "NYSE-WPM": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    },
+    "NYSE-WTR": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Neutral",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NASDAQ-AAPL": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NYSE-AIT": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
+    },
+    "NYSE-ALB": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Sell",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    },
+    "NASDAQ-AMAT": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Neutral",
+        "Summary": "Buy",
+        "Moving Averages": "Buy"
+      },
+      "week": {}
+    },
+    "NYSE-AMC": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Neutral",
+        "Summary": "Sell",
+        "Moving Averages": "Strong Sell"
+      },
+      "week": {}
+    },
+    "NASDAQ-AMZN": {
+      "day": {
+        "date": "2018/7/28",
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "week": {}
     }
   },
-  "lastRun": 1532794575788,
-  "lastTicker": "NYSE-TECK"
+  "lastRun": 1532795634880,
+  "lastTicker": "NYSE-EGO"
 }

@@ -61,10 +61,11 @@ function getSignals(ticker, period){
 
 // SHEETS API
 function GET_LAST_RUN(){
-  return cache.get("lastRun")
+  var d = new Date(Number(cache.get("lastRun")))
+  return d.toLocaleDateString() + ' ' + d.toLocaleTimeString()
 }
 function GET_LAST_TICKER(){
-  return cache.get("lastTicker")
+  return "Last: "+cache.get("lastTicker")
 }
 
 function GET_TICKER_SIGNAL(ticker, period, signal){
