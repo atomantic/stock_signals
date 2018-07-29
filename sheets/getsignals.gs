@@ -6,9 +6,8 @@
 var cache = CacheService.getUserCache();
 var results = JSON.parse(cache.get('results')||'{}')
 function onOpen(){
-  var cached = cache.get("results");
-  if (cached != null) {
-    return cached;
+  if (results && results.lastRun > new Date().getTime() - 3600000) {
+    return;
   }
   var url = 'https://api.myjson.com/bins/19fs22';
   var response = UrlFetchApp.fetch(url, {
@@ -22,7 +21,7 @@ function onOpen(){
   var payload = JSON.parse(response.getContentText())
   // cache for 1 hour
   cache.put("lastRun", payload.lastRun, 3600);
-  cache.put("lastTicker", payload.lastTicker, 3600); 
+  cache.put("lastTicker", payload.lastTicker, 3600);
   cache.put("results", JSON.stringify(payload.results), 3600);
 }
 onOpen()
@@ -44,7 +43,7 @@ function isEmptyObject(obj) {
  */
 function getSignals(ticker, period){
   if(isEmptyObject(results)){
-    results = JSON.parse(cache.get('results')||{})
+    results = JSON.parse(cache.get('results')||'{}')
   }
   if(results[ticker]){
     return results[ticker][period] || {} // if an invalid period is given, return an empty object

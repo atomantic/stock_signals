@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "PAUSE_SECONDS=15 JSON_CACHE=https://api.myjson.com/bins/19fs22 node .",
+		"start": "SNAPSHOT_ENABLED=true PAUSE_SECONDS=15 JSON_CACHE=https://api.myjson.com/bins/19fs22 node .",
 		"setup": "npm i -g phantomjs-prebuilt casperjs && npm i"
 	},
 	"repository": {

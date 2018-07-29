@@ -32,7 +32,7 @@ npm start
 
 ## Get Trading Indicators for a Single Ticker
 ```
-TICKER=NASDAQ-AMZN casperjs test --fail-fast lib/technicals.js
+TICKER=NASDAQ-AAPL SNAPSHOT_ENABLED=1 casperjs test --fail-fast --verbose --ignore-ssl-errors=true --load-images=true lib/technicals.js
 ```
 
 ## Deploy
