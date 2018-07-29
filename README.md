@@ -13,7 +13,9 @@ My general strategy is this:
     - If my cost-basis is lower than current price: `hold`
     - if my cost-basis is higher than the current price: `sell`
 - Neutral = `hold`
-- `Strong Sell` and `Strong Buy` signals just increase the color coding darkness in the Google Sheet, which informs me of the quanitity I might wish to buy.
+- `Strong Sell` and `Strong Buy` signals just increase the color coding darkness in the Google Sheet, which informs me of the quanitity I might wish to buy. I might sell half on a `Sell` and sell all on a `Strong Sell`.
+
+Additionally, these indicators are still only prompting suggestions that require human evaluation. I consider other factors such as insider trading (e.g. insiders buying a bunch of stock in a mining company: https://www.secform4.com/insider-trading/1600470.htm) before making a decision.
 
 I might post the Google Sheets template logic later...
 
@@ -44,5 +46,5 @@ TICKER=NASDAQ-AAPL SNAPSHOT_ENABLED=1 casperjs test --fail-fast --verbose --igno
 now.sh will expire a container if it isn't being hit regularly
 hit it by leaving a running job like this:
 ```
-watch -n 60 curl https://signals.now.sh/
+watch -n 120 curl https://signals.now.sh/
 ```

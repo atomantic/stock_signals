@@ -6,7 +6,7 @@
 var cache = CacheService.getUserCache();
 var results = JSON.parse(cache.get('results')||'{}')
 function onOpen(){
-  if (results && results.lastRun > new Date().getTime() - 3600000) {
+  if (results && results.lastRun > new Date().getTime() - 1800000) {
     return;
   }
   var url = 'https://api.myjson.com/bins/19fs22';
@@ -19,10 +19,10 @@ function onOpen(){
     throw 'failed to fetch JSON cache data'
   }
   var payload = JSON.parse(response.getContentText())
-  // cache for 1 hour
-  cache.put("lastRun", payload.lastRun, 3600);
-  cache.put("lastTicker", payload.lastTicker, 3600);
-  cache.put("results", JSON.stringify(payload.results), 3600);
+  // cache for 30 minutes
+  cache.put("lastRun", payload.lastRun, 1800);
+  cache.put("lastTicker", payload.lastTicker, 1800);
+  cache.put("results", JSON.stringify(payload.results), 1800);
 }
 onOpen()
 
