@@ -839,21 +839,31 @@
     },
     "NASDAQ-AAPL": {
       "day": {
-        "date": 1532878327304,
+        "date": 1532882400496,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "week": {}
+      "week": {
+        "date": 1532882400496,
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
     },
     "NYSE-AIT": {
       "day": {
-        "date": 1532878349506,
+        "date": 1532882434092,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "week": {}
+      "week": {
+        "date": 1532882434092,
+        "Oscillators": "Buy",
+        "Summary": "Buy",
+        "Moving Averages": "Strong Buy"
+      }
     },
     "NYSE-ALB": {
       "day": {
@@ -910,6 +920,6 @@
       "week": {}
     }
   },
-  "lastRun": 1532880347304,
-  "lastTicker": "NASDAQ-TXN"
+  "lastRun": 1532882434092,
+  "lastTicker": "NYSE-AIT"
 }

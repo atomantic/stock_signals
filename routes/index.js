@@ -17,7 +17,7 @@ module.exports = [{
     method: 'GET',
     path: '/reload',
     handler: function(req, h){
-      request('https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js', function(req, err, body){
+      request(process.env.TICKER_SOURCE_FILE, function(req, err, body){
         var cleanBody = body.replace('module.exports = ','').replace(/\s/g,'')
         config.tickers = JSON.parse('{"tickers":'+cleanBody+'}').tickers
         return h.response(config.tickers);
