@@ -1388,13 +1388,13 @@
     },
     "AMEX-UAMY": {
       "day": {
-        "date": 1532905607682,
+        "date": 1532926404753,
         "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
       "week": {
-        "date": 1532905607682,
+        "date": 1532926404753,
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
@@ -1415,6 +1415,6 @@
       }
     }
   },
-  "lastRun": 1532905913582,
-  "lastTicker": "NASDAQ-AMAT"
+  "lastRun": 1532926404753,
+  "lastTicker": "AMEX-UAMY"
 }
