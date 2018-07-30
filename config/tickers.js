@@ -45,6 +45,7 @@ module.exports = [
     "NYSE-HBM",
     "AMEX-HDV",
     "NYSE-HL",
+    "NASDAQ-HMNY",
     "NYSE-HMY",
     "NASDAQ-HOLI",
     "AMEX-IAU",
