@@ -94,7 +94,7 @@ module.exports = [
     "NASDAQ-QCOM",
     "NYSE-REG",
     "AMEX-REMX",
-    "ASX-RIO",
+    "NYSE-RIO",
     "NYSE-ROK",
     "NASDAQ-RWLK",
     "NYSE-S",
