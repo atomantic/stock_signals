@@ -117,6 +117,7 @@ module.exports = [
     "NYSE-T",
     "NYSE-TECK",
     "NYSE-TEVA",
+    "NYSE-TROX",
     "NASDAQ-TSLA",
     "NYSE-TWTR",
     "NASDAQ-TXN",
