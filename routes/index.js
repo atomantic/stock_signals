@@ -17,11 +17,13 @@ module.exports = [{
     method: 'GET',
     path: '/reload',
     handler: function(req, h){
-      request(process.env.TICKER_SOURCE_FILE, function(req, err, body){
-        var cleanBody = body.replace('module.exports = ','').replace(/\s/g,'')
-        config.tickers = JSON.parse('{"tickers":'+cleanBody+'}').tickers
-        return h.response(config.tickers);
+      console.log('updating source file', process.env.TICKER_SOURCE_FILE)
+      request(process.env.TICKER_SOURCE_FILE, function(err, req, body){
+          var cleanBody = body.replace('module.exports = ','').replace(/\s/g,'')
+          config.tickers = JSON.parse('{"tickers":'+cleanBody+'}').tickers
+          console.log('tickers updated')
       })
+      return h.response()
     }
   }
 ]
