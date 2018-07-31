@@ -4,7 +4,7 @@ RUN npm i -g --depth=0 --silent phantomjs-prebuilt casperjs --unsafe-perm
 
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV LOG_LEVEL=info
-ENV ABORT_SECONDS=60
+ENV ABORT_SECONDS=240
 ENV PAUSE_SECONDS=120
 ENV JSON_CACHE=https://api.myjson.com/bins/19fs22
 ENV TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js
