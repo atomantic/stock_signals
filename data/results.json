@@ -2,16 +2,16 @@
   "results": {
     "NASDAQ-EKSO": {
       "day": {
-        "date": 1532904103708,
+        "date": 1533001833232,
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Sell"
       },
       "week": {
-        "date": 1532904103708,
+        "date": 1533001833232,
         "Oscillators": "Buy",
         "Summary": "Buy",
-        "Moving Averages": "Buy"
+        "Moving Averages": "Sell"
       }
     },
     "NYSE-TEVA": {
@@ -1457,6 +1457,6 @@
       }
     }
   },
-  "lastRun": 1533000480181,
-  "lastTicker": "NASDAQ-NTLA"
+  "lastRun": 1533001833232,
+  "lastTicker": "NASDAQ-EKSO"
 }
