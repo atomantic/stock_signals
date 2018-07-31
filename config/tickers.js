@@ -76,6 +76,7 @@ module.exports = [
     "NYSE-JNJ",
     "NYSE-JPM",
     "NASDAQ-LRCX",
+    "NYSE-LUV",
     "NYSE-MCD",
     "NYSE-MDT",
     "NYSE-MMM",
