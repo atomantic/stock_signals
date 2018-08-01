@@ -53,9 +53,6 @@ function isEmptyObject(obj) {
  * )
  */
 function getTickerObj(ticker){
-  if(isEmptyObject(results)){
-    results = JSON.parse(cache.get('results')||'{}')
-  }
   if(results[ticker]){
     return results[ticker];
   }
@@ -67,7 +64,7 @@ function getTickerObj(ticker){
       return results[key]
     }
   }
-  return {}; // default, no object
+  throw('ticker not found')
 }
 
 /**
@@ -124,6 +121,7 @@ function GET_TICKER_SIGNAL(ticker, period, signal){
 function GET_TICKER_UPDATE(ticker){
   ticker = ticker2Sub(ticker);
   var tickerObj = getTickerObj(ticker);
+  return ticker;
   var updatedDate = tickerObj['updated']||tickerObj.day?tickerObj.day.date:false
   if(!updatedDate){
     return 'not found'
