@@ -9,3 +9,4 @@ config/diff.js
 config/whitelist_new.js
 config/integrations_bak.js
 .idea
+dockerized-phantomjs.tar.gz

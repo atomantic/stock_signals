@@ -1,11 +1,17 @@
 FROM node:8.11.3-alpine
 
-RUN npm i -g --depth=0 --silent phantomjs-prebuilt casperjs --unsafe-perm
+RUN apk update 
+RUN apk add python
+RUN apk add curl
+RUN curl -Ls https://github.com/fgrehm/docker-phantomjs2/releases/download/v2.0.0-20150722/dockerized-phantomjs.tar.gz \
+       | tar xz -C /
+
+RUN npm i -g --depth=0 --silent casperjs --unsafe-perm
 
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV LOG_LEVEL=info
-ENV ABORT_SECONDS=90
-ENV PAUSE_SECONDS=30
+ENV ABORT_SECONDS=60
+ENV PAUSE_SECONDS=5
 ENV JSON_CACHE=https://api.myjson.com/bins/19fs22
 ENV TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js
 
@@ -17,9 +23,5 @@ WORKDIR /app
 RUN npm i --ignore-scripts
 
 COPY . /app
-
-RUN chown -R node:node /app
-
-USER node
 
 CMD node .

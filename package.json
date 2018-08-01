@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "SNAPSHOT_ENABLED=true PAUSE_SECONDS=15 JSON_CACHE=https://api.myjson.com/bins/19fs22 TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js node .",
-		"setup": "npm i -g phantomjs-prebuilt casperjs && npm i"
+		"start": "SNAPSHOT_ENABLED=true PAUSE_SECONDS=5 JSON_CACHE=https://api.myjson.com/bins/19fs22 TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js node .",
+		"setup": "npm i -g phantomjs-prebuilt casperjs now && npm i"
 	},
 	"repository": {
 		"type": "git",
@@ -21,6 +21,5 @@
 		"lodash": "4.17.10",
 		"request": "2.87.0"
 	},
-	"devDependencies": {
-	}
+	"devDependencies": {}
 }

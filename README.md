@@ -34,11 +34,12 @@ npm start
 
 ## Get Trading Indicators for a Single Ticker
 ```
-TICKER=NASDAQ-AAPL SNAPSHOT_ENABLED=1 casperjs test --fail-fast --verbose --ignore-ssl-errors=true --load-images=true lib/technicals.js
+TICKER=NASDAQ-AAPL SNAPSHOT_ENABLED=1 casperjs test --fail-fast --verbose --web-security=no --ignore-ssl-errors=true --load-images=false lib/technicals.js
 ```
 
 ## Deploy
 ```
+wget https://github.com/fgrehm/docker-phantomjs2/releases/download/v2.0.0-20150722/dockerized-phantomjs.tar.gz
 ./deploy
 ```
 
