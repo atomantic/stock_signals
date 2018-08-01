@@ -39,7 +39,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 		var cleanBody = body.replace('module.exports = ','').replace(/\s/g,'')
 		var tickerCount = config.tickers.length
 		config.tickers = JSON.parse('{"tickers":'+cleanBody+'}').tickers
-		console.log('updateed tickers from github:', tickerCount, '=>', config.tickers.length)
+		console.log('updated tickers from github:', tickerCount, '=>', config.tickers.length)
 		// Register the plugin with custom config
 		server.register([{
 			plugin: require('hapi-and-healthy'),
