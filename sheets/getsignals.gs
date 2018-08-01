@@ -23,6 +23,7 @@ function onOpen(){
     throw 'failed to fetch JSON cache data'
   }
   var payload = JSON.parse(response.getContentText());
+  
   results = payload.results;
   // cache for 15 minutes
   cache.put("lastRun", payload.lastRun, 900);
@@ -64,7 +65,7 @@ function getTickerObj(ticker){
       return results[key]
     }
   }
-  throw('ticker not found')
+  throw('ticker not found: '+ticker)
 }
 
 /**
@@ -74,7 +75,7 @@ function getTickerObj(ticker){
  * @return {object} period signal (e.g. {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"})
  */
 function getSignals(ticker, period){
-  getTickerObj(ticker)[period] || {}
+  return getTickerObj(ticker)[period] || {}
 }
 
 function ticker2Sub(ticker){
@@ -121,10 +122,9 @@ function GET_TICKER_SIGNAL(ticker, period, signal){
 function GET_TICKER_UPDATE(ticker){
   ticker = ticker2Sub(ticker);
   var tickerObj = getTickerObj(ticker);
-  return ticker;
-  var updatedDate = tickerObj['updated']||tickerObj.day?tickerObj.day.date:false
+  var updatedDate = tickerObj['updated']||(tickerObj.day?tickerObj.day.date:false)
   if(!updatedDate){
-    return 'not found'
+    throw 'not found'+ticker
   }
   return (new Date(updatedDate)).toLocaleString()
 }
