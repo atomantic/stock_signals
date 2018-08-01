@@ -30,7 +30,8 @@ request(process.env.JSON_CACHE, function(err, response, body){
 	log('remote lastRun:', remoteCache.lastRun)
 	log(' local lastRun:', results.lastRun)
 	if(remoteCache.lastRun > results.lastRun){
-		log('remote cache is newer, using it')
+		var remoteTime = new Date(remoteCache.lastRun).toLocaleString()
+		log(`remote cache is newer ${remoteTime}, using it`)
 		results = remoteCache
 	}
 	// get the latest ticker set from github
@@ -40,18 +41,17 @@ request(process.env.JSON_CACHE, function(err, response, body){
 		var tickerCount = config.tickers.length
 		config.tickers = JSON.parse('{"tickers":'+cleanBody+'}').tickers
 		console.log('updated tickers from github:', tickerCount, '=>', config.tickers.length)
-		// Register the plugin with custom config
 		server.register([{
 			plugin: require('hapi-and-healthy'),
 			options: {
 				usage: false,
 				custom: {
-					lastFinish: runner.lastFinish,
 					abort_seconds: process.env.ABORT_SECONDS,
-					pause_seconds: process.env.PAUSE_SECONDS,
-					lastTicker: results.lasstTicker,
-					lastFinishSeconds: (new Date().getTime() - runner.lastFinish) / 1000
+					lastRun: results.lastRun,
+					lastTicker: results.lastTicker,
+					pause_seconds: process.env.PAUSE_SECONDS
 				},
+				id: pjson.version,
 				env: process.env.APP_ENV,
 				name: pjson.name,
 				version: pjson.version,

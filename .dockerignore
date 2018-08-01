@@ -1,11 +1,14 @@
 .git
 node_modules
-ops
+sheets
+snaps
 .dockerignore
 .DS_Store
 .eslintrc
 .gitignore
-dev
+.nvmrc
+deploy.sh
 Dockerfile
 README.md
 version.txt
+*.tar.gz
