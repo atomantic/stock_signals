@@ -128,3 +128,9 @@ function GET_TICKER_UPDATE(ticker){
   }
   return (new Date(updatedDate)).toLocaleString()
 }
+
+function GET_TICKER_META_SIGNAL(ticker){
+  ticker = ticker2Sub(ticker);
+  var tickerObj = getTickerObj(ticker);
+  return tickerObj['signal'];
+}

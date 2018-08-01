@@ -31,7 +31,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 	log(' local lastRun:', results.lastRun)
 	if(remoteCache.lastRun > results.lastRun){
 		var remoteTime = new Date(remoteCache.lastRun).toLocaleString()
-		log(`remote cache is newer ${remoteTime}, using it`)
+		log(`remote cache is newer ${remoteCache.lastTicker} @ ${remoteTime}, using it`)
 		results = remoteCache
 	}
 	// get the latest ticker set from github
