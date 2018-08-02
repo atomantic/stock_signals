@@ -90,6 +90,7 @@ module.exports = [
     "NASDAQ-NFLX",
     "NASDAQ-NTLA",
     "TSX-NTR",
+    "NASDAQ-NVAX",
     "NASDAQ-NVDA",
     "NYSE-PFE",
     "NASDAQ-PFLT",

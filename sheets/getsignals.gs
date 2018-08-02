@@ -1,16 +1,16 @@
-
 /*
  * on page load, we will grab the cached signal results
  * we use a myjson backup in case the now.sh instance goes down (power down to low hit activity)
  */
-//var cache = CacheService.getUserCache();
-var cache = CacheService.getScriptCache();
+var cache = CacheService.getUserCache();
+//var cache = CacheService.getScriptCache();
 //var cache = CacheService.getDocumentCache();
 var results = JSON.parse(cache.get('results')||'{}')
 var fetchCounter = 0;
-function onOpen(){
-  if (cache.get('lastRun')) {
-    return;
+function fillCache(){
+  var lastRun = cache.get('lastRun');
+  if (lastRun) {
+    return lastRun;
   }
   fetchCounter++;
   var url = 'https://api.myjson.com/bins/19fs22';
@@ -29,8 +29,9 @@ function onOpen(){
   cache.put("lastRun", payload.lastRun, 900);
   cache.put("lastTicker", payload.lastTicker, 900);
   cache.put("results", JSON.stringify(payload.results), 900);
+  return lastRun;
 }
-onOpen()
+fillCache()
 
 function isEmptyObject(obj) {
   for(var prop in obj) {
@@ -54,6 +55,10 @@ function isEmptyObject(obj) {
  * )
  */
 function getTickerObj(ticker){
+  if(isEmptyObject(results)){
+    // see if it was updated after open
+    results = JSON.parse(cache.get('results')||'{}')
+  }
   if(results[ticker]){
     return results[ticker];
   }
@@ -94,9 +99,10 @@ function GET_TICKER_FETCH_COUNTER(){
   return fetchCounter;
 }
 function RELOAD_TICKERS(){
+  Utilities.sleep(600000);
   results = {};
   cache.removeAll(['lastRun','lastTicker','results']);
-  onOpen();
+  fillCache();
   return cache.get('lastRun');
 }
 function GET_LAST_RUN(){
