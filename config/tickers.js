@@ -88,6 +88,7 @@ module.exports = [
     "NYSE-MDT",
     "NYSE-MMM",
     "NYSE-MOS",
+    "NYSE-MPW",
     "NASDAQ-MSFT",
     "NASDAQ-MU",
     "NYSE-MUX",
