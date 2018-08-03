@@ -143,5 +143,6 @@ module.exports = [
     "NYSE-WPM",
     "NYSE-WTR",
     "NYSE-XOM",
-    "AMEX-XPL"
+    "AMEX-XPL",
+    "NASDAQ-ZNGA"
 ]
