@@ -8,6 +8,7 @@ module.exports = [
     "NASDAQ-AMD",
     "NASDAQ-AMZN",
     "NASDAQ-ARTNA",
+    "NASDAQ-ARTX",
     "NYSE-AUY",
     "NASDAQ-AVGO",
     "NYSE-AWK",
