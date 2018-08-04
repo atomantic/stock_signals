@@ -171,5 +171,14 @@ function GET_TICKER_META_SIGNAL(ticker){
 // alphabetize ticker list by suffix (to match sheet)
 // return an array of cells showing [signal, hour.Summary, day.Summary, week.Summary]
 function GET_SIGNALS_ARRAY(){
-  return resultsArray
+  if(!resultsArray.length){
+    resultsArray = resultsToArray()
+  }
+  return resultsArray;
+}
+
+// alphabetize ticker list by suffix (to match sheet)
+// return an array of cells showing [signal, hour.Summary, day.Summary, week.Summary]
+function GET_RESULTS_LENGTH(){
+  return resultsArray.length
 }

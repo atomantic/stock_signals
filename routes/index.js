@@ -24,8 +24,8 @@ module.exports = [{
       if(i===-1){
         return h.response('not found')
       }
-      // set one back so we will increment into it after the current run finishes
-      runnerData.currentIndex = i--
+      // set two back so we will increment into it after the current run finishes
+      runnerData.currentIndex = i-2
       return h.response(runnerData.currentIndex)
     }
   },{
