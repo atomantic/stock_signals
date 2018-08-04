@@ -43,7 +43,7 @@ module.exports = [{
       // ensure that there is a blank ticker result for any that are missing
       each(config.tickers, function(key){
         if(!results.results[key]){
-          results.results.key = {
+          results.results[key] = {
             signal: '?',
             day: {},
             hours: {},
