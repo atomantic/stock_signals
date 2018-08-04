@@ -2406,13 +2406,13 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533408911216,
+      "updated": 1533411596249,
       "week": {
         "Oscillators": "Buy",
-        "Summary": "Strong Buy",
+        "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "signal": "Strong Buy"
+      "signal": "Buy"
     },
     "NYSE-BA": {
       "day": {},
@@ -2735,8 +2735,27 @@
       "hours": {},
       "updated": 1533351600009,
       "week": {}
+    },
+    "NASDAQ-ARTX": {
+      "day": {
+        "Oscillators": "Buy",
+        "Summary": "Strong Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "hours": {
+        "Oscillators": "Buy",
+        "Summary": "Strong Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "updated": 1533411585377,
+      "week": {
+        "Oscillators": "Buy",
+        "Summary": "Strong Buy",
+        "Moving Averages": "Strong Buy"
+      },
+      "signal": "Strong Buy"
     }
   },
-  "lastRun": 1533408956542,
-  "lastTicker": "NYSE-BA"
+  "lastRun": 1533411596249,
+  "lastTicker": "NYSE-AUY"
 }
