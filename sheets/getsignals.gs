@@ -6,14 +6,41 @@ var cache = CacheService.getUserCache();
 //var cache = CacheService.getScriptCache();
 //var cache = CacheService.getDocumentCache();
 var results = JSON.parse(cache.get('results')||'{}')
+var resultsArray = resultsToArray()
 var fetchCounter = 0;
+
+function resultsToArray(){
+ // map results to an array
+  var resultsArray = []
+  for(t in results){
+    resultsArray.push([
+      t,
+      results[t].signal,
+      results[t].day ? results[t].day.Summary : '?',
+      results[t].hours ? results[t].hours.Summary : '?',
+      results[t].week ? results[t].week.Summary : '?',
+      (new Date(results[t].updated)).toLocaleString()
+    ])
+  }
+  // alphebetize elements by ticker suffix
+  // (e.g. NASDAQ-EKSO sorts in E, by EKSO)
+  resultsArray.sort(function(a, b){
+    var keyA = a[0].split('-')[1],
+        keyB = b[0].split('-')[1];
+    if(keyA < keyB) return -1;
+    if(keyA > keyB) return 1;
+    return 0;
+  });
+
+  return resultsArray;
+}
 function fillCache(){
   var lastRun = cache.get('lastRun');
-  if (lastRun) {
+  if (lastRun && lastRun > (new Date().getTime()) - 900000) {
     return lastRun;
   }
   fetchCounter++;
-  var url = 'https://api.myjson.com/bins/19fs22';
+  var url = 'https://api.myjson.com/bins/xw4eo';
   var response = UrlFetchApp.fetch(url, {
     'method': 'get',
     'muteHttpExceptions': false
@@ -139,4 +166,10 @@ function GET_TICKER_META_SIGNAL(ticker){
   ticker = ticker2Sub(ticker);
   var tickerObj = getTickerObj(ticker);
   return tickerObj['signal'];
+}
+
+// alphabetize ticker list by suffix (to match sheet)
+// return an array of cells showing [signal, hour.Summary, day.Summary, week.Summary]
+function GET_SIGNALS_ARRAY(){
+  return resultsArray
 }
