@@ -1740,10 +1740,10 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533351657600,
+      "updated": 1533412779383,
       "week": {
-        "Oscillators": "Sell",
-        "Summary": "Buy",
+        "Oscillators": "Buy",
+        "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
       },
       "signal": "Buy"
@@ -2253,7 +2253,7 @@
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533351672511,
+      "updated": 1533412795230,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Sell",
@@ -2782,6 +2782,6 @@
       "week": {}
     }
   },
-  "lastRun": 1533412762600,
-  "lastTicker": "NYSE-WPM"
+  "lastRun": 1533412795230,
+  "lastTicker": "NYSE-XOM"
 }

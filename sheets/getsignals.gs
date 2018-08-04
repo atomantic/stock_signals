@@ -5,8 +5,9 @@
 var cache = CacheService.getUserCache();
 //var cache = CacheService.getScriptCache();
 //var cache = CacheService.getDocumentCache();
-var results = JSON.parse(cache.get('results')||'{}')
-var resultsArray = resultsToArray()
+var results = JSON.parse(cache.get('results')||'{}');
+var resultsArray = resultsToArray();
+var lastRun = cache.get('lastRun');
 var fetchCounter = 0;
 
 function resultsToArray(){
@@ -35,12 +36,11 @@ function resultsToArray(){
   return resultsArray;
 }
 function fillCache(force){
-  var lastRun = cache.get('lastRun');
   if (!force && lastRun && lastRun > (new Date().getTime()) - 600000) {
     return lastRun;
   }
   fetchCounter++;
-  var url = 'https://api.myjson.com/bins/xw4eo';
+  var url = 'https://api.myjson.com/bins/1eh1ls';
   var response = UrlFetchApp.fetch(url, {
     'method': 'get',
     'muteHttpExceptions': false
@@ -52,6 +52,8 @@ function fillCache(force){
   var payload = JSON.parse(response.getContentText());
   
   results = payload.results;
+  resultsArray = resultsToArray();
+  lastRun = payload.lastRun;
   // cache for 10 minutes
   cache.put("lastRun", payload.lastRun, 600);
   cache.put("lastTicker", payload.lastTicker, 600);
@@ -133,7 +135,7 @@ function RELOAD_TICKERS(){
   return cache.get('lastRun');
 }
 function GET_LAST_RUN(){
-  var d = new Date(Number(cache.get("lastRun")))
+  var d = new Date(Number(lastRun))
   return d.toLocaleString()
 }
 function GET_LAST_TICKER(){
