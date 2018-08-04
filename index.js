@@ -5,6 +5,7 @@ const log = require('./utils/log')
 const pjson = require('./package')
 const request = require('request')
 const routes = require('./routes')
+const {merge} = require('lodash')
 const runner = require('./lib/runner')
 var results = require('./data/results')
 // Create a server with a host and port
@@ -31,7 +32,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 	if(remoteCache.lastRun > results.lastRun){
 		var remoteTime = new Date(remoteCache.lastRun).toLocaleString()
 		log(`remote cache is newer ${remoteCache.lastTicker} @ ${remoteTime}, using it`)
-		results = remoteCache
+		results = merge(results, remoteCache)
 	}
 	// get the latest ticker set from github
 	// (we may have updated it and then the now.sh container was killed and restarted)

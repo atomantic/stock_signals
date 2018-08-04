@@ -34,9 +34,9 @@ function resultsToArray(){
 
   return resultsArray;
 }
-function fillCache(){
+function fillCache(force){
   var lastRun = cache.get('lastRun');
-  if (lastRun && lastRun > (new Date().getTime()) - 900000) {
+  if (!force && lastRun && lastRun > (new Date().getTime()) - 600000) {
     return lastRun;
   }
   fetchCounter++;
@@ -52,10 +52,10 @@ function fillCache(){
   var payload = JSON.parse(response.getContentText());
   
   results = payload.results;
-  // cache for 15 minutes
-  cache.put("lastRun", payload.lastRun, 900);
-  cache.put("lastTicker", payload.lastTicker, 900);
-  cache.put("results", JSON.stringify(payload.results), 900);
+  // cache for 10 minutes
+  cache.put("lastRun", payload.lastRun, 600);
+  cache.put("lastTicker", payload.lastTicker, 600);
+  cache.put("results", JSON.stringify(payload.results), 600);
   return lastRun;
 }
 fillCache()
