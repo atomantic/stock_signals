@@ -1,7 +1,6 @@
 'use strict'
 const config = require('./config')
 const Hapi = require('hapi')
-const path = require('path')
 const log = require('./utils/log')
 const pjson = require('./package')
 const request = require('request')
