@@ -1,10 +1,10 @@
 {
 	"name": "runner",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "SNAPSHOT_ENABLED=true PAUSE_SECONDS=5 JSON_CACHE=https://api.myjson.com/bins/19fs22 TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js node .",
+		"start": "SNAPSHOT_ENABLED=true PAUSE_SECONDS=5 JSON_CACHE=https://api.myjson.com/bins/xw4eo TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js node .",
 		"setup": "npm i -g phantomjs-prebuilt casperjs now && npm i"
 	},
 	"repository": {

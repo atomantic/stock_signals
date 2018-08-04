@@ -12,7 +12,7 @@ ENV NPM_CONFIG_LOGLEVEL warn
 ENV LOG_LEVEL=info
 ENV ABORT_SECONDS=60
 ENV PAUSE_SECONDS=5
-ENV JSON_CACHE=https://api.myjson.com/bins/19fs22
+ENV JSON_CACHE=https://api.myjson.com/bins/xw4eo
 ENV TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js
 
 EXPOSE 8808
