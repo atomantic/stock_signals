@@ -3,6 +3,7 @@ const results = require('../data/results')
 const config = require('../config')
 const request = require('request')
 const runnerData = require('../lib/runner.data')
+const reloadTickers = require('../lib/reload.tickers')
 module.exports = [{
     method: 'GET',
     path: '/data',
@@ -59,13 +60,7 @@ module.exports = [{
     method: 'GET',
     path: '/reload',
     handler: function(req, h){
-      // update the source tickers from github
-      console.log('updating source file', process.env.TICKER_SOURCE_FILE)
-      request(process.env.TICKER_SOURCE_FILE, function(err, req, body){
-          var cleanBody = body.replace('module.exports = ','').replace(/\s/g,'')
-          config.tickers = JSON.parse('{"tickers":'+cleanBody+'}').tickers
-          console.log('tickers updated')
-      })
+      reloadTickers()
       return h.response()
     }
   }

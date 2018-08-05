@@ -34,13 +34,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 		log(`remote cache is newer ${remoteCache.lastTicker} @ ${remoteTime}, using it`)
 		results = merge(results, remoteCache)
 	}
-	// get the latest ticker set from github
-	// (we may have updated it and then the now.sh container was killed and restarted)
-	request(process.env.TICKER_SOURCE_FILE, function(req, err, body){
-		var cleanBody = body.replace('module.exports = ','').replace(/\s/g,'')
-		var tickerCount = config.tickers.length
-		config.tickers = JSON.parse('{"tickers":'+cleanBody+'}').tickers
-		console.log('updated tickers from github:', tickerCount, '=>', config.tickers.length)
+	reloadTickers(function(){
 		server.register([{
 			plugin: require('hapi-and-healthy'),
 			options: {
