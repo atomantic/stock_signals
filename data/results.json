@@ -1009,28 +1009,11 @@
       "signal": "Buy"
     },
     "NYSE-HASI": {
-      "day": {
-        "Oscillators": "Buy",
-        "Summary": "Sell",
-        "Moving Averages": "Sell"
-      },
-      "hours": {
-        "Oscillators": "Buy",
-        "Summary": "Sell",
-        "Moving Averages": "Sell"
-      },
-      "month": {
-        "Oscillators": "Sell",
-        "Summary": "Sell",
-        "Moving Averages": "Strong Sell"
-      },
-      "updated": 1533497373391,
-      "week": {
-        "Oscillators": "Neutral",
-        "Summary": "Sell",
-        "Moving Averages": "Sell"
-      },
-      "signal": "Sell"
+      "day": {},
+      "hours": {},
+      "month": {},
+      "updated": 1533499108287,
+      "week": {}
     },
     "NYSE-HBM": {
       "day": {
@@ -3367,7 +3350,7 @@
         "Moving Averages": "Strong Sell"
       },
       "hours": {
-        "Oscillators": "Buy",
+        "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
@@ -3376,7 +3359,7 @@
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533497357468,
+      "updated": 1533499103074,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Sell",
@@ -3601,6 +3584,6 @@
       "signal": "Strong Buy"
     }
   },
-  "lastRun": 1533499083804,
-  "lastTicker": "AMEX-GTE"
+  "lastRun": 1533499108287,
+  "lastTicker": "NYSE-HASI"
 }
