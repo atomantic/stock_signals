@@ -8,6 +8,7 @@ const routes = require('./routes')
 const {merge} = require('lodash')
 const runner = require('./lib/runner')
 var results = require('./data/results')
+const reloadTickers = require('./lib/reload.tickers')
 // Create a server with a host and port
 const server = new Hapi.Server({
 	port: 8808
