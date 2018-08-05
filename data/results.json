@@ -16,7 +16,7 @@
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533496989141,
+      "updated": 1533498653013,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Buy",
@@ -568,7 +568,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533496775816,
+      "updated": 1533498448641,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Buy",
@@ -592,7 +592,7 @@
         "Summary": "Buy",
         "Moving Averages": "Neutral"
       },
-      "updated": 1533496811800,
+      "updated": 1533498482840,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Buy",
@@ -616,7 +616,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533496827580,
+      "updated": 1533498500088,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
@@ -631,7 +631,7 @@
         "Moving Averages": "Strong Buy"
       },
       "hours": {
-        "Oscillators": "Neutral",
+        "Oscillators": "Sell",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
@@ -640,7 +640,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533496866682,
+      "updated": 1533498538547,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Buy",
@@ -664,7 +664,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533496890528,
+      "updated": 1533498560851,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Buy",
@@ -688,7 +688,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533496908716,
+      "updated": 1533498581754,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
@@ -703,16 +703,16 @@
         "Moving Averages": "Strong Sell"
       },
       "hours": {
-        "Oscillators": "Neutral",
+        "Oscillators": "Sell",
         "Summary": "Sell",
-        "Moving Averages": "Strong Sell"
+        "Moving Averages": "Sell"
       },
       "month": {
         "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533496926509,
+      "updated": 1533498601317,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Sell",
@@ -736,7 +736,7 @@
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533496966669,
+      "updated": 1533498633902,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Sell",
@@ -751,7 +751,7 @@
         "Moving Averages": "Strong Buy"
       },
       "hours": {
-        "Oscillators": "Sell",
+        "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
@@ -760,7 +760,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533497030829,
+      "updated": 1533498699575,
       "week": {
         "Oscillators": "Sell",
         "Summary": "Buy",
@@ -777,14 +777,14 @@
       "hours": {
         "Oscillators": "Sell",
         "Summary": "Sell",
-        "Moving Averages": "Sell"
+        "Moving Averages": "Neutral"
       },
       "month": {
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533497048868,
+      "updated": 1533498717731,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Buy",
@@ -808,7 +808,7 @@
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533497069203,
+      "updated": 1533498737196,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Sell",
@@ -832,7 +832,7 @@
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533497104514,
+      "updated": 1533498775251,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Sell",
@@ -847,7 +847,7 @@
         "Moving Averages": "Strong Sell"
       },
       "hours": {
-        "Oscillators": "Neutral",
+        "Oscillators": "Buy",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
@@ -856,7 +856,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533497122771,
+      "updated": 1533498804754,
       "week": {
         "Oscillators": "Sell",
         "Summary": "Sell",
@@ -880,7 +880,7 @@
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533497227795,
+      "updated": 1533498935194,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Sell",
@@ -895,7 +895,7 @@
         "Moving Averages": "Strong Sell"
       },
       "hours": {
-        "Oscillators": "Buy",
+        "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
@@ -904,7 +904,7 @@
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533497261730,
+      "updated": 1533498980918,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Sell",
@@ -919,8 +919,8 @@
         "Moving Averages": "Strong Buy"
       },
       "hours": {
-        "Oscillators": "Buy",
-        "Summary": "Strong Buy",
+        "Oscillators": "Sell",
+        "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
       "month": {
@@ -928,13 +928,13 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533497277670,
+      "updated": 1533499002090,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "signal": "Strong Buy"
+      "signal": "Buy"
     },
     "NYSE-GME": {
       "day": {
@@ -952,7 +952,7 @@
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533497294731,
+      "updated": 1533499022651,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Sell",
@@ -976,7 +976,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533497310775,
+      "updated": 1533499045672,
       "week": {
         "Oscillators": "Sell",
         "Summary": "Buy",
@@ -1000,7 +1000,7 @@
         "Summary": "Strong Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533497325692,
+      "updated": 1533499064589,
       "week": {
         "Oscillators": "Sell",
         "Summary": "Buy",
@@ -1648,7 +1648,7 @@
         "Summary": "Sell",
         "Moving Averages": "Neutral"
       },
-      "updated": 1533497012183,
+      "updated": 1533498671556,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Buy",
@@ -1672,7 +1672,7 @@
         "Summary": "Buy",
         "Moving Averages": "Buy"
       },
-      "updated": 1533497140105,
+      "updated": 1533498830230,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Buy",
@@ -1696,7 +1696,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533497155880,
+      "updated": 1533498851495,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
@@ -2560,7 +2560,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533496794064,
+      "updated": 1533498465947,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
@@ -2584,7 +2584,7 @@
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533497194505,
+      "updated": 1533498893341,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Sell",
@@ -2599,8 +2599,8 @@
         "Moving Averages": "Strong Sell"
       },
       "hours": {
-        "Oscillators": "Buy",
-        "Summary": "Sell",
+        "Oscillators": "Sell",
+        "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
       },
       "month": {
@@ -2608,7 +2608,7 @@
         "Summary": "Strong Sell",
         "Moving Averages": "Strong Sell"
       },
-      "updated": 1533497210673,
+      "updated": 1533498913782,
       "week": {
         "Oscillators": "Sell",
         "Summary": "Sell",
@@ -3184,7 +3184,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533496844968,
+      "updated": 1533498519144,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Strong Buy",
@@ -3208,7 +3208,7 @@
         "Summary": "Buy",
         "Moving Averages": "Neutral"
       },
-      "updated": 1533496945353,
+      "updated": 1533498617441,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Sell",
@@ -3232,7 +3232,7 @@
         "Summary": "Buy",
         "Moving Averages": "Strong Buy"
       },
-      "updated": 1533497087938,
+      "updated": 1533498754698,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Buy",
@@ -3247,7 +3247,7 @@
         "Moving Averages": "Strong Sell"
       },
       "hours": {
-        "Oscillators": "Buy",
+        "Oscillators": "Neutral",
         "Summary": "Sell",
         "Moving Averages": "Strong Sell"
       },
@@ -3256,7 +3256,7 @@
         "Summary": "Sell",
         "Moving Averages": "Sell"
       },
-      "updated": 1533497173108,
+      "updated": 1533498873717,
       "week": {
         "Oscillators": "Neutral",
         "Summary": "Sell",
@@ -3272,21 +3272,21 @@
       },
       "hours": {
         "Oscillators": "Buy",
-        "Summary": "Sell",
-        "Moving Averages": "Sell"
+        "Summary": "Buy",
+        "Moving Averages": "Neutral"
       },
       "month": {
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Buy"
       },
-      "updated": 1533497244802,
+      "updated": 1533498954915,
       "week": {
         "Oscillators": "Buy",
         "Summary": "Buy",
         "Moving Averages": "Buy"
       },
-      "signal": "Neutral"
+      "signal": "Buy"
     },
     "NASDAQ-NVAX": {
       "day": {
@@ -3352,7 +3352,7 @@
         "Summary": "Buy",
         "Moving Averages": "Buy"
       },
-      "updated": 1533497341855,
+      "updated": 1533499083804,
       "week": {
         "Oscillators": "Sell",
         "Summary": "Buy",
@@ -3601,6 +3601,6 @@
       "signal": "Strong Buy"
     }
   },
-  "lastRun": 1533498430838,
-  "lastTicker": "NASDAQ-CRSP"
+  "lastRun": 1533499083804,
+  "lastTicker": "AMEX-GTE"
 }
