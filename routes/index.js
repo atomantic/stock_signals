@@ -18,6 +18,14 @@ module.exports = [{
     }
   },{
     method: 'GET',
+    path: '/tickers/update',
+    handler: function(req, h){
+      reloadTickers(function(){
+        return h.response(config.tickers)
+      })
+    }
+  },{
+    method: 'GET',
     path: '/set/{ticker}',
     handler: function(req, h){
       // change the currentIndex to make it run a particular ticker next
@@ -55,13 +63,6 @@ module.exports = [{
         }
       })
       return h.response(results)
-    }
-  },{
-    method: 'GET',
-    path: '/reload',
-    handler: function(req, h){
-      reloadTickers()
-      return h.response()
     }
   }
 ]
