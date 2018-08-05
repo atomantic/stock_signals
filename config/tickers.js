@@ -19,6 +19,7 @@ module.exports = [
     "AMEX-BTG",
     "NYSE-C",
     "NYSE-CBL",
+    "NYSE-CCI",
     "NASDAQ-CDTI",
     "NASDAQ-CELG",
     "NYSE-CF",
