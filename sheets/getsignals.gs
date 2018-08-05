@@ -12,7 +12,7 @@ var fetchCounter = 0;
 
 function resultsToArray(){
  // map results to an array
-  var resultsArray = []
+  var resultsArray = [];
   for(t in results){
     resultsArray.push([
       t,
@@ -20,8 +20,9 @@ function resultsToArray(){
       results[t].day ? results[t].day.Summary : '?',
       results[t].hours ? results[t].hours.Summary : '?',
       results[t].week ? results[t].week.Summary : '?',
-      (new Date(results[t].updated)).toLocaleString()
-    ])
+      results[t].month ? results[t].month.Summary : '?',
+      dateToHuman(results[t].updated)
+    ]);
   }
   // alphebetize elements by ticker suffix
   // (e.g. NASDAQ-EKSO sorts in E, by EKSO)
@@ -53,6 +54,7 @@ function fillCache(force){
   
   results = payload.results;
   resultsArray = resultsToArray();
+  //GET_SIGNALS_ARRAY(); // retrigger for reflow
   lastRun = payload.lastRun;
   // cache for 10 minutes
   cache.put("lastRun", payload.lastRun, 600);
@@ -61,6 +63,11 @@ function fillCache(force){
   return lastRun;
 }
 fillCache()
+
+function dateToHuman(timestamp){
+  var d = new Date(timestamp);
+  return (d.getMonth()+1)+'/'+(d.getDate()+1)+' '+d.toLocaleTimeString()
+}
 
 function isEmptyObject(obj) {
   for(var prop in obj) {
@@ -79,6 +86,7 @@ function isEmptyObject(obj) {
  * "signal": "Buy", 
  * "hours": {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"}
  * "day": {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"}
+ * "month": {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"}
  * "week": {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"}
  * }
  * )
@@ -86,20 +94,20 @@ function isEmptyObject(obj) {
 function getTickerObj(ticker){
   if(isEmptyObject(results)){
     // see if it was updated after open
-    results = JSON.parse(cache.get('results')||'{}')
+    results = JSON.parse(cache.get('results')||'{}');
   }
   if(results[ticker]){
     return results[ticker];
   }
   // now fuzz test the ticker for a match
-  var markets = ['AMEX','ASX','NASDAQ','NYSE','TSX']
+  var markets = ['AMEX','ASX','NASDAQ','NYSE','TSX'];
   for(var i=0; i<markets.length; i++){
-    var key = markets[i]+'-'+ticker
+    var key = markets[i]+'-'+ticker;
     if(results[key]){
-      return results[key]
+      return results[key];
     }
   }
-  throw('ticker not found: '+ticker)
+  throw('ticker not found: '+ticker);
 }
 
 /**
@@ -109,7 +117,7 @@ function getTickerObj(ticker){
  * @return {object} period signal (e.g. {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"})
  */
 function getSignals(ticker, period){
-  return getTickerObj(ticker)[period] || {}
+  return getTickerObj(ticker)[period] || {};
 }
 
 function ticker2Sub(ticker){
@@ -117,7 +125,7 @@ function ticker2Sub(ticker){
   // e.g. NYSEAMERICAN:BTG
   var subTicker = ticker.split(':')
   if(subTicker.length === 2){
-    ticker = subTicker[1]
+    ticker = subTicker[1];
   }
   return ticker;
 }
@@ -135,33 +143,32 @@ function RELOAD_TICKERS(){
   return cache.get('lastRun');
 }
 function GET_LAST_RUN(){
-  var d = new Date(Number(lastRun))
-  return d.toLocaleString()
+  return dateToHuman(Number(lastRun));
 }
 function GET_LAST_TICKER(){
-  return "Last: "+cache.get("lastTicker")
+  return "Last: "+cache.get("lastTicker");
 }
 
 function GET_TICKER_SIGNAL(ticker, period, signal){
   ticker = ticker2Sub(ticker);
-  var tickerResults = getSignals(ticker, period)
+  var tickerResults = getSignals(ticker, period);
   if(!tickerResults){
-    return 'ticker?'
+    return 'ticker?';
   }
   if(!tickerResults[signal]){
-    throw 'no results for signal'
+    throw 'no results for signal';
   }
-  return tickerResults[signal]
+  return tickerResults[signal];
 }
 
 function GET_TICKER_UPDATE(ticker){
   ticker = ticker2Sub(ticker);
   var tickerObj = getTickerObj(ticker);
-  var updatedDate = tickerObj['updated']||(tickerObj.day?tickerObj.day.date:false)
+  var updatedDate = tickerObj['updated']||(tickerObj.day?tickerObj.day.date:false);
   if(!updatedDate){
-    throw 'not found'+ticker
+    throw 'not found'+ticker;
   }
-  return (new Date(updatedDate)).toLocaleString()
+  return dateToHuman(updateDate);
 }
 
 function GET_TICKER_META_SIGNAL(ticker){
@@ -174,7 +181,7 @@ function GET_TICKER_META_SIGNAL(ticker){
 // return an array of cells showing [signal, hour.Summary, day.Summary, week.Summary]
 function GET_SIGNALS_ARRAY(){
   if(!resultsArray.length){
-    resultsArray = resultsToArray()
+    resultsArray = resultsToArray();
   }
   return resultsArray;
 }
@@ -182,5 +189,5 @@ function GET_SIGNALS_ARRAY(){
 // alphabetize ticker list by suffix (to match sheet)
 // return an array of cells showing [signal, hour.Summary, day.Summary, week.Summary]
 function GET_RESULTS_LENGTH(){
-  return resultsArray.length
+  return resultsArray.length;
 }
