@@ -47,6 +47,7 @@ module.exports = [{
             signal: '?',
             day: {},
             hours: {},
+            month: {},
             updated: now(),
             week: {}
           }
