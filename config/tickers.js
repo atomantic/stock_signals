@@ -109,6 +109,7 @@ module.exports = [
     "NYSE-PPG",
     "NASDAQ-PRVB",
     "NASDAQ-QCOM",
+    "NYSE-RCL",
     "NYSE-REG",
     "AMEX-REMX",
     "NYSE-RIO",
