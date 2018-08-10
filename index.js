@@ -33,7 +33,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 	if(remoteCache.lastRun > results.lastRun){
 		var remoteTime = new Date(remoteCache.lastRun).toLocaleString()
 		log(`remote cache is newer ${remoteCache.lastTicker} @ ${remoteTime}, using it`)
-		var i = config.tickers.indexOf(req.params.ticker)
+		var i = config.tickers.indexOf(remoteCache.lastTicker)
 		if(i===-1){
 			console.log('could not find last run ticker in config; starting random.')
 		}else{
