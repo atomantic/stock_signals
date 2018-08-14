@@ -49,6 +49,7 @@ module.exports = [
     "AMEX-EWA",
     "NYSE-F",
     "NASDAQ-FB",
+    "NYSE-FNF",
     "TSX-FTS",
     "NYSE-FTV",
     "AMEX-FXI",
