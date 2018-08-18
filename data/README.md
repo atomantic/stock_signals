@@ -40,10 +40,15 @@ ticker  price   time    meta_signal    previous_meta
 4_hour_summary_from  1_day_summary_from   1_week_summary_from  1_month_summary_from
 ```
 
+The signal database creates 8KB per full run.
+Each run takes ~1 hour.
+This should create about 60MB per year.
+
 
 # Cleaning Errors
 
-Remove 0 price records:
+# Jupyter Notebook
 ```
-\w+-\w+,0,15[\d,-]+\n
+cd data;
+docker run -it -v $(pwd):/home/jovyan --rm -p 8888:8888 jupyter/scipy-notebook
 ```
