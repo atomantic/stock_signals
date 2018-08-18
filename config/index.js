@@ -1,6 +1,7 @@
 module.exports = {
   maps: require('./maps'),
   tickerSchema: {
+    price: 0,
     time: 0,
     sum: [
       0, // 4 hour summary signal
@@ -15,5 +16,6 @@ module.exports = {
     from: 0 // the previous meta value
   },
   tickers: require('./tickers'),
-  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+  // userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
 }

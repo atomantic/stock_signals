@@ -31,3 +31,11 @@ For all logs and db files, the following legend maps TradingView Summary Signal 
 Additionally, we save every single hit to a rolling log file, which we can use for backtesting strategies, and to see if the current signal is either moving up or down (direction is important). We use the last known state to know if the signal is either retreating or moving forward.
 
 The rolling logs are capped at 100MB and are saved as minimal csv files using numeric indicators to create smaller files.
+
+The column headers for the files are the following:
+
+```
+ticker  price   time    meta_signal    previous_meta
+4_hour_summary  1_day_summary   1_week_summary  1_month_summary
+4_hour_summary_from  1_day_summary_from   1_week_summary_from  1_month_summary_from
+```
