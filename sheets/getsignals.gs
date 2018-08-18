@@ -7,26 +7,34 @@ var cache = CacheService.getUserCache();
 //var cache = CacheService.getDocumentCache();
 var results = JSON.parse(cache.get('results')||'{}');
 var resultsArray = resultsToArray();
-var lastRun = cache.get('lastRun');
+var time = cache.get('time');
 var fetchCounter = 0;
 
 function resultsToArray(){
+  var reverseValues = {
+    '-2': 'Strong Sell',
+    '-1': 'Sell',
+    '0': 'Neutral',
+    '1': 'Buy',
+    '2': 'Strong Buy'
+ };
  // map results to an array
-  var resultsArray = [];
+  var res = [];
   for(t in results){
-    resultsArray.push([
+    res.push([
       t,
-      results[t].signal,
-      results[t].day ? results[t].day.Summary : '?',
-      results[t].hours ? results[t].hours.Summary : '?',
-      results[t].week ? results[t].week.Summary : '?',
-      results[t].month ? results[t].month.Summary : '?',
-      dateToHuman(results[t].updated)
+      Math.round(results[t].meta - results[t].from),
+      reverseValues[results[t].meta],
+      reverseValues[results[t].sum[0]], // 4 hour
+      reverseValues[results[t].sum[1]], // 1 day
+      reverseValues[results[t].sum[2]], // 1 week
+      reverseValues[results[t].sum[3]], // 1 month
+      dateToHuman(results[t].time)
     ]);
   }
   // alphebetize elements by ticker suffix
   // (e.g. NASDAQ-EKSO sorts in E, by EKSO)
-  resultsArray.sort(function(a, b){
+  res.sort(function(a, b){
     var keyA = a[0].split('-')[1],
         keyB = b[0].split('-')[1];
     if(keyA < keyB) return -1;
@@ -34,11 +42,11 @@ function resultsToArray(){
     return 0;
   });
 
-  return resultsArray;
+  return res;
 }
 function fillCache(force){
-  if (!force && lastRun && lastRun > (new Date().getTime()) - 600000) {
-    return lastRun;
+  if (!force && time && time > (new Date().getTime()) - 600000) {
+    return time;
   }
   fetchCounter++;
   var url = 'https://api.myjson.com/bins/1eh1ls';
@@ -55,12 +63,12 @@ function fillCache(force){
   results = payload.results;
   resultsArray = resultsToArray();
   //GET_SIGNALS_ARRAY(); // retrigger for reflow
-  lastRun = payload.lastRun;
+  time = payload.time;
   // cache for 10 minutes
-  cache.put("lastRun", payload.lastRun, 600);
-  cache.put("lastTicker", payload.lastTicker, 600);
-  cache.put("results", JSON.stringify(payload.results), 600);
-  return lastRun;
+  cache.put("time", payload.time, 600);
+  cache.put("last", payload.last, 600);
+  cache.put("results", JSON.stringify(payload.tickers), 600);
+  return time;
 }
 fillCache()
 
@@ -81,15 +89,7 @@ function isEmptyObject(obj) {
 /**
  * get a ticker's results object
  * @param {string} ticker, the ticker symbol (either in format `NASDAQ-NVDA` or `NVDA`)
- * @return {object} ticker (e.g. {
- * "updated":"1533083031228",
- * "signal": "Buy", 
- * "hours": {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"}
- * "day": {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"}
- * "month": {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"}
- * "week": {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"}
- * }
- * )
+ * @return {object} ticker object
  */
 function getTickerObj(ticker){
   if(isEmptyObject(results)){
@@ -120,16 +120,6 @@ function getSignals(ticker, period){
   return getTickerObj(ticker)[period] || {};
 }
 
-function ticker2Sub(ticker){
-  // Google Finance API requires ticker has leading market with a colon
-  // e.g. NYSEAMERICAN:BTG
-  var subTicker = ticker.split(':')
-  if(subTicker.length === 2){
-    ticker = subTicker[1];
-  }
-  return ticker;
-}
-
 // SHEETS API
 
 function GET_TICKER_FETCH_COUNTER(){
@@ -138,56 +128,25 @@ function GET_TICKER_FETCH_COUNTER(){
 function RELOAD_TICKERS(){
   Utilities.sleep(600000);
   results = {};
-  cache.removeAll(['lastRun','lastTicker','results']);
+  cache.removeAll(['time','last','results']);
   fillCache();
-  return cache.get('lastRun');
+  return cache.get('time');
 }
 function GET_LAST_RUN(){
-  return dateToHuman(Number(lastRun));
+  return dateToHuman(Number(time));
 }
 function GET_LAST_TICKER(){
-  return "Last: "+cache.get("lastTicker");
-}
-
-function GET_TICKER_SIGNAL(ticker, period, signal){
-  ticker = ticker2Sub(ticker);
-  var tickerResults = getSignals(ticker, period);
-  if(!tickerResults){
-    return 'ticker?';
-  }
-  if(!tickerResults[signal]){
-    throw 'no results for signal';
-  }
-  return tickerResults[signal];
-}
-
-function GET_TICKER_UPDATE(ticker){
-  ticker = ticker2Sub(ticker);
-  var tickerObj = getTickerObj(ticker);
-  var updatedDate = tickerObj['updated']||(tickerObj.day?tickerObj.day.date:false);
-  if(!updatedDate){
-    throw 'not found'+ticker;
-  }
-  return dateToHuman(updateDate);
-}
-
-function GET_TICKER_META_SIGNAL(ticker){
-  ticker = ticker2Sub(ticker);
-  var tickerObj = getTickerObj(ticker);
-  return tickerObj['signal'];
+  return "Last: "+cache.get("last");
 }
 
 // alphabetize ticker list by suffix (to match sheet)
-// return an array of cells showing [signal, hour.Summary, day.Summary, week.Summary]
+// return an array of cells showing [signal, direction, hour.Summary, day.Summary, week.Summary, month.Summary]
 function GET_SIGNALS_ARRAY(){
   if(!resultsArray.length){
     resultsArray = resultsToArray();
   }
   return resultsArray;
 }
-
-// alphabetize ticker list by suffix (to match sheet)
-// return an array of cells showing [signal, hour.Summary, day.Summary, week.Summary]
 function GET_RESULTS_LENGTH(){
   return resultsArray.length;
 }

@@ -39,3 +39,11 @@ ticker  price   time    meta_signal    previous_meta
 4_hour_summary  1_day_summary   1_week_summary  1_month_summary
 4_hour_summary_from  1_day_summary_from   1_week_summary_from  1_month_summary_from
 ```
+
+
+# Cleaning Errors
+
+Remove 0 price records:
+```
+\w+-\w+,0,15[\d,-]+\n
+```

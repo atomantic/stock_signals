@@ -38,7 +38,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 			console.log('could not find last run ticker in config; starting random.')
 		}else{
 			// start here
-			runner.data.currentIndex = i
+			runner.data.i = i
 		}
 		results = merge(results, remoteCache)
 	}
