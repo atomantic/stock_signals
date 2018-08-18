@@ -1,7 +1,6 @@
-const {	each, now } = require('lodash')
-const results = require('../data/results')
+const {	cloneDeep, each } = require('lodash')
+const results = require('../data/latest')
 const config = require('../config')
-const request = require('request')
 const runnerData = require('../lib/runner.data')
 const reloadTickers = require('../lib/reload.tickers')
 module.exports = [{
@@ -43,23 +42,16 @@ module.exports = [{
     path: '/sync',
     handler: function(req, h){
       // clean the results list to only contain the tickers present in the ticker list
-      each(results.results, function(value, key){
+      each(results.tickers, function(value, key){
         if(config.tickers.indexOf(key)===-1){
           // should not exist
-          delete results.results[key]
+          delete results.tickers[key]
         }
       })
       // ensure that there is a blank ticker result for any that are missing
       each(config.tickers, function(key){
-        if(!results.results[key]){
-          results.results[key] = {
-            signal: '?',
-            day: {},
-            hours: {},
-            month: {},
-            updated: now(),
-            week: {}
-          }
+        if(!results.tickers[key]){
+          results.tickers[key] = cloneDeep(config.tickerSchema)
         }
       })
       return h.response(results)
