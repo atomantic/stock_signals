@@ -7,7 +7,7 @@ const request = require('request')
 const routes = require('./routes')
 const {merge} = require('lodash')
 const runner = require('./lib/runner')
-var results = require('./data/results')
+var results = require('./data/latest')
 const reloadTickers = require('./lib/reload.tickers')
 // Create a server with a host and port
 const server = new Hapi.Server({
@@ -28,12 +28,12 @@ request(process.env.JSON_CACHE, function(err, response, body){
 	}catch(e){
 		throw e.message
 	}
-	log('remote lastRun:', remoteCache.lastRun)
-	log(' local lastRun:', results.lastRun)
-	if(remoteCache.lastRun > results.lastRun){
-		var remoteTime = new Date(remoteCache.lastRun).toLocaleString()
-		log(`remote cache is newer ${remoteCache.lastTicker} @ ${remoteTime}, using it`)
-		var i = config.tickers.indexOf(remoteCache.lastTicker)
+	log('remote lastRun:', remoteCache.time)
+	log(' local lastRun:', results.time)
+	if(remoteCache.time > results.time){
+		var remoteTime = new Date(remoteCache.time).toLocaleString()
+		log(`remote cache is newer ${remoteCache.last} @ ${remoteTime}, using it`)
+		var i = config.tickers.indexOf(remoteCache.last)
 		if(i===-1){
 			console.log('could not find last run ticker in config; starting random.')
 		}else{
@@ -49,8 +49,8 @@ request(process.env.JSON_CACHE, function(err, response, body){
 				usage: false,
 				custom: {
 					abort_seconds: process.env.ABORT_SECONDS,
-					lastRun: results.lastRun,
-					lastTicker: results.lastTicker,
+					lastRun: results.time,
+					lastTicker: results.last,
 					pause_seconds: process.env.PAUSE_SECONDS
 				},
 				id: pjson.version,
