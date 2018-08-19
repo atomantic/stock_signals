@@ -60,7 +60,7 @@ function fillCache(force){
   }
   var payload = JSON.parse(response.getContentText());
   
-  results = payload.results;
+  results = payload.tickers;
   resultsArray = resultsToArray();
   //GET_SIGNALS_ARRAY(); // retrigger for reflow
   time = payload.time;
