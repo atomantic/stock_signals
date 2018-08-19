@@ -16,6 +16,7 @@
 	"private": true,
 	"dependencies": {
 		"casperjs": "1.1.4",
+		"chalk": "2.4.1",
 		"cheerio": "1.0.0-rc.2",
 		"hapi": "17.5.2",
 		"hapi-and-healthy": "6.0.1",

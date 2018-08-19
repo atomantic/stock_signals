@@ -1,4 +1,11 @@
 module.exports = {
+    colors: {
+        '-2': 'red',
+        '-1': 'magenta',	
+        '0': 'gray',
+        '1': 'green',
+        '2': 'cyan'
+    },
     icons: {
         '-2': '🤑',
         '-1': '💰',	
