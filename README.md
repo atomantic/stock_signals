@@ -113,14 +113,69 @@ docker run -it -v $(pwd):/home/jovyan --rm -p 8888:8888 jupyter/scipy-notebook
 ```
 This outputs `./data/signals.csv`, which is the combined, sanitized database file of unique data on each ticker over time. This can then be thrown into BigQuery/DynamoDB or some other system to run ML, draw charts, or run other queries.
 
+## TODO
+- use python to evaluate to query how often the price prediction goes up, but the price goes down--and vice versa. 
+  - If the move is positive, we would expect the price to go up on the next log entry.
+  - if the move is negative, we expect the price to go down on the next query
+  - remove oldest entry for each ticker (those began with a Neutral rating for all previous signals)
+
 ## Sync to Google Cloud Storage
 ```
 gsutil rsync -d data gs://stock-tickers/data
 ```
+
+# BigQuery ML
 
 ## Load into BigQuery
 ```
 # from cloud storage
 bq mk ticker_tracker
 bq load --source_format=CSV --location=US ticker_tracker.signals gs://stock-tickers/data/signals.csv ticker:string,price:float,time:integer,meta_signal:integer,meta_previous:integer,h:integer,d:integer,w:integer,m:integer,hp:integer,dp:integer,wp:integer,mp:integer,exchange:string,name:string,move:integer
+```
+
+## Linear Regression Model
+
+create model
+```
+CREATE MODEL
+  `signals.model_aapl_price`
+OPTIONS
+  ( model_type='linear_reg',
+    ls_init_learn_rate=.15,
+    l1_reg=1,
+    max_iterations=5,
+    data_split_method='seq',
+    data_split_eval_fraction=0.3,
+    data_split_col='time' ) AS
+SELECT
+  meta_signal,
+  meta_previous,
+  h,d,w,m,
+  hp,dp,wp,mp,move,
+  time,
+  price
+FROM
+  `ticker_tracker.signals`
+WHERE
+  name = "AAPL"
+```
+
+predict
+```
+SELECT
+  *
+FROM
+  ML.PREDICT(MODEL `signals.model_aapl_price`,
+    (
+    SELECT
+      price,
+      time,
+      meta_signal,
+      meta_previous,
+      h,d,w,m,
+      hp,dp,wp,mp,move,
+    FROM
+      `ticker_tracker.signals`
+    WHERE
+      name = "AAPL"))
 ```
