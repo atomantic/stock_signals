@@ -92,7 +92,7 @@ The rolling logs are capped at 100MB and are saved as minimal csv files using nu
 The column headers for the files are the following:
 
 ```
-ticker  price   time    meta_signal    previous_meta
+ticker  price   time    meta_signal    meta_previous
 4_hour_summary  1_day_summary   1_week_summary  1_month_summary
 4_hour_summary_from  1_day_summary_from   1_week_summary_from  1_month_summary_from
 ```
@@ -113,6 +113,13 @@ docker run -it -v $(pwd):/home/jovyan --rm -p 8888:8888 jupyter/scipy-notebook
 ```
 This outputs `./data/signals.csv`, which is the combined, sanitized database file of unique data on each ticker over time. This can then be thrown into BigQuery/DynamoDB or some other system to run ML, draw charts, or run other queries.
 
-# TODO:
-- store historical data in google cloud datastore (and run linear regressions with BigQuery)
-- if the price is 0 or NaN, abort bad (and alert me)
+## Sync to Google Cloud Storage
+```
+gsutil rsync -d data gs://stock-tickers/data
+```
+
+## Load into BigQuery
+```
+# from cloud storage
+bq load --source_format=CSV --location=US ticker_tracker.signals gs://stock-tickers/data/signals.csv ticker:string,price:float,time:integer,meta_signal:integer,meta_previous:integer,h:integer,d:integer,w:integer,m:integer,hp:integer,dp:integer,wp:integer,mp:integer,exchange:string,name:string,move:integer
+```
