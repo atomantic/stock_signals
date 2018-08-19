@@ -121,5 +121,6 @@ gsutil rsync -d data gs://stock-tickers/data
 ## Load into BigQuery
 ```
 # from cloud storage
+bq mk ticker_tracker
 bq load --source_format=CSV --location=US ticker_tracker.signals gs://stock-tickers/data/signals.csv ticker:string,price:float,time:integer,meta_signal:integer,meta_previous:integer,h:integer,d:integer,w:integer,m:integer,hp:integer,dp:integer,wp:integer,mp:integer,exchange:string,name:string,move:integer
 ```
