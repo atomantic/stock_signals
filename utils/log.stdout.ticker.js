@@ -4,6 +4,9 @@ const config = require('../config')
 const log = require('./log')
 const outpad = require('./outpad')
 module.exports = function(ticker, results) {
+    if(typeof results.sum[1]==='undefined'){
+        return console.error('problem detected: ', ticker, results)
+    }
     let movement = Math.round(results.meta - results.from)
     log(
         chalk.blue(outpad(ticker, 15)),
