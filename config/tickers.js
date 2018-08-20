@@ -108,6 +108,7 @@ module.exports = [
     "NASDAQ-NVDA",
     "NYSE-O",
     "NASDAQ-PACB",
+    "NASDAQ-PEP",
     "NYSE-PFE",
     "NASDAQ-PFLT",
     "AMEX-PLM",
