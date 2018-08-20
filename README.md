@@ -31,6 +31,7 @@ this will:
 ```
 npm start
 ```
+![running](img/running.png)
 
 ## Testing
 You can run a single ticker test like so:
