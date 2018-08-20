@@ -5,7 +5,8 @@ const log = require('./utils/log')
 const pjson = require('./package')
 const request = require('request')
 const routes = require('./routes')
-const {merge} = require('lodash')
+const {each, merge} = require('lodash')
+const outpad = require('./utils/outpad')
 const runner = require('./lib/runner')
 var results = require('./data/latest')
 const reloadTickers = require('./lib/reload.tickers')
@@ -14,6 +15,11 @@ const server = new Hapi.Server({
 	port: 8808
 })
 require('./lib/process')(server)
+
+console.log('Icon Legend:')
+var iconHelp = ''
+each(config.maps.icons, (k,v) => iconHelp+=outpad(k+': '+config.maps.reverseValues[v]+' ('+v+')', 20))
+console.log(iconHelp)
 
 // check to see if the remote cache has a newer copy than our static results.json
 // I may have run this in a shorter wait period, more recently on my machine

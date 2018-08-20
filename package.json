@@ -15,6 +15,7 @@
 	"license": "ISC",
 	"private": true,
 	"dependencies": {
+		"async.parallel": "0.5.2",
 		"casperjs": "1.1.4",
 		"chalk": "2.4.1",
 		"cheerio": "1.0.0-rc.2",
