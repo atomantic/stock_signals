@@ -10,7 +10,6 @@ module.exports = {
       if(i===-1){
         return h.response('not found')
       }
-      // set two back so we will increment into it after the current run finishes
       runnerData.i = i-1
       return h.response(runnerData.i)
     }
