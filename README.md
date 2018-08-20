@@ -114,12 +114,6 @@ docker run -it -v $(pwd):/home/jovyan --rm -p 8888:8888 jupyter/scipy-notebook
 ```
 This outputs `./data/signals.csv`, which is the combined, sanitized database file of unique data on each ticker over time. This can then be thrown into BigQuery/DynamoDB or some other system to run ML, draw charts, or run other queries.
 
-## TODO
-- use python to evaluate to query how often the price prediction goes up, but the price goes down--and vice versa. 
-  - If the move is positive, we would expect the price to go up on the next log entry.
-  - if the move is negative, we expect the price to go down on the next query
-  - remove oldest entry for each ticker (those began with a Neutral rating for all previous signals)
-
 ## Sync to Google Cloud Storage
 ```
 gsutil rsync -d data gs://stock-tickers/data
