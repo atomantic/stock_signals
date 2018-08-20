@@ -1,7 +1,4 @@
-cookies.txt
 node_modules
-package-lock.json
-*.xlsx
 .ipynb_checkpoints
 .config
 .ipython
@@ -9,9 +6,9 @@ package-lock.json
 data/*.localstorage
 data/cookies*
 data/*.html
+data/signals.*.0.csv
+data/timeseries/*.csv
 snaps/*.png
 config/diff.js
-config/whitelist_new.js
-config/integrations_bak.js
 .idea
 dockerized-phantomjs.tar.gz
