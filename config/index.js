@@ -9,14 +9,6 @@ module.exports = {
       [],
       []
     ],
-    ma_change: [
-      [
-        // Hull MA percentage change
-      ],
-      [],
-      [],
-      []
-    ],
     osc: [
       [
         // Relative Strength Index (14)

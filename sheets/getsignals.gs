@@ -21,17 +21,6 @@ function resultsToArray(){
  // map results to an array
   var res = [];
   for(t in results){
-    // temporary to fix backward compatibility (older records)
-    // delete after full run
-    if(!results[t].ma){
-      results[t].ma = [[0],[0],[0],[0]];
-    }
-    if(!results[t].ma_change){
-      results[t].ma_change = [[0],[0],[0],[0]];
-    }
-    if(!results[t].osc){
-      results[t].osc = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
-    }
     res.push([
       t,
       dateToHuman(results[t].time),
@@ -61,14 +50,10 @@ function resultsToArray(){
       results[t].osc[1][4],
       results[t].osc[2][4],
       results[t].osc[3][4],
-      results[t].ma[0][0], // Hull Moving Average (9)
-      results[t].ma[0][0],
-      results[t].ma[0][0],
-      results[t].ma[0][0],
-      results[t].ma_change[0][0], // Hull Moving Average (9)
-      results[t].ma_change[0][0],
-      results[t].ma_change[0][0],
-      results[t].ma_change[0][0],
+      results[t].ma[0][0], // Hull Moving Average (9) - numeric indicator (-2, -1, 0, 1, 2)
+      results[t].ma[1][0],
+      results[t].ma[2][0],
+      results[t].ma[3][0],
       results[t].price,
       results[t].change
     ]);

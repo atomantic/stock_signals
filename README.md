@@ -72,10 +72,10 @@ For all logs and db files, the following legend maps TradingView Summary Signal 
     "tickers": {
       "NASDAQ-EKSO": {
       "ma": [
-        [2.59], // 4 hour Hull MA
-        [2.84], // 1 day Hull MA
-        [2.71], // 1 week Hull MA
-        [2.04]  // 1 month Hull MA
+        [1], // 4 hour Hull MA (numeric indicator)
+        [1], // 1 day Hull MA
+        [1], // 1 week Hull MA
+        [1]  // 1 month Hull MA
       ],
       "osc": [
         [ // 4 hour oscillators
@@ -137,13 +137,14 @@ ticker  price   time    meta_signal    meta_previous
 4h_stoch, 1d_stoch, 1w_stoch, 1m_stoch,
 4h_ult, 1d_ult, 1w_ult, 1m_ult,
 4h_macd, 1d_macd, 1w_macd, 1m_macd,
-4h_hull, 1d_hull, 1w_hull, 1m_hull
+4h_hull, 1d_hull, 1w_hull, 1m_hull,
+4h_ma, 1d_ma, 1w_ma, 1m_ma
 ```
 
 The signal database creates 8KB per full run.
 Any results that exactly match the previous result (nothing changed in price or signals), will not be saved to the rolling DB file. This means that generally all day Saturday and Sunday, there will be no new db activity since the markets are closed. It's probably best to not run this on the weekends or late at night when it won't add any value.
 Each run takes ~1 hour.
-This should create ~25MB per year worth of data
+This should create ~50MB per year worth of data
 
 
 ## Cleaning Errors
@@ -176,10 +177,9 @@ bq load --source_format=CSV --location=US ticker_tracker.signals gs://stock-tick
   h_stochrsi:float, d_stochrsi:float, w_stochrsi:float, m_stochrsi:float,\
   h_stoch:float, d_stoch:float, w_stoch:float, m_stoch:float,\
   h_ult:float, d_ult:float, w_ult:float, m_ult:float,\
-  h_macd:float, d_macd:float, w_macd:float, m_macd:float,\
-  h_hull:float, d_hull:float, w_hull:float, m_hull:float,\
-  h_ma:float, d_ma:float, w_ma:float, m_ma:float,\
-  h_ma_change:float, d_ma_change:float, w_ma_change:float, m_ma_change:float,\
+  h_macd:integer, d_macd:integer, w_macd:integer, m_macd:integer,\
+  h_hull:integer, d_hull:integer, w_hull:integer, m_hull:integer,\
+  h_ma:integer, d_ma:integer, w_ma:integer, m_ma:integer,\
   move:integer,\
   exchange:string,name:string
 ```
@@ -209,7 +209,6 @@ SELECT
   h_macd, d_macd, w_macd, m_macd,
   h_hull, d_hull, w_hull, m_hull,
   h_ma, d_ma, w_ma, m_ma,
-  h_ma_change, d_ma_change, w_ma_change, m_ma_change,
   time,
   price
 FROM
