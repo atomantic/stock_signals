@@ -1,5 +1,6 @@
 
 const config = require('../config')
+const runnerData = require('../lib/runner.data')
 module.exports = {
     method: 'GET',
     path: '/set/{ticker}',
