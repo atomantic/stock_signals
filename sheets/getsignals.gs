@@ -21,6 +21,8 @@ function resultsToArray(){
  // map results to an array
   var res = [];
   for(t in results){
+    // temporary to fix backward compatibility (older records)
+    // delete after full run
     if(!results[t].ma){
       results[t].ma = [[0],[0],[0],[0]];
     }
@@ -43,19 +45,19 @@ function resultsToArray(){
       results[t].osc[1][0],
       results[t].osc[2][0],
       results[t].osc[3][0],
-      results[t].osc[0][1], // Stochastic %K (14, 3, 3)
+      results[t].osc[0][1], // Stochastic RSI Fast (3, 3, 14, 14)
       results[t].osc[1][1],
       results[t].osc[2][1],
       results[t].osc[3][1],
-      results[t].osc[0][2], // MACD Level (12, 27)
+      results[t].osc[0][2], // Stochastic %K (14, 3, 3)
       results[t].osc[1][2],
       results[t].osc[2][2],
       results[t].osc[3][2],
-      results[t].osc[0][3], // Stochastic RSI Fast (3, 3, 14, 14)
+      results[t].osc[0][3], // Ultimate Oscillator (7, 14, 28)
       results[t].osc[1][3],
       results[t].osc[2][3],
       results[t].osc[3][3],
-      results[t].osc[0][4], // Ultimate Oscillator (7, 14, 28)
+      results[t].osc[0][4], // MACD Level (12, 27) - numeric indicator (-2, -1, 0, 1, 2)
       results[t].osc[1][4],
       results[t].osc[2][4],
       results[t].osc[3][4],

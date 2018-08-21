@@ -80,10 +80,10 @@ For all logs and db files, the following legend maps TradingView Summary Signal 
       "osc": [
         [ // 4 hour oscillators
           54.83, // rsi
-          32.13, // stoch
-          0.17, // macd
           0.98, // stoch rsi
+          32.13, // stoch
           34.48 // ultimate osc
+          1, // macd numeric directional indicator
         ],
         [ // 1 day oscillators
           60.53,
@@ -133,11 +133,11 @@ ticker  price   time    meta_signal    meta_previous
 4_hour_summary  1_day_summary   1_week_summary  1_month_summary
 4_hour_summary_from  1_day_summary_from   1_week_summary_from  1_month_summary_from
 4h_rsi, 1d_rsi, 1w_rsi, 1m_rsi,
-4h_stoch, 1d_stoch, 1w_stoch, 1m_stoch,
-4h_macd, 1d_macd, 1w_macd, 1m_macd,
 4h_stochrsi, 1d_stochrsi, 1w_stochrsi, 1m_stochrsi,
+4h_stoch, 1d_stoch, 1w_stoch, 1m_stoch,
 4h_ult, 1d_ult, 1w_ult, 1m_ult,
-4h_hull, 1d_hull, 1w_hull, 1m_hull,
+4h_macd, 1d_macd, 1w_macd, 1m_macd,
+4h_hull, 1d_hull, 1w_hull, 1m_hull
 ```
 
 The signal database creates 8KB per full run.
@@ -167,7 +167,21 @@ gsutil rsync -d data gs://stock-tickers/data
 ```
 # from cloud storage
 bq mk ticker_tracker
-bq load --source_format=CSV --location=US ticker_tracker.signals gs://stock-tickers/data/signals.csv ticker:string,price:float,time:integer,meta_signal:integer,meta_previous:integer,h:integer,d:integer,w:integer,m:integer,hp:integer,dp:integer,wp:integer,mp:integer,exchange:string,name:string,move:integer
+bq load --source_format=CSV --location=US ticker_tracker.signals gs://stock-tickers/data/signals.csv \
+  ticker:string,price:float,change:float,time:integer,\
+  meta_signal:integer,meta_previous:integer,\
+  h:integer,d:integer,w:integer,m:integer,\
+  hp:integer,dp:integer,wp:integer,mp:integer,\
+  h_rsi:float, d_rsi:float, w_rsi:float, m_rsi:float,\
+  h_stochrsi:float, d_stochrsi:float, w_stochrsi:float, m_stochrsi:float,\
+  h_stoch:float, d_stoch:float, w_stoch:float, m_stoch:float,\
+  h_ult:float, d_ult:float, w_ult:float, m_ult:float,\
+  h_macd:float, d_macd:float, w_macd:float, m_macd:float,\
+  h_hull:float, d_hull:float, w_hull:float, m_hull:float,\
+  h_ma:float, d_ma:float, w_ma:float, m_ma:float,\
+  h_ma_change:float, d_ma_change:float, w_ma_change:float, m_ma_change:float,\
+  move:integer,\
+  exchange:string,name:string
 ```
 
 ## Linear Regression Model
@@ -189,6 +203,13 @@ SELECT
   meta_previous,
   h,d,w,m,
   hp,dp,wp,mp,move,
+  h_stochrsi, d_stochrsi, w_stochrsi, m_stochrsi,
+  h_stoch, d_stoch, w_stoch, m_stoch,
+  h_ult, d_ult, w_ult, m_ult,
+  h_macd, d_macd, w_macd, m_macd,
+  h_hull, d_hull, w_hull, m_hull,
+  h_ma, d_ma, w_ma, m_ma,
+  h_ma_change, d_ma_change, w_ma_change, m_ma_change,
   time,
   price
 FROM
