@@ -6,8 +6,9 @@ node_modules
 data/*.localstorage
 data/cookies*
 data/*.html
-data/signals.*.0.csv
+data/signals*
 data/timeseries/*.csv
+data/timeseries.json
 snaps/*.png
 config/diff.js
 .idea

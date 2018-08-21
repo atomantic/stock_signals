@@ -71,6 +71,42 @@ For all logs and db files, the following legend maps TradingView Summary Signal 
 {
     "tickers": {
       "NASDAQ-EKSO": {
+      "ma": [
+        [2.59], // 4 hour Hull MA
+        [2.84], // 1 day Hull MA
+        [2.71], // 1 week Hull MA
+        [2.04]  // 1 month Hull MA
+      ],
+      "osc": [
+        [ // 4 hour oscillators
+          54.83, // rsi
+          32.13, // stoch
+          0.17, // macd
+          0.98, // stoch rsi
+          34.48 // ultimate osc
+        ],
+        [ // 1 day oscillators
+          60.53,
+          64.05,
+          0.26,
+          57.64,
+          51.31
+        ],
+        [ // 1 week oscillators
+          65.11,
+          73.07,
+          0.18,
+          95.43,
+          45.37
+        ],
+        [ // 1 month oscillators
+          46.35,
+          27.77,
+          -1.22,
+          93.2,
+          41.74
+        ]
+      ],
         "price": 2.72,
         "time": 1534604640049, // unix timestamp
         "sum": [1,2,1,1], // summary values for periods (4 hour, 1 day, 1 week, 1 month)
@@ -96,6 +132,12 @@ The column headers for the files are the following:
 ticker  price   time    meta_signal    meta_previous
 4_hour_summary  1_day_summary   1_week_summary  1_month_summary
 4_hour_summary_from  1_day_summary_from   1_week_summary_from  1_month_summary_from
+4h_rsi, 1d_rsi, 1w_rsi, 1m_rsi,
+4h_stoch, 1d_stoch, 1w_stoch, 1m_stoch,
+4h_macd, 1d_macd, 1w_macd, 1m_macd,
+4h_stochrsi, 1d_stochrsi, 1w_stochrsi, 1m_stochrsi,
+4h_ult, 1d_ult, 1w_ult, 1m_ult,
+4h_hull, 1d_hull, 1w_hull, 1m_hull,
 ```
 
 The signal database creates 8KB per full run.

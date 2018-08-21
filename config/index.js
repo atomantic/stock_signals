@@ -1,6 +1,35 @@
 module.exports = {
   maps: require('./maps'),
   tickerSchema: {
+    ma: [
+      [
+        // Hull MA
+      ],
+      [],
+      [],
+      []
+    ],
+    ma_change: [
+      [
+        // Hull MA percentage change
+      ],
+      [],
+      [],
+      []
+    ],
+    osc: [
+      [
+        // Relative Strength Index (14)
+        // Stochastic %K (14, 3, 3)
+        // MACD Level (12, 27)
+        // Stochastic RSI Fast (3, 3, 14, 14)
+        // Ultimate Oscillator (7, 14, 28)
+      ],
+      [],
+      [],
+      []
+    ],
+    change: 0,
     price: 0,
     time: 0,
     sum: [

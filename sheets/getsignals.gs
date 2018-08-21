@@ -21,15 +21,54 @@ function resultsToArray(){
  // map results to an array
   var res = [];
   for(t in results){
+    if(!results[t].ma){
+      results[t].ma = [[0],[0],[0],[0]];
+    }
+    if(!results[t].ma_change){
+      results[t].ma_change = [[0],[0],[0],[0]];
+    }
+    if(!results[t].osc){
+      results[t].osc = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+    }
     res.push([
       t,
+      dateToHuman(results[t].time),
       Math.round(results[t].meta - results[t].from),
       reverseValues[results[t].meta],
       reverseValues[results[t].sum[0]], // 4 hour
       reverseValues[results[t].sum[1]], // 1 day
       reverseValues[results[t].sum[2]], // 1 week
       reverseValues[results[t].sum[3]], // 1 month
-      dateToHuman(results[t].time)
+      results[t].osc[0][0], // Relative Strength Index (14)
+      results[t].osc[1][0],
+      results[t].osc[2][0],
+      results[t].osc[3][0],
+      results[t].osc[0][1], // Stochastic %K (14, 3, 3)
+      results[t].osc[1][1],
+      results[t].osc[2][1],
+      results[t].osc[3][1],
+      results[t].osc[0][2], // MACD Level (12, 27)
+      results[t].osc[1][2],
+      results[t].osc[2][2],
+      results[t].osc[3][2],
+      results[t].osc[0][3], // Stochastic RSI Fast (3, 3, 14, 14)
+      results[t].osc[1][3],
+      results[t].osc[2][3],
+      results[t].osc[3][3],
+      results[t].osc[0][4], // Ultimate Oscillator (7, 14, 28)
+      results[t].osc[1][4],
+      results[t].osc[2][4],
+      results[t].osc[3][4],
+      results[t].ma[0][0], // Hull Moving Average (9)
+      results[t].ma[0][0],
+      results[t].ma[0][0],
+      results[t].ma[0][0],
+      results[t].ma_change[0][0], // Hull Moving Average (9)
+      results[t].ma_change[0][0],
+      results[t].ma_change[0][0],
+      results[t].ma_change[0][0],
+      results[t].price,
+      results[t].change
     ]);
   }
   // alphebetize elements by ticker suffix
@@ -77,49 +116,6 @@ function dateToHuman(timestamp){
   return (d.getMonth()+1)+'/'+(d.getDate()+1)+' '+d.toLocaleTimeString()
 }
 
-function isEmptyObject(obj) {
-  for(var prop in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-      return false;
-    }
-  }
-  return true;
-}
-
-/**
- * get a ticker's results object
- * @param {string} ticker, the ticker symbol (either in format `NASDAQ-NVDA` or `NVDA`)
- * @return {object} ticker object
- */
-function getTickerObj(ticker){
-  if(isEmptyObject(results)){
-    // see if it was updated after open
-    results = JSON.parse(cache.get('results')||'{}');
-  }
-  if(results[ticker]){
-    return results[ticker];
-  }
-  // now fuzz test the ticker for a match
-  var markets = ['AMEX','ASX','NASDAQ','NYSE','TSX'];
-  for(var i=0; i<markets.length; i++){
-    var key = markets[i]+'-'+ticker;
-    if(results[key]){
-      return results[key];
-    }
-  }
-  throw('ticker not found: '+ticker);
-}
-
-/**
- * get the trading signals for a period
- * @param {string} ticker, the ticker symbol (either in format `NASDAQ-NVDA` or `NVDA`)
- * @param {string} period, the time period for the signals (e.g. `day`, `week`)
- * @return {object} period signal (e.g. {"Oscillators":"Buy", "Summary":"Buy", "Moving Averages":"Neutral"})
- */
-function getSignals(ticker, period){
-  return getTickerObj(ticker)[period] || {};
-}
-
 // SHEETS API
 
 function GET_TICKER_FETCH_COUNTER(){
@@ -140,7 +136,8 @@ function GET_LAST_TICKER(){
 }
 
 // alphabetize ticker list by suffix (to match sheet)
-// return an array of cells showing [signal, direction, hour.Summary, day.Summary, week.Summary, month.Summary]
+// return an array of cells showing 
+// [signal, direction, hour.Summary, day.Summary, week.Summary, month.Summary, h.rsi, h.stoch, h.macd, ...]
 function GET_SIGNALS_ARRAY(){
   if(!resultsArray.length){
     resultsArray = resultsToArray();

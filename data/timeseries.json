@@ -1,6 +1,759 @@
 {
   "timeseries": {},
   "NASDAQ-ARTX": {
-    "RSI.monthly": 1534807547017
+    "RSI.monthly": 1534807547017,
+    "RSI.weekly": 1534813519011,
+    "RSI.daily": 1534816991974,
+    "RSI.undefined": 1534818056182
+  },
+  "NYSE-AUY": {
+    "RSI.monthly": 1534807567574,
+    "RSI.weekly": 1534813538447,
+    "RSI.daily": 1534817016413,
+    "RSI.undefined": 1534818082082
+  },
+  "NASDAQ-AVGO": {
+    "RSI.monthly": 1534807591004,
+    "RSI.weekly": 1534813559957,
+    "RSI.daily": 1534817037758,
+    "RSI.undefined": 1534818106808
+  },
+  "NYSE-AWK": {
+    "RSI.monthly": 1534807611696,
+    "RSI.weekly": 1534810113152,
+    "RSI.daily": 1534813579639,
+    "RSI.undefined": 1534817063144,
+    "STOCHRSI.daily": 1534820747578
+  },
+  "NYSE-BA": {
+    "RSI.monthly": 1534810141071,
+    "RSI.weekly": 1534813600996,
+    "RSI.daily": 1534813606921,
+    "RSI.undefined": 1534817084231,
+    "STOCHRSI.daily": 1534820783066
+  },
+  "NYSE-BABA": {
+    "RSI.monthly": 1534810167956,
+    "RSI.weekly": 1534813626989,
+    "RSI.daily": 1534817106371,
+    "STOCHRSI.daily": 1534820816435
+  },
+  "NYSE-BAC": {
+    "RSI.monthly": 1534810190823,
+    "RSI.weekly": 1534813648676,
+    "RSI.daily": 1534817128861,
+    "STOCHRSI.daily": 1534820845799
+  },
+  "NASDAQ-BOTZ": {
+    "RSI.monthly": 1534810214018,
+    "RSI.weekly": 1534813671364,
+    "RSI.daily": 1534817149134,
+    "STOCHRSI.daily": 1534820877874
+  },
+  "AMEX-BTG": {
+    "RSI.monthly": 1534810236791,
+    "RSI.weekly": 1534813694009,
+    "RSI.daily": 1534817170840,
+    "STOCHRSI.daily": 1534820927127
+  },
+  "NYSE-C": {
+    "RSI.monthly": 1534810260850,
+    "RSI.weekly": 1534813713736,
+    "RSI.daily": 1534817190679,
+    "STOCHRSI.daily": 1534820964950
+  },
+  "NYSE-CBL": {
+    "RSI.monthly": 1534810283897,
+    "RSI.weekly": 1534813735945,
+    "RSI.daily": 1534817212212,
+    "STOCHRSI.daily": 1534820988896
+  },
+  "NYSE-CCI": {
+    "RSI.monthly": 1534810306977,
+    "RSI.weekly": 1534813755934,
+    "RSI.daily": 1534817239376,
+    "STOCHRSI.daily": 1534821011522
+  },
+  "NASDAQ-CDTI": {
+    "RSI.monthly": 1534810327953,
+    "RSI.weekly": 1534813776878,
+    "RSI.daily": 1534817285605,
+    "STOCHRSI.daily": 1534821034931
+  },
+  "NASDAQ-CELG": {
+    "RSI.monthly": 1534810351953,
+    "RSI.weekly": 1534813796308,
+    "RSI.daily": 1534817313261,
+    "STOCHRSI.daily": 1534821055724
+  },
+  "NYSE-CF": {
+    "RSI.monthly": 1534810300329,
+    "RSI.weekly": 1534813815777,
+    "RSI.daily": 1534817341565,
+    "STOCHRSI.daily": 1534821077296
+  },
+  "NASDAQ-CGNX": {
+    "RSI.monthly": 1534810322493,
+    "RSI.weekly": 1534813837764,
+    "RSI.daily": 1534817369579,
+    "STOCHRSI.daily": 1534821117687
+  },
+  "NASDAQ-CIBR": {
+    "RSI.monthly": 1534810344494,
+    "RSI.weekly": 1534813857356,
+    "RSI.daily": 1534817395324,
+    "STOCHRSI.daily": 1534821140988
+  },
+  "NYSE-CINR": {
+    "RSI.monthly": 1534810363750,
+    "RSI.weekly": 1534813876516,
+    "RSI.daily": 1534817420223,
+    "STOCHRSI.daily": 1534821165473
+  },
+  "NASDAQ-CMCSA": {
+    "RSI.monthly": 1534810383570,
+    "RSI.weekly": 1534813897908,
+    "RSI.daily": 1534817445084,
+    "STOCHRSI.daily": 1534821189884
+  },
+  "NYSE-CMP": {
+    "RSI.monthly": 1534810405041,
+    "RSI.weekly": 1534813920970,
+    "RSI.daily": 1534817470652,
+    "STOCHRSI.daily": 1534821218805
+  },
+  "AMEX-COPX": {
+    "RSI.monthly": 1534810427462,
+    "RSI.weekly": 1534813942857,
+    "RSI.daily": 1534817498034,
+    "STOCHRSI.daily": 1534821250399
+  },
+  "NASDAQ-CRSP": {
+    "RSI.monthly": 1534810449612,
+    "RSI.weekly": 1534813963111,
+    "RSI.daily": 1534817526727,
+    "STOCHRSI.daily": 1534821277594
+  },
+  "NYSE-CWT": {
+    "RSI.monthly": 1534810472148,
+    "RSI.weekly": 1534813984225,
+    "RSI.daily": 1534814001295,
+    "RSI.undefined": 1534817550000,
+    "STOCHRSI.daily": 1534821303691
+  },
+  "NASDAQ-CY": {
+    "RSI.monthly": 1534810495756,
+    "RSI.daily": 1534814022891,
+    "RSI.weekly": 1534817575496,
+    "STOCHRSI.daily": 1534821327472
+  },
+  "NYSE-D": {
+    "RSI.monthly": 1534810516376,
+    "RSI.daily": 1534814042414,
+    "RSI.weekly": 1534821354985
+  },
+  "NYSE-DAL": {
+    "RSI.monthly": 1534810540873,
+    "RSI.daily": 1534814063910,
+    "RSI.weekly": 1534821379510
+  },
+  "AMEX-DGRO": {
+    "RSI.monthly": 1534810564199,
+    "RSI.daily": 1534814083499,
+    "RSI.weekly": 1534821403227
+  },
+  "NYSE-DIS": {
+    "RSI.monthly": 1534810588313,
+    "RSI.daily": 1534814106151,
+    "RSI.weekly": 1534821427616
+  },
+  "NYSE-DUK": {
+    "RSI.monthly": 1534810610936,
+    "RSI.daily": 1534814126555,
+    "RSI.weekly": 1534821451678
+  },
+  "NASDAQ-DVY": {
+    "RSI.monthly": 1534810634879,
+    "RSI.daily": 1534814148080,
+    "RSI.weekly": 1534821474829
+  },
+  "NYSE-ECR": {
+    "RSI.monthly": 1534810658730,
+    "RSI.daily": 1534814171815,
+    "RSI.weekly": 1534821498442
+  },
+  "NASDAQ-EDIT": {
+    "RSI.monthly": 1534810680759,
+    "RSI.daily": 1534814192812,
+    "RSI.weekly": 1534821523387
+  },
+  "NYSE-EGO": {
+    "RSI.monthly": 1534810701043,
+    "RSI.daily": 1534814214171,
+    "RSI.weekly": 1534821547353
+  },
+  "NASDAQ-EKSO": {
+    "RSI.monthly": 1534810725600,
+    "RSI.daily": 1534814235304,
+    "RSI.weekly": 1534821572106
+  },
+  "TSX-ENB": {
+    "RSI.monthly": 1534810747125,
+    "RSI.daily": 1534814258923,
+    "RSI.weekly": 1534821600310
+  },
+  "NYSE-ETN": {
+    "RSI.monthly": 1534810769999,
+    "RSI.daily": 1534814284897,
+    "RSI.weekly": 1534821624290
+  },
+  "NYSE-EXG": {
+    "RSI.monthly": 1534810793481,
+    "RSI.daily": 1534814309666,
+    "RSI.weekly": 1534821648303
+  },
+  "NYSE-EXK": {
+    "RSI.monthly": 1534810816831,
+    "RSI.daily": 1534814331831,
+    "RSI.weekly": 1534821672627
+  },
+  "AMEX-EWA": {
+    "RSI.monthly": 1534810839917,
+    "RSI.daily": 1534814354393,
+    "RSI.weekly": 1534821696824
+  },
+  "NYSE-F": {
+    "RSI.monthly": 1534810863227,
+    "RSI.daily": 1534814376966,
+    "RSI.weekly": 1534821719880
+  },
+  "NASDAQ-FB": {
+    "RSI.monthly": 1534810888476,
+    "RSI.daily": 1534814396958,
+    "RSI.weekly": 1534821744299
+  },
+  "NYSE-FNF": {
+    "RSI.monthly": 1534810913883,
+    "RSI.daily": 1534814419865,
+    "RSI.weekly": 1534821768445
+  },
+  "TSX-FTS": {
+    "RSI.monthly": 1534810937410,
+    "RSI.daily": 1534814443676,
+    "RSI.weekly": 1534821793322
+  },
+  "NYSE-FTV": {
+    "RSI.monthly": 1534810960427,
+    "RSI.daily": 1534814466296,
+    "RSI.weekly": 1534821819500
+  },
+  "AMEX-FXI": {
+    "RSI.monthly": 1534810988889,
+    "RSI.daily": 1534814487514,
+    "RSI.weekly": 1534821844833
+  },
+  "AMEX-GDX": {
+    "RSI.monthly": 1534811012400,
+    "RSI.daily": 1534814509022,
+    "RSI.weekly": 1534821872459
+  },
+  "AMEX-GDXJ": {
+    "RSI.monthly": 1534811035922,
+    "RSI.daily": 1534814528685,
+    "RSI.weekly": 1534821897069
+  },
+  "NYSE-GE": {
+    "RSI.monthly": 1534811059192,
+    "RSI.daily": 1534814551006,
+    "RSI.weekly": 1534821921700
+  },
+  "NASDAQ-GERN": {
+    "RSI.monthly": 1534811081888,
+    "RSI.daily": 1534814570852,
+    "RSI.weekly": 1534821952739
+  },
+  "NYSE-GG": {
+    "RSI.monthly": 1534811101353,
+    "RSI.daily": 1534814593534,
+    "RSI.weekly": 1534821978562
+  },
+  "NASDAQ-GILD": {
+    "RSI.monthly": 1534811122878,
+    "RSI.daily": 1534814614118,
+    "RSI.weekly": 1534822005162
+  },
+  "NYSE-GME": {
+    "RSI.monthly": 1534811142630,
+    "RSI.daily": 1534814636073,
+    "RSI.weekly": 1534822029209
+  },
+  "NASDAQ-GOOG": {
+    "RSI.monthly": 1534811163999,
+    "RSI.daily": 1534814655999,
+    "RSI.weekly": 1534822056989
+  },
+  "NASDAQ-GOOGL": {
+    "RSI.monthly": 1534811183632,
+    "RSI.daily": 1534814678097,
+    "RSI.weekly": 1534822082886
+  },
+  "AMEX-GTE": {
+    "RSI.monthly": 1534811205358,
+    "RSI.daily": 1534814697719,
+    "RSI.weekly": 1534822107259
+  },
+  "AMEX-GSAT": {
+    "RSI.monthly": 1534811229661,
+    "RSI.daily": 1534814719972,
+    "RSI.weekly": 1534822131273
+  },
+  "NYSE-HASI": {
+    "RSI.monthly": 1534811253130,
+    "RSI.daily": 1534814740894,
+    "RSI.weekly": 1534822155169
+  },
+  "NYSE-HBM": {
+    "RSI.monthly": 1534811279691,
+    "RSI.daily": 1534814762923,
+    "RSI.weekly": 1534822182204
+  },
+  "NYSE-HCLP": {
+    "RSI.monthly": 1534811300168,
+    "RSI.daily": 1534814784520,
+    "RSI.weekly": 1534822206069
+  },
+  "AMEX-HDV": {
+    "RSI.monthly": 1534811322080,
+    "RSI.daily": 1534814807893,
+    "RSI.weekly": 1534822237531
+  },
+  "NYSE-HL": {
+    "RSI.monthly": 1534811346788,
+    "RSI.daily": 1534814831249,
+    "RSI.weekly": 1534822267404
+  },
+  "NASDAQ-HMNY": {
+    "RSI.monthly": 1534811366754,
+    "RSI.daily": 1534814852064,
+    "RSI.weekly": 1534822302697
+  },
+  "NYSE-HMY": {
+    "RSI.monthly": 1534811390463,
+    "RSI.daily": 1534814875025,
+    "RSI.weekly": 1534822327688
+  },
+  "NASDAQ-HOLI": {
+    "RSI.monthly": 1534811414530,
+    "RSI.daily": 1534814895881,
+    "RSI.weekly": 1534822354303
+  },
+  "AMEX-IAU": {
+    "RSI.monthly": 1534811437156,
+    "RSI.daily": 1534814917055,
+    "RSI.weekly": 1534822381695
+  },
+  "NYSE-IBM": {
+    "RSI.monthly": 1534811459955,
+    "RSI.daily": 1534814937280,
+    "RSI.weekly": 1534822422539
+  },
+  "NYSE-ICE": {
+    "RSI.monthly": 1534811483179,
+    "RSI.daily": 1534814959130,
+    "RSI.weekly": 1534822447139
+  },
+  "NYSE-ICL": {
+    "RSI.monthly": 1534811506582,
+    "RSI.daily": 1534814982215,
+    "RSI.weekly": 1534822472131
+  },
+  "AMEX-IDV": {
+    "RSI.monthly": 1534811530812,
+    "RSI.daily": 1534815002465,
+    "RSI.weekly": 1534822496229
+  },
+  "NYSE-IFF": {
+    "RSI.monthly": 1534811554507,
+    "RSI.daily": 1534815022725,
+    "RSI.weekly": 1534822518866
+  },
+  "AMEX-IGRO": {
+    "RSI.monthly": 1534811576968,
+    "RSI.daily": 1534815043983,
+    "RSI.weekly": 1534822544167,
+    "STOCHRSI.daily": 1534822549228
+  },
+  "NASDAQ-INTC": {
+    "RSI.monthly": 1534811600572,
+    "RSI.daily": 1534815063629,
+    "RSI.weekly": 1534822573867
+  },
+  "NYSE-IPI": {
+    "RSI.monthly": 1534811624238,
+    "RSI.daily": 1534815084923,
+    "RSI.weekly": 1534822602686
+  },
+  "NASDAQ-IPIC": {
+    "RSI.monthly": 1534811647154,
+    "RSI.daily": 1534815107823,
+    "RSI.weekly": 1534822640766
+  },
+  "NASDAQ-IRBT": {
+    "RSI.monthly": 1534811670604,
+    "RSI.daily": 1534815128951
+  },
+  "NASDAQ-JAGX": {
+    "RSI.monthly": 1534811694246,
+    "RSI.daily": 1534815148704
+  },
+  "NYSE-JNJ": {
+    "RSI.monthly": 1534811717216,
+    "RSI.daily": 1534815170899
+  },
+  "NYSE-JPM": {
+    "RSI.monthly": 1534811740701,
+    "RSI.daily": 1534815190929
+  },
+  "NASDAQ-KALA": {
+    "RSI.monthly": 1534811763521,
+    "RSI.daily": 1534815212245
+  },
+  "NASDAQ-LRCX": {
+    "RSI.monthly": 1534811784721,
+    "RSI.daily": 1534815234987
+  },
+  "NYSE-LSI": {
+    "RSI.monthly": 1534811807460,
+    "RSI.daily": 1534815255476
+  },
+  "NYSE-LUV": {
+    "RSI.monthly": 1534811829938,
+    "RSI.daily": 1534815277184
+  },
+  "NYSE-LVS": {
+    "RSI.monthly": 1534811854675,
+    "RSI.daily": 1534815300168
+  },
+  "NYSE-MCD": {
+    "RSI.monthly": 1534811878548,
+    "RSI.daily": 1534815320199
+  },
+  "NYSE-MDT": {
+    "RSI.monthly": 1534811901130,
+    "RSI.daily": 1534815343113
+  },
+  "NYSE-MFC": {
+    "RSI.monthly": 1534811930226,
+    "RSI.daily": 1534815362562
+  },
+  "NYSE-MMM": {
+    "RSI.monthly": 1534811954728,
+    "RSI.daily": 1534815386233
+  },
+  "NYSE-MOS": {
+    "RSI.monthly": 1534811976074,
+    "RSI.daily": 1534815410466
+  },
+  "NYSE-MPW": {
+    "RSI.monthly": 1534811998986,
+    "RSI.daily": 1534815433539
+  },
+  "NASDAQ-MSFT": {
+    "RSI.monthly": 1534812022100,
+    "RSI.daily": 1534815455926
+  },
+  "NASDAQ-MU": {
+    "RSI.monthly": 1534812042331,
+    "RSI.daily": 1534815479362
+  },
+  "NYSE-MUX": {
+    "RSI.monthly": 1534812067728,
+    "RSI.daily": 1534815502444
+  },
+  "NASDAQ-NFLX": {
+    "RSI.monthly": 1534812091263,
+    "RSI.daily": 1534815525661
+  },
+  "NYSE-NOK": {
+    "RSI.monthly": 1534812114147,
+    "RSI.daily": 1534815548161
+  },
+  "NASDAQ-NTLA": {
+    "RSI.monthly": 1534812137563,
+    "RSI.daily": 1534815569283
+  },
+  "TSX-NTR": {
+    "RSI.monthly": 1534812161135,
+    "RSI.daily": 1534815591774
+  },
+  "NASDAQ-NVAX": {
+    "RSI.monthly": 1534812186559,
+    "RSI.daily": 1534815612603
+  },
+  "NASDAQ-NVDA": {
+    "RSI.monthly": 1534812209912,
+    "RSI.daily": 1534815635265
+  },
+  "NYSE-O": {
+    "RSI.monthly": 1534812233140,
+    "RSI.daily": 1534815658063
+  },
+  "NASDAQ-PACB": {
+    "RSI.monthly": 1534812253333,
+    "RSI.daily": 1534815683082
+  },
+  "NASDAQ-PEP": {
+    "RSI.monthly": 1534812278092,
+    "RSI.daily": 1534815706478
+  },
+  "NYSE-PFE": {
+    "RSI.monthly": 1534812298479,
+    "RSI.daily": 1534815729590
+  },
+  "NASDAQ-PFLT": {
+    "RSI.monthly": 1534812322002,
+    "RSI.daily": 1534815752481
+  },
+  "AMEX-PLM": {
+    "RSI.monthly": 1534812345034,
+    "RSI.daily": 1534815772641
+  },
+  "NYSE-PPG": {
+    "RSI.monthly": 1534812368099,
+    "RSI.daily": 1534815794631
+  },
+  "NASDAQ-PRVB": {
+    "RSI.monthly": 1534812389549,
+    "RSI.daily": 1534815818888
+  },
+  "NASDAQ-QCOM": {
+    "RSI.monthly": 1534812412940,
+    "RSI.daily": 1534815843490
+  },
+  "NYSE-RCL": {
+    "RSI.monthly": 1534812434303,
+    "RSI.daily": 1534815870339
+  },
+  "NYSE-REG": {
+    "RSI.monthly": 1534812455898,
+    "RSI.daily": 1534815894538
+  },
+  "AMEX-REMX": {
+    "RSI.monthly": 1534812481363,
+    "RSI.daily": 1534815917985
+  },
+  "NYSE-RIO": {
+    "RSI.monthly": 1534812501072,
+    "RSI.daily": 1534815941378
+  },
+  "NYSE-ROK": {
+    "RSI.monthly": 1534812523557,
+    "RSI.daily": 1534815964038
+  },
+  "NASDAQ-RWLK": {
+    "RSI.monthly": 1534812543916,
+    "RSI.daily": 1534815983944
+  },
+  "NYSE-S": {
+    "RSI.monthly": 1534812564899,
+    "RSI.daily": 1534816006022
+  },
+  "NASDAQ-SBBP": {
+    "RSI.monthly": 1534812584839,
+    "RSI.daily": 1534816026738
+  },
+  "NYSE-SBS": {
+    "RSI.monthly": 1534812605943,
+    "RSI.daily": 1534816049238
+  },
+  "NASDAQ-SBUX": {
+    "RSI.monthly": 1534812625691,
+    "RSI.daily": 1534816069289
+  },
+  "NASDAQ-SGMO": {
+    "RSI.monthly": 1534812646875,
+    "RSI.daily": 1534816091029
+  },
+  "NYSE-SJT": {
+    "RSI.monthly": 1534812667073,
+    "RSI.daily": 1534816111473
+  },
+  "AMEX-SLV": {
+    "RSI.monthly": 1534812687931,
+    "RSI.daily": 1534816133194
+  },
+  "NYSE-SO": {
+    "RSI.monthly": 1534812707670,
+    "RSI.daily": 1534816153946
+  },
+  "NYSE-SQ": {
+    "RSI.monthly": 1534812730156,
+    "RSI.daily": 1534816176355
+  },
+  "AMEX-SVXY": {
+    "RSI.monthly": 1534812749652,
+    "RSI.daily": 1534816199037
+  },
+  "NASDAQ-SWKS": {
+    "RSI.monthly": 1534812772002,
+    "RSI.daily": 1534816219127
+  },
+  "NYSE-SXCP": {
+    "RSI.monthly": 1534812791647,
+    "RSI.weekly": 1534812798839,
+    "RSI.daily": 1534816240817
+  },
+  "NYSE-T": {
+    "RSI.monthly": 1534812818483,
+    "RSI.daily": 1534816260498
+  },
+  "NYSE-TECK": {
+    "RSI.monthly": 1534812841066,
+    "RSI.daily": 1534816282016
+  },
+  "NYSE-TEVA": {
+    "RSI.monthly": 1534812860677,
+    "RSI.daily": 1534816301730
+  },
+  "NASDAQ-TMUS": {
+    "RSI.monthly": 1534812879813,
+    "RSI.daily": 1534816323111
+  },
+  "NYSE-TROX": {
+    "RSI.monthly": 1534812900921,
+    "RSI.daily": 1534816343037
+  },
+  "NASDAQ-TSLA": {
+    "RSI.monthly": 1534812920509,
+    "RSI.daily": 1534816365365
+  },
+  "NYSE-TWTR": {
+    "RSI.monthly": 1534812941900,
+    "RSI.daily": 1534816388598
+  },
+  "NASDAQ-TXN": {
+    "RSI.monthly": 1534812961553,
+    "RSI.daily": 1534816408977
+  },
+  "AMEX-UAMY": {
+    "RSI.monthly": 1534812982952,
+    "RSI.daily": 1534816430024
+  },
+  "NYSE-V": {
+    "RSI.monthly": 1534813002635,
+    "RSI.daily": 1534816453126
+  },
+  "NYSE-VALE": {
+    "RSI.monthly": 1534813025163,
+    "RSI.daily": 1534816473907
+  },
+  "AMEX-VHT": {
+    "RSI.monthly": 1534813044818,
+    "RSI.daily": 1534816496071
+  },
+  "AMEX-VIG": {
+    "RSI.monthly": 1534813066916,
+    "RSI.daily": 1534816515602
+  },
+  "NASDAQ-VKTX": {
+    "RSI.monthly": 1534813086407,
+    "RSI.daily": 1534816536979
+  },
+  "AMEX-VTI": {
+    "RSI.monthly": 1534813108008,
+    "RSI.daily": 1534816556654
+  },
+  "AMEX-VYM": {
+    "RSI.monthly": 1534813127981,
+    "RSI.daily": 1534816577982
+  },
+  "NASDAQ-VYMI": {
+    "RSI.monthly": 1534813150031,
+    "RSI.daily": 1534816599067
+  },
+  "NYSE-VZ": {
+    "RSI.monthly": 1534813169400,
+    "RSI.daily": 1534816622739
+  },
+  "NYSE-WFC": {
+    "RSI.monthly": 1534813190924,
+    "RSI.daily": 1534816643628
+  },
+  "NYSE-WPG": {
+    "RSI.monthly": 1534813210634,
+    "RSI.daily": 1534816664955
+  },
+  "NYSE-WPM": {
+    "RSI.monthly": 1534813231910,
+    "RSI.daily": 1534816684679
+  },
+  "NYSE-WTR": {
+    "RSI.monthly": 1534813251641,
+    "RSI.daily": 1534816706021
+  },
+  "NYSE-XOM": {
+    "RSI.monthly": 1534813272953,
+    "RSI.daily": 1534816726401
+  },
+  "AMEX-XPL": {
+    "RSI.monthly": 1534813292201,
+    "RSI.daily": 1534816748458
+  },
+  "NASDAQ-ZNGA": {
+    "RSI.monthly": 1534813313832,
+    "RSI.daily": 1534816771282
+  },
+  "NASDAQ-AAPL": {
+    "RSI.monthly": 1534813333518,
+    "RSI.weekly": 1534817599922,
+    "RSI.daily": 1534817820104
+  },
+  "NYSE-ABBV": {
+    "RSI.monthly": 1534813354926,
+    "RSI.daily": 1534816814141,
+    "RSI.weekly": 1534817626905,
+    "RSI.undefined": 1534817843455
+  },
+  "NYSE-AIT": {
+    "RSI.monthly": 1534813374623,
+    "RSI.daily": 1534816835034,
+    "RSI.weekly": 1534817652188,
+    "RSI.undefined": 1534817866444
+  },
+  "NYSE-ALB": {
+    "RSI.monthly": 1534813395927,
+    "RSI.daily": 1534816855703,
+    "RSI.weekly": 1534817677064,
+    "RSI.undefined": 1534817891172
+  },
+  "NASDAQ-AMAT": {
+    "RSI.monthly": 1534813415743,
+    "RSI.daily": 1534816880277,
+    "RSI.weekly": 1534817700789,
+    "RSI.undefined": 1534817917043
+  },
+  "NYSE-AMC": {
+    "RSI.monthly": 1534813436918,
+    "RSI.daily": 1534816902633,
+    "RSI.weekly": 1534817725005,
+    "RSI.undefined": 1534817951292
+  },
+  "NASDAQ-AMD": {
+    "RSI.monthly": 1534813456583,
+    "RSI.daily": 1534816925129,
+    "RSI.weekly": 1534817749167,
+    "RSI.undefined": 1534817976934
+  },
+  "NASDAQ-AMZN": {
+    "RSI.monthly": 1534813477890,
+    "RSI.daily": 1534816945516,
+    "RSI.weekly": 1534817773214,
+    "RSI.undefined": 1534818005890
+  },
+  "NASDAQ-ARTNA": {
+    "RSI.monthly": 1534813497347,
+    "RSI.daily": 1534816968255,
+    "RSI.weekly": 1534817796544,
+    "RSI.undefined": 1534818031406
   }
 }

@@ -7,3 +7,5 @@
   - remove oldest entry for each ticker (those began with a Neutral rating for all previous signals)
 3. get the oscillation wave of the meta indicator and of simple others (RSI/Stoch RSI) to capture the direction of movement.
 4. create oscilator for movement (current meta compared to previous meta over time)
+5. log directionality for Hull MA
+6. log directionality for price
