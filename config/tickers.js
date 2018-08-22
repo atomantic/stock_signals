@@ -131,6 +131,7 @@ module.exports = [
     "AMEX-SLV",
     "NYSE-SO",
     "NYSE-SQ",
+    "NYSE-STWD",
     "AMEX-SVXY",
     "NASDAQ-SWKS",
     "NYSE-SXCP",
