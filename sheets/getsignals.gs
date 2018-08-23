@@ -10,6 +10,17 @@ var resultsArray = resultsToArray();
 var time = cache.get('time');
 var fetchCounter = 0;
 
+function getValue(v){
+  return (v && typeof v === 'object') ? v[v.length-1] : v
+}
+function getDirection(v){
+  if(!v || typeof v !=='object' || v.length < 2){
+    return '-';
+  }
+  var current = v[v.length - 1]
+  var last = v[v.length - 2]
+  return current > last ? '📈' : (current===last ? '-' : '📉')
+}
 function resultsToArray(){
   var reverseValues = {
     '-2': 'Strong Sell',
@@ -21,7 +32,8 @@ function resultsToArray(){
  // map results to an array
   var res = [];
   for(t in results){
-    res.push([
+    var row = []
+    row.push(
       t,
       dateToHuman(results[t].time),
       Math.round(results[t].meta - results[t].from),
@@ -29,34 +41,54 @@ function resultsToArray(){
       reverseValues[results[t].sum[0]], // 4 hour
       reverseValues[results[t].sum[1]], // 1 day
       reverseValues[results[t].sum[2]], // 1 week
-      reverseValues[results[t].sum[3]], // 1 month
-      results[t].osc[0][0], // Relative Strength Index (14)
-      results[t].osc[1][0],
-      results[t].osc[2][0],
-      results[t].osc[3][0],
-      results[t].osc[0][1], // Stochastic RSI Fast (3, 3, 14, 14)
-      results[t].osc[1][1],
-      results[t].osc[2][1],
-      results[t].osc[3][1],
-      results[t].osc[0][2], // Stochastic %K (14, 3, 3)
-      results[t].osc[1][2],
-      results[t].osc[2][2],
-      results[t].osc[3][2],
-      results[t].osc[0][3], // Ultimate Oscillator (7, 14, 28)
-      results[t].osc[1][3],
-      results[t].osc[2][3],
-      results[t].osc[3][3],
-      results[t].osc[0][4], // MACD Level (12, 27) - numeric indicator (-2, -1, 0, 1, 2)
-      results[t].osc[1][4],
-      results[t].osc[2][4],
-      results[t].osc[3][4],
-      results[t].ma[0][0], // Hull Moving Average (9) - numeric indicator (-2, -1, 0, 1, 2)
-      results[t].ma[1][0],
-      results[t].ma[2][0],
-      results[t].ma[3][0],
+      reverseValues[results[t].sum[3]] // 1 month
+    );
+    // Relative Strength Index (14)
+    results[t].osc.forEach(function(o){
+      row.push(
+        getValue(o[0]),
+        getDirection(o[0])
+      );
+    });
+    // Stochastic RSI Fast (3, 3, 14, 14)
+    results[t].osc.forEach(function(o){
+      row.push(
+        getValue(o[1]),
+        getDirection(o[1])
+      );
+    });
+    // Stochastic %K (14, 3, 3)
+    results[t].osc.forEach(function(o){
+      row.push(
+        getValue(o[2]),
+        getDirection(o[2])
+      );
+    });
+    // Ultimate Oscillator (7, 14, 28)
+    results[t].osc.forEach(function(o){
+      row.push(
+        getValue(o[3]),
+        getDirection(o[3])
+      );
+    });
+    // MACD Level (12, 27) - numeric indicator (-2, -1, 0, 1, 2)
+    results[t].osc.forEach(function(o){
+      row.push(
+        getValue(o[4]),
+        getDirection(o[4])
+      );
+    });
+    results[t].ma.forEach(function(o){
+      row.push(
+        getValue(o[0]),
+        getDirection(o[0])
+      );
+    });
+    row.push(
       results[t].price,
       results[t].change
-    ]);
+    );
+    res.push(row);
   }
   // alphebetize elements by ticker suffix
   // (e.g. NASDAQ-EKSO sorts in E, by EKSO)

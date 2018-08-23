@@ -151,6 +151,7 @@ module.exports = [
     "AMEX-VHT",
     "AMEX-VIG",
     "NASDAQ-VKTX",
+    "AMEX-VOO",
     "AMEX-VTI",
     "AMEX-VYM",
     "NASDAQ-VYMI",

@@ -2,6 +2,7 @@ node_modules
 .ipynb_checkpoints
 .config
 .ipython
+.jupyter
 .local
 data/*.localstorage
 data/cookies*
@@ -9,6 +10,7 @@ data/*.html
 data/signals*
 data/timeseries/*.csv
 data/timeseries.json
+data/latest.json
 snaps/*.png
 config/diff.js
 .idea

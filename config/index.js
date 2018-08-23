@@ -3,23 +3,23 @@ module.exports = {
   tickerSchema: {
     ma: [
       [
-        // Hull MA
-      ],
-      [],
-      [],
-      []
+        []// Hull MA (numeric signal: -2,-1,0,1,2)
+      ], // 4 hour
+      [[]], // daily
+      [[]], // weekly
+      [[]] // monthly
     ],
     osc: [
       [
-        // Relative Strength Index (14)
-        // Stochastic %K (14, 3, 3)
-        // MACD Level (12, 27)
-        // Stochastic RSI Fast (3, 3, 14, 14)
-        // Ultimate Oscillator (7, 14, 28)
+        [],// Relative Strength Index (14)
+        [],// Stochastic RSI Fast (3, 3, 14, 14)
+        [],// Stochastic %K (14, 3, 3)
+        [],// Ultimate Oscillator (7, 14, 28)
+        [] // MACD Level (12, 27) (numeric signal: -2,-1,0,1,2)
       ],
-      [],
-      [],
-      []
+      [[],[],[],[]],
+      [[],[],[],[]],
+      [[],[],[],[]]
     ],
     change: 0,
     price: 0,

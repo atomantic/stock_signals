@@ -72,39 +72,39 @@ For all logs and db files, the following legend maps TradingView Summary Signal 
     "tickers": {
       "NASDAQ-EKSO": {
       "ma": [
-        [1], // 4 hour Hull MA (numeric indicator)
-        [1], // 1 day Hull MA
-        [1], // 1 week Hull MA
-        [1]  // 1 month Hull MA
+        [[0, 1]], // last value, 4 hour Hull MA (numeric indicator)
+        [[0, 1]], // 1 day Hull MA
+        [[0, 1]], // 1 week Hull MA
+        [[0, 1]]  // 1 month Hull MA
       ],
       "osc": [
         [ // 4 hour oscillators
-          54.83, // rsi
-          0.98, // stoch rsi
-          32.13, // stoch
-          34.48 // ultimate osc
-          1, // macd numeric directional indicator
+          [54.83], // rsi
+          [0.98], // stoch rsi
+          [32.13], // stoch
+          [34.48] // ultimate osc
+          [1], // macd numeric directional indicator
         ],
         [ // 1 day oscillators
-          60.53,
-          64.05,
-          0.26,
-          57.64,
-          51.31
+          [60.53],
+          [64.05],
+          [0.26],
+          [57.64],
+          [1]
         ],
         [ // 1 week oscillators
-          65.11,
-          73.07,
-          0.18,
-          95.43,
-          45.37
+          [65.11],
+          [73.07],
+          [0.18],
+          [95.43],
+          [1]
         ],
         [ // 1 month oscillators
-          46.35,
-          27.77,
-          -1.22,
-          93.2,
-          41.74
+          [46.35],
+          [27.77],
+          [-1.22],
+          [93.2],
+          [1]
         ]
       ],
         "price": 2.72,
@@ -129,16 +129,14 @@ The rolling logs are capped at 100MB and are saved as minimal csv files using nu
 The column headers for the files are the following:
 
 ```
-ticker  price   time    meta_signal    meta_previous
-4_hour_summary  1_day_summary   1_week_summary  1_month_summary
-4_hour_summary_from  1_day_summary_from   1_week_summary_from  1_month_summary_from
-4h_rsi, 1d_rsi, 1w_rsi, 1m_rsi,
-4h_stochrsi, 1d_stochrsi, 1w_stochrsi, 1m_stochrsi,
-4h_stoch, 1d_stoch, 1w_stoch, 1m_stoch,
-4h_ult, 1d_ult, 1w_ult, 1m_ult,
-4h_macd, 1d_macd, 1w_macd, 1m_macd,
-4h_hull, 1d_hull, 1w_hull, 1m_hull,
-4h_ma, 1d_ma, 1w_ma, 1m_ma
+frame.columns = ["ticker","price","change","time","meta_signal","meta_previous",
+                "4h","1d","1w","1m",
+                "4hp","1dp","1wp","1mp",
+                "4h_rsi","4h_stochrsi","4h_stoch","4h_ult","4h_macd","4h_hull","4h_ma",
+                "1d_rsi","1d_stochrsi","1d_stoch","1d_ult","1d_macd","1d_hull","1d_ma",
+                "1w_rsi","1w_stochrsi","1w_stoch","1w_ult","1w_macd","1w_hull","1w_ma",
+                "1m_rsi","1m_stochrsi","1m_stoch","1m_ult","1m_macd","1m_hull","1m_ma"
+                ]
 ```
 
 The signal database creates 8KB per full run.
