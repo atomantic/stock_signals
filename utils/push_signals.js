@@ -7,7 +7,8 @@ module.exports = function push_signals(signal_array, state_array){
         // previous item value
         var val_last = state_array[i][size-1] 
         // new value being pushed
-        // note: for newer tickers, Monthly (and maybe weekly) may have null values (make them "-")
+        // note: for newer tickers, Monthly (and maybe weekly) may have null values 
+        // make them "/", not 0, but also not null
         var val_new = isNull(signal_array[i]) ? '/' : signal_array[i]
         // console.log('val_new',val_new, 'val_last', val_last)
 

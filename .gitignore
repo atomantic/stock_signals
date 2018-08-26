@@ -4,6 +4,7 @@ node_modules
 .ipython
 .jupyter
 .local
+data/.cache
 data/*.localstorage
 data/cookies*
 data/*.html
