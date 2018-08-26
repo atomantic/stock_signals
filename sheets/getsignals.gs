@@ -15,11 +15,11 @@ function getValue(v){
 }
 function getDirection(v){
   if(!v || typeof v !=='object' || v.length < 2){
-    return '-';
+    return '';
   }
   var current = v[v.length - 1]
   var last = v[v.length - 2]
-  return current > last ? '📈' : (current===last ? '-' : '📉')
+  return current > last ? '+' : (current===last ? '' : '-')
 }
 function resultsToArray(){
   var reverseValues = {
