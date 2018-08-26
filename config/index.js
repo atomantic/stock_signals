@@ -10,7 +10,7 @@ module.exports = {
       [[]] // monthly
     ],
     osc: [
-      [
+      [ // 4 hour
         [],// Relative Strength Index (14)
         [],// Stochastic RSI Fast (3, 3, 14, 14)
         [],// Stochastic %K (14, 3, 3)
