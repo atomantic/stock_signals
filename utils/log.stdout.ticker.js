@@ -3,7 +3,7 @@ const colorize = require('./colorize')
 const config = require('../config')
 const log = require('./log')
 const outpad = require('./outpad')
-module.exports = function(ticker, results) {
+module.exports = function(ticker, results, changed) {
     if(typeof results.sum[1]==='undefined'){
         return console.error('problem detected: ', ticker, results)
     }
@@ -17,7 +17,8 @@ module.exports = function(ticker, results) {
         'M:'+colorize(results.sum[3]), 62),
         ' '+config.maps.icons[results.meta]+' ',
         outpad(config.maps.reverseValues[results.meta], 12),
-        config.maps.changeIcons[movement]||movement
+        config.maps.changeIcons[movement]||movement,
+        changed ? '' : '   [unchanged]'
     )
   }
   
