@@ -128,6 +128,7 @@ module.exports = [
     "NASDAQ-SBBP",
     "NYSE-SBS",
     "NASDAQ-SBUX",
+    "NYSE-SCCO",
     "NASDAQ-SGMO",
     "NYSE-SJT",
     "AMEX-SLV",
