@@ -1,5 +1,6 @@
 module.exports = [
     "NASDAQ-AAPL",
+    "NYSE-ABB",
     "NYSE-ABBV",
     "NYSE-AIT",
     "NYSE-ALB",

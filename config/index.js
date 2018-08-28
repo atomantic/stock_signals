@@ -21,20 +21,20 @@ module.exports = {
       [[],[],[],[],[]],
       [[],[],[],[],[]]
     ],
-    change: 0,
-    price: 0,
-    time: 0,
+    change: null,
+    price: null,
+    time: null,
     sum: [
-      0, // 4 hour summary signal
-      0, // 1 day summary signal
-      0, // 1 week summary signal
-      0 // 1 month summary signal
+      null, // 4 hour summary signal
+      null, // 1 day summary signal
+      null, // 1 week summary signal
+      null // 1 month summary signal
     ],
     // last changed summary signals
     // so if it went from Neutral->Buy on the 1 day, sum[1] = 1 && prev[1] = 0
-    prev: [0,0,0,0],
-    meta: 0, // the average meta signal from all time periods
-    from: 0 // the previous meta value
+    prev: [null,null,null,null],
+    meta: null, // the average meta signal from all time periods
+    from: null // the previous meta value
   },
   skip: require('./skip'),
   tickers: require('./tickers'),

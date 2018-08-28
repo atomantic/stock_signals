@@ -1,5 +1,6 @@
 
 const config = require('../config')
+const reloadTickers = require('../lib/reload.tickers')
 module.exports = {
     method: 'GET',
     path: '/tickers/update',
