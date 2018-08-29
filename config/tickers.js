@@ -167,5 +167,15 @@ module.exports = [
     "NYSE-WTR",
     "NYSE-XOM",
     "AMEX-XPL",
-    "NASDAQ-ZNGA"
+    "NASDAQ-ZNGA",
+    "BTCUSD",
+    "ETCUSD",
+    "ETHUSD",
+    "BCHUSD",
+    "LTCUSD",
+    "LTCBTC",
+    "ETCBTC",
+    "ETHBTC",
+    "BCHBTC",
+    "LTCBTC"
 ]
