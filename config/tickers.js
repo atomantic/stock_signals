@@ -168,5 +168,10 @@ module.exports = [
     "NYSE-XOM",
     "AMEX-XPL",
     "NASDAQ-ZNGA",
-    "crypto:BTC-USD"
+    "crypto:BTC-USD",
+    "crypto:LTC-USD",
+    "crypto:ETH-USD",
+    "crypto:BCH-USD",
+    "crypto:ETC-USD",
+    "crypto:ETH-BTC"
 ]
