@@ -8,10 +8,10 @@ module.exports = function(ticker, results, changed) {
         return console.error('problem detected: ', ticker, results)
     }
     let movement = Math.round(results.meta - results.from)
-    let isCrypto = ticker.indexOf('crypto:')!==-1
+    let inBTC = ticker.indexOf('crypto:')!==-1 && ticker.substr(ticker.length-3, ticker.length)==='BTC'
     log(
         chalk.blue(outpad(ticker, 15)),
-        chalk.cyan(outpad((isCrypto ? 'B' : '$')+results.price.toFixed(isCrypto?8:2), 15, 'left')),
+        chalk.cyan(outpad((inBTC ? 'B' : '$')+results.price.toFixed(inBTC?8:2), 15, 'left')),
         outpad('4H:'+colorize(results.sum[0])+' '+
         'D:'+colorize(results.sum[1])+' '+
         'W:'+colorize(results.sum[2])+' '+
