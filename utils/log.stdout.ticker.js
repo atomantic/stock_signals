@@ -8,9 +8,10 @@ module.exports = function(ticker, results, changed) {
         return console.error('problem detected: ', ticker, results)
     }
     let movement = Math.round(results.meta - results.from)
+    let isCrypto = ticker.indexOf('crypto:')!==-1
     log(
         chalk.blue(outpad(ticker, 15)),
-        chalk.cyan(outpad('$'+results.price.toFixed(2), 9, 'left')),
+        chalk.cyan(outpad((isCrypto ? 'B' : '$')+results.price.toFixed(isCrypto?8:2), 15, 'left')),
         outpad('4H:'+colorize(results.sum[0])+' '+
         'D:'+colorize(results.sum[1])+' '+
         'W:'+colorize(results.sum[2])+' '+
