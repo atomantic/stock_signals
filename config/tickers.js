@@ -167,5 +167,6 @@ module.exports = [
     "NYSE-WTR",
     "NYSE-XOM",
     "AMEX-XPL",
-    "NASDAQ-ZNGA"
+    "NASDAQ-ZNGA",
+    "crypto:BTC-USD"
 ]

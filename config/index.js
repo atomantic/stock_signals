@@ -21,7 +21,6 @@ module.exports = {
       [[],[],[],[],[]],
       [[],[],[],[],[]]
     ],
-    change: null,
     price: null,
     time: null,
     sum: [
