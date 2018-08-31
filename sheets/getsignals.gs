@@ -31,6 +31,7 @@ function resultsToArray(){
  };
  // map results to an array
   var res = [];
+  var res_crypto = [];
   for(t in results){
     var row = []
     row.push(
@@ -85,10 +86,13 @@ function resultsToArray(){
       );
     });
     row.push(
-      results[t].price,
-      results[t].change
+      results[t].price
     );
-    res.push(row);
+    if(row[0].indexOf('crypto:')!==-1){
+      res_crypto.push(row);
+    }else{
+      res.push(row);
+    }
   }
   // alphebetize elements by ticker suffix
   // (e.g. NASDAQ-EKSO sorts in E, by EKSO)
@@ -99,8 +103,16 @@ function resultsToArray(){
     if(keyA > keyB) return 1;
     return 0;
   });
+  // sort crypto by full ticker (e.g. BTC-USD)
+  res_crypto.sort(function(a, b){
+    var keyA = a[0].split(':')[1],
+        keyB = b[0].split(':')[1];
+    if(keyA < keyB) return -1;
+    if(keyA > keyB) return 1;
+    return 0;
+  });
 
-  return res;
+  return res.concat(res_crypto);
 }
 function fillCache(force){
   if (!force && time && time > (new Date().getTime()) - 600000) {
@@ -132,7 +144,7 @@ fillCache()
 
 function dateToHuman(timestamp){
   var d = new Date(timestamp);
-  return (d.getMonth()+1)+'/'+(d.getDate()+1)+' '+d.toLocaleTimeString()
+  return (d.getMonth()+1)+'/'+d.getDate()+' '+d.toLocaleTimeString()
 }
 
 // SHEETS API
