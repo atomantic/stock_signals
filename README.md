@@ -135,7 +135,8 @@ frame.columns = ["ticker","price","change","time","meta_signal","meta_previous",
                 "4h_rsi","4h_stochrsi","4h_stoch","4h_ult","4h_macd","4h_hull","4h_ma",
                 "1d_rsi","1d_stochrsi","1d_stoch","1d_ult","1d_macd","1d_hull","1d_ma",
                 "1w_rsi","1w_stochrsi","1w_stoch","1w_ult","1w_macd","1w_hull","1w_ma",
-                "1m_rsi","1m_stochrsi","1m_stoch","1m_ult","1m_macd","1m_hull","1m_ma"
+                "1m_rsi","1m_stochrsi","1m_stoch","1m_ult","1m_macd","1m_hull","1m_ma",
+                "4h_divergence","1d_divergence","1w_divergence","1m_divergence"
                 ]
 ```
 

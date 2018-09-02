@@ -15,10 +15,12 @@ module.exports = function(ticker, results, changed) {
         outpad('4H:'+colorize(results.sum[0])+' '+
         'D:'+colorize(results.sum[1])+' '+
         'W:'+colorize(results.sum[2])+' '+
-        'M:'+colorize(results.sum[3]), 42),
+        'M:'+colorize(results.sum[3]), 64),
         ' '+config.maps.icons[results.meta]+' ',
         outpad(config.maps.reverseValues[results.meta], 12),
         config.maps.changeIcons[movement]||movement,
+        '\trsi:', results.osc.map(x=>x[0][x[0].length-1]).join(','),
+        'div:', results.divergence.join(','),
         changed ? '' : '   [unchanged]'
     )
   }

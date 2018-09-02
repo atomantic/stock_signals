@@ -49,6 +49,13 @@ request(process.env.JSON_CACHE, function(err, response, body){
 		results = merge(results, remoteCache)
 	}
 	reloadTickers(function(){
+		if(process.env.CRYPTO_MODE){
+			// only run crypto
+			// console.log(config.tickers.filter(function(a){return a.indexOf('crypto:')===0}))
+			config.tickers = config.tickers.filter(function(a){return a.indexOf('crypto:')===0})
+			runner.data.i = config.tickers.length-1
+			results.last = config.tickers[runner.data.i]
+		}
 		server.register([{
 			plugin: require('hapi-and-healthy'),
 			options: {
