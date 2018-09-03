@@ -19,8 +19,7 @@ module.exports = function(ticker, results, changed) {
         ' '+config.maps.icons[results.meta]+' ',
         outpad(config.maps.reverseValues[results.meta], 12),
         config.maps.changeIcons[movement]||movement,
-        '\trsi:', results.osc.map(x=>x[0][x[0].length-1]).join(','),
-        'div:', results.divergence.join(','),
+        '\tdiv:', results.divergence.join(','),
         changed ? '' : '   [unchanged]'
     )
   }
