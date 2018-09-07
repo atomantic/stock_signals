@@ -21,11 +21,19 @@ function getDirection(v){
   var last = v[v.length - 2]
   return current > last ? '+' : (current===last ? '' : '-')
 }
+function getStrongOrWeak(v){
+  if(!v || typeof v !=='object' || v.length < 2){
+    return 0;
+  }
+  var current = v[v.length - 1]
+  var last = v[v.length - 2]
+  return current > last ? 1 : (current===last ? 0 : -1)
+}
 function resultsToArray(){
   var reverseValues = {
     '-2': 'Strong Sell',
     '-1': 'Sell',
-    '0': 'Neutral',
+    '0': 'Hold',
     '1': 'Buy',
     '2': 'Strong Buy'
  };
@@ -39,10 +47,10 @@ function resultsToArray(){
       dateToHuman(results[t].time),
       Math.round(results[t].meta - results[t].from),
       reverseValues[results[t].meta],
-      reverseValues[results[t].sum[0]], // 4 hour
-      reverseValues[results[t].sum[1]], // 1 day
-      reverseValues[results[t].sum[2]], // 1 week
-      reverseValues[results[t].sum[3]] // 1 month
+      results[t].sum[0], // 4 hour
+      results[t].sum[1], // 1 day
+      results[t].sum[2], // 1 week
+      results[t].sum[3] // 1 month
     );
     // Relative Strength Index (14)
     results[t].osc.forEach(function(o){
@@ -51,6 +59,26 @@ function resultsToArray(){
         getDirection(o[0])
       );
     });
+    // is the RSI weak or strong on the short/long 
+    var rsi_short = Math.round((
+      // [4h][RSI]
+      getStrongOrWeak(results[t].osc[0][0]) +
+      // [1d][RSI]
+      getStrongOrWeak(results[t].osc[1][0]) 
+      )/2);
+    var rsi_long = Math.round((
+      // [1w][RSI]
+      getStrongOrWeak(results[t].osc[2][0]) +
+      // [1m][RSI]
+      getStrongOrWeak(results[t].osc[3][0]) 
+      )/2)
+    row.push(
+      rsi_short,
+      rsi_long,
+      // total weakness/Strength
+      Math.round((rsi_short+rsi_long)/2)
+    );
+
     // Stochastic RSI Fast (3, 3, 14, 14)
     results[t].osc.forEach(function(o){
       row.push(
@@ -65,6 +93,18 @@ function resultsToArray(){
         getDirection(o[2])
       );
     });
+    // strong or week stochastic 
+    var stoch_short = Math.round((
+      getStrongOrWeak(results[t].osc[0][2]) +
+      getStrongOrWeak(results[t].osc[1][2]) 
+      )/2);
+    var stoch_long = Math.round((
+      getStrongOrWeak(results[t].osc[2][2]) +
+      getStrongOrWeak(results[t].osc[3][2]) 
+      )/2)
+    row.push(
+      Math.round((stoch_short+stoch_long)/2)
+    );
     // Ultimate Oscillator (7, 14, 28)
     results[t].osc.forEach(function(o){
       row.push(
@@ -88,6 +128,38 @@ function resultsToArray(){
     row.push(
       results[t].price
     );
+    row = row.concat(
+      results[t].divergence
+    );
+    // debugging divergence logic (temp)
+    row = row.concat(
+      results[t].oversold.cont
+    );
+    results[t].oversold.state.forEach(function(o){
+      if(o.length===0){
+        row.push('','','','')
+      }
+      if(o.length===1){
+        row.push('','',o[0][0],o[0][1])
+      }
+      if(o.length===2){
+        row.push(o[0][0],o[0][1],o[1][0],o[1][1])
+      }
+    });
+    row = row.concat(
+      results[t].overbought.cont
+    );
+    results[t].overbought.state.forEach(function(o){
+      if(o.length===0){
+        row.push('','','','')
+      }
+      if(o.length===1){
+        row.push('','',o[0][0],o[0][1])
+      }
+      if(o.length===2){
+        row.push(o[0][0],o[0][1],o[1][0],o[1][1])
+      }
+    });
     if(row[0].indexOf('crypto:')!==-1){
       res_crypto.push(row);
     }else{

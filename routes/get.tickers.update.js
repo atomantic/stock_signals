@@ -6,7 +6,8 @@ module.exports = {
     path: '/tickers/update',
     handler: function(req, h){
         reloadTickers(function(){
-            return h.response(config.tickers)
+            console.log('tickers reloaded', config.tickers.length)
         })
+        return h.response(config.tickers.length)
     }
 }
