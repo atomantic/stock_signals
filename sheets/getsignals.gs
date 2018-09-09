@@ -135,10 +135,6 @@ function resultsToArray(){
     row = row.concat(
       results[t].divergence
     );
-    // debugging divergence logic (temp)
-    row = row.concat(
-      results[t].oversold.cont
-    );
     results[t].oversold.state.forEach(function(o){
       if(o.length===0){
         row.push('','','','')
@@ -150,9 +146,6 @@ function resultsToArray(){
         row.push(o[0][0],o[0][1],o[1][0],o[1][1])
       }
     });
-    row = row.concat(
-      results[t].overbought.cont
-    );
     results[t].overbought.state.forEach(function(o){
       if(o.length===0){
         row.push('','','','')
