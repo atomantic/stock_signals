@@ -1,12 +1,12 @@
 'use strict'
 const config = require('./config')
 const Hapi = require('hapi')
-const log = require('./utils/log')
+const log = require('./lib/log')
 const pjson = require('./package')
 const request = require('request')
 const routes = require('./routes')
 const {each, merge} = require('lodash')
-const outpad = require('./utils/outpad')
+const outpad = require('./lib/log/outpad')
 const runner = require('./lib/runner')
 var results = require('./data/latest')
 const reloadTickers = require('./lib/reload.tickers')
@@ -34,8 +34,8 @@ request(process.env.JSON_CACHE, function(err, response, body){
 	}catch(e){
 		throw e.message
 	}
-	log('remote lastRun:', remoteCache.time)
-	log(' local lastRun:', results.time)
+	log('remote lastRun:', new Date(remoteCache.time))
+	log(' local lastRun:', new Date(results.time))
 	if(remoteCache.time > results.time){
 		var remoteTime = new Date(remoteCache.time).toLocaleString()
 		log(`remote cache is newer ${remoteCache.last} @ ${remoteTime}, using it`)
