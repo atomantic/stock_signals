@@ -4,13 +4,13 @@ module.exports = {
     ma: [
       [
         []// Hull MA (numeric signal: -2,-1,0,1,2)
-      ], // 4 hour
+      ], // hourly
       [[]], // daily
       [[]], // weekly
       [[]] // monthly
     ],
     osc: [
-      [ // 4 hour
+      [ // hourly
         [],// Relative Strength Index (14)
         [],// Stochastic RSI Fast (3, 3, 14, 14)
         [],// Stochastic %K (14, 3, 3)
@@ -26,7 +26,7 @@ module.exports = {
     overbought: {
       cont: [0, 0, 0, 0],  // start 0 to indicate not actively within > 70 RSI ranges
       state: [
-        //  [[last_over_70_4h_RSI, price],[latest_over_70_4h_RSI, price]]
+        //  [[last_over_70_hourly_RSI, price],[latest_over_70_hourly_RSI, price]]
         [],
         //  [[last_over_70_daily_RSI, price],[latest_over_70_daily_RSI, price]]
         [],

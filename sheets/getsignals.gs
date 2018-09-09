@@ -51,10 +51,10 @@ function resultsToArray(){
       dateToHuman(results[t].time),
       Math.round(results[t].meta - results[t].from),
       reverseValues[results[t].meta],
-      results[t].sum[0], // 4 hour
-      results[t].sum[1], // 1 day
-      results[t].sum[2], // 1 week
-      results[t].sum[3] // 1 month
+      results[t].sum[0], // hourly
+      results[t].sum[1], // daily
+      results[t].sum[2], // weekly
+      results[t].sum[3] // monthly
     );
     // Relative Strength Index (14)
     results[t].osc.forEach(function(o){
@@ -65,15 +65,15 @@ function resultsToArray(){
     });
     // is the RSI weak or strong on the short/long 
     var rsi_short = Math.round((
-      // [4h][RSI]
+      // [h][RSI]
       getStrongOrWeak(results[t].osc[0][0]) +
-      // [1d][RSI]
+      // [d][RSI]
       getStrongOrWeak(results[t].osc[1][0]) 
       )/2);
     var rsi_long = Math.round((
-      // [1w][RSI]
+      // [w][RSI]
       getStrongOrWeak(results[t].osc[2][0]) +
-      // [1m][RSI]
+      // [m][RSI]
       getStrongOrWeak(results[t].osc[3][0]) 
       )/2)
     row.push(
