@@ -1,10 +1,10 @@
 node_modules
 .ipynb_checkpoints
+.cache
 .config
 .ipython
 .jupyter
 .local
-data/.cache
 data/*.localstorage
 data/cookies*
 data/*.html
