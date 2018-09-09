@@ -5,7 +5,11 @@
 var cache = CacheService.getUserCache();
 //var cache = CacheService.getScriptCache();
 //var cache = CacheService.getDocumentCache();
-var results = JSON.parse(cache.get('results')||'{}');
+var results = JSON.parse(cache.get('t1')||cache.get('results')||'{}');
+var results2 = JSON.parse(cache.get('t2')||'{}');
+for(var t in results2){
+  results[t] = results2[t]
+}
 var resultsArray = resultsToArray();
 var time = cache.get('time');
 var fetchCounter = 0;
@@ -209,7 +213,20 @@ function fillCache(force){
   // cache for 10 minutes
   cache.put("time", payload.time, 600);
   cache.put("last", payload.last, 600);
-  cache.put("results", JSON.stringify(payload.tickers), 600);
+  // split tickers in 2 (too big to store in a single cache key)
+  var count = 0
+  var t1 = {}
+  var t2 = {}
+  for(var t in payload.tickers){
+    if(count < 50){
+      t1[t] = payload.tickers[t]
+    }else{
+      t2[t] = payload.tickers[t]
+    }
+    count++
+  }
+  cache.put("t1", JSON.stringify(t1), 600);
+  cache.put("t2", JSON.stringify(t2), 600);
   return time;
 }
 fillCache()
@@ -225,9 +242,9 @@ function GET_TICKER_FETCH_COUNTER(){
   return fetchCounter;
 }
 function RELOAD_TICKERS(){
-  Utilities.sleep(600000);
+  Utilities.sleep(60000);
   results = {};
-  cache.removeAll(['time','last','results']);
+  cache.removeAll(['time','last','results', 't1','t2']);
   fillCache();
   return cache.get('time');
 }

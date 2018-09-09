@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "SNAPSHOT_ENABLED=true PAUSE_SECONDS=3 JSON_CACHE=https://api.myjson.com/bins/1eh1ls TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js node .",
+		"start": "SNAPSHOT_ENABLED=true PAUSE_SECONDS=10 JSON_CACHE=https://api.myjson.com/bins/1eh1ls TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js node .",
 		"crypto": "PAUSE_SECONDS=30 CRYPTO_MODE=1 JSON_CACHE=https://api.myjson.com/bins/1eh1ls TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js node .",
 		"setup": "npm i -g phantomjs-prebuilt casperjs now && npm i"
 	},
