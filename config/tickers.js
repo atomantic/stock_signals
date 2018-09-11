@@ -60,7 +60,6 @@ module.exports = [
     "NYSE-GE",
     "NASDAQ-GERN",
     "NYSE-GG",
-    "NYSE-GGP",
     "NASDAQ-GILD",
     "NYSE-GME",
     "NASDAQ-GOOG",
