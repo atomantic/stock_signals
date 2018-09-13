@@ -47,6 +47,7 @@ function resultsToArray(){
   for(t in results){
     var row = []
     row.push(
+      results[t].price,
       t,
       dateToHuman(results[t].time),
       Math.round(results[t].meta - results[t].from),
@@ -129,9 +130,6 @@ function resultsToArray(){
         getDirection(o[0])
       );
     });
-    row.push(
-      results[t].price
-    );
     row = row.concat(
       results[t].divergence
     );
@@ -157,7 +155,7 @@ function resultsToArray(){
         row.push(o[0][0],o[0][1],o[1][0],o[1][1])
       }
     });
-    if(row[0].indexOf('crypto:')!==-1){
+    if(row[1].indexOf('crypto:')!==-1){
       res_crypto.push(row);
     }else{
       res.push(row);
@@ -166,16 +164,16 @@ function resultsToArray(){
   // alphebetize elements by ticker suffix
   // (e.g. NASDAQ-EKSO sorts in E, by EKSO)
   res.sort(function(a, b){
-    var keyA = a[0].split('-')[1],
-        keyB = b[0].split('-')[1];
+    var keyA = a[1].split('-')[1],
+        keyB = b[1].split('-')[1];
     if(keyA < keyB) return -1;
     if(keyA > keyB) return 1;
     return 0;
   });
   // sort crypto by full ticker (e.g. BTC-USD)
   res_crypto.sort(function(a, b){
-    var keyA = a[0].split(':')[1],
-        keyB = b[0].split(':')[1];
+    var keyA = a[1].split(':')[1],
+        keyB = b[1].split(':')[1];
     if(keyA < keyB) return -1;
     if(keyA > keyB) return 1;
     return 0;
