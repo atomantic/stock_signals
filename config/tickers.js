@@ -145,6 +145,7 @@ module.exports = [
     "NYSE-TAP",
     "NYSE-TECK",
     "NYSE-TEVA",
+    "NASDAQ-TLRY",
     "NASDAQ-TMUS",
     "NYSE-TROX",
     "NASDAQ-TSLA",
