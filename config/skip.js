@@ -1,4 +1,5 @@
 module.exports = [
     "NASDAQ-CDTI",
-    "NASDAQ-HMNY"
+    "NASDAQ-HMNY",
+    "NASDAQ-JAGX"
 ]
