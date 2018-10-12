@@ -36,7 +36,7 @@ npm start
 ## Testing
 You can run a single ticker test like so:
 ```
-TICKER=AMEX-VHT SNAPSHOT_ENABLED=1 casperjs test --fail-fast --verbose --web-security=no --ignore-ssl-errors=true --load-images=false lib/technicals.js
+TICKER=AMEX-SPY SNAPSHOT_ENABLED=1 casperjs test --fail-fast --verbose --web-security=no --ignore-ssl-errors=true --load-images=false lib/technicals.js
 ```
 This will store a screencapture in `./snaps/` and output verbose data
 
