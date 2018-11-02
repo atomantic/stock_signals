@@ -15,7 +15,7 @@ module.exports = {
       // ensure that there is a blank ticker result for any that are missing
       each(config.tickers, function(key){
         if(!results.tickers[key]){
-          results.tickers[key] = cloneDeep(config.tickerSchema)
+          results.tickers[key] = cloneDeep(key.includes('swap:') ? config.swapSchema : config.tickerSchema)
         }
       })
       return h.response(results)

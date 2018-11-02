@@ -13,7 +13,7 @@ ENV LOG_LEVEL=info
 ENV ABORT_SECONDS=60
 ENV PAUSE_SECONDS=5
 ENV JSON_CACHE=https://api.myjson.com/bins/1eh1ls
-ENV TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/tradingview_signals/master/config/tickers.js
+ENV TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/stock_signals/master/config/tickers.js
 
 EXPOSE 8808
 

@@ -59,6 +59,11 @@ module.exports = {
     meta: null, // the average meta signal from all time periods
     from: null // the previous meta value
   },
+  // swaps calculate using RSI, CCI on daily only
+  swapSchema: { 
+    cci: [],
+    rsi: []
+  },
   skip: require('./skip'),
   tickers: require('./tickers'),
   //userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
