@@ -15,11 +15,12 @@ module.exports = {
         [],// Stochastic RSI Fast (3, 3, 14, 14)
         [],// Stochastic %K (14, 3, 3)
         [],// Ultimate Oscillator (7, 14, 28)
-        [] // MACD Level (12, 27) (numeric signal: -2,-1,0,1,2)
+        [],// MACD Level (12, 27) (numeric signal: -2,-1,0,1,2)
+        [] // Commodity Channel Index (20)
       ],
-      [[],[],[],[],[]],
-      [[],[],[],[],[]],
-      [[],[],[],[],[]]
+      [[],[],[],[],[],[]],
+      [[],[],[],[],[],[]],
+      [[],[],[],[],[],[]]
     ],
     // tuples for discovering bearish divergence
     // and for confirming bullish continuation

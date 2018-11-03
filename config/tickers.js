@@ -56,7 +56,6 @@ module.exports = [
     "AMEX-GDX",
     "AMEX-GDXJ",
     "NYSE-GE",
-    "NASDAQ-GERN",
     "NYSE-GG",
     "NYSE-GIS",
     "NASDAQ-GOOG",

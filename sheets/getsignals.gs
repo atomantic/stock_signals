@@ -1,16 +1,20 @@
 /*
  * on page load, we will grab the cached signal results
- * we use a myjson backup in case the now.sh instance goes down (power down to low hit activity)
+ * we use a myjson backup in case the now.sh instance goes down (e.g. power down to low hit activity)
  */
 var cache = CacheService.getUserCache();
 //var cache = CacheService.getScriptCache();
 //var cache = CacheService.getDocumentCache();
+// cache is split into multiple keys to beat the cache value limit size
 var results = JSON.parse(cache.get('t1')||cache.get('results')||'{}');
 var results2 = JSON.parse(cache.get('t2')||'{}');
+// swaps are stored in another key
+var swaps = JSON.parse(cache.get('swaps')||'{}');
 for(var t in results2){
   results[t] = results2[t]
 }
 var resultsArray = resultsToArray();
+var swapsArray = swapsToArray();
 var time = cache.get('time');
 var fetchCounter = 0;
 
@@ -124,6 +128,15 @@ function resultsToArray(){
         getDirection(o[4])
       );
     });
+    // CCI (20)
+    results[t].osc.forEach(function(o){
+      if(o[5]){
+        row.push(
+          getValue(o[5]),
+          getDirection(o[5])
+        );
+      }
+    });
     results[t].ma.forEach(function(o){
       row.push(
         getValue(o[0]),
@@ -181,6 +194,21 @@ function resultsToArray(){
 
   return res.concat(res_crypto);
 }
+
+function swapsToArray(){
+ // map swaps to an array
+  arr = []
+  for(t in swaps){
+    var row = []
+    row.push(t);
+    swaps[t].rsi.forEach(function(o){row.push(o)});
+    row.push(swaps[t].rsi[0] > swaps[t].rsi[1] ? 1 : -1);
+    swaps[t].cci.forEach(function(o){row.push(o)});
+    row.push(swaps[t].cci[0] > swaps[t].cci[1] ? 1 : -1);
+    arr.push(row)
+  }
+  return arr;
+}
 function fillCache(force){
   if (!force && time && time > (new Date().getTime()) - 600000) {
     return time;
@@ -197,8 +225,17 @@ function fillCache(force){
   }
   var payload = JSON.parse(response.getContentText());
   
-  results = payload.tickers;
+  results = {};
+  swaps = {};
+  for(var key in payload.tickers){
+    if(key.indexOf('swap:')!==-1){
+      swaps[key.replace('swap:','')] = payload.tickers[key]
+    }else{
+      results[key] = payload.tickers[key]
+    }
+  }
   resultsArray = resultsToArray();
+  swapsToArray();
   //GET_SIGNALS_ARRAY(); // retrigger for reflow
   time = payload.time;
   // cache for 10 minutes
@@ -208,16 +245,17 @@ function fillCache(force){
   var count = 0
   var t1 = {}
   var t2 = {}
-  for(var t in payload.tickers){
+  for(var t in results){
     if(count < 50){
-      t1[t] = payload.tickers[t]
+      t1[t] = results[t]
     }else{
-      t2[t] = payload.tickers[t]
+      t2[t] = results[t]
     }
     count++
   }
   cache.put("t1", JSON.stringify(t1), 600);
   cache.put("t2", JSON.stringify(t2), 600);
+  cache.put("swaps", JSON.stringify(swaps), 600);
   return time;
 }
 fillCache()
@@ -253,7 +291,14 @@ function GET_SIGNALS_ARRAY(){
   if(!resultsArray.length){
     resultsArray = resultsToArray();
   }
+  
   return resultsArray;
+}
+function GET_SWAPS_ARRAY(){
+  if(!swapsArray.length){
+    swapsArray = swapsToArray();
+  }
+  return swapsArray;
 }
 function GET_RESULTS_LENGTH(){
   return resultsArray.length;
