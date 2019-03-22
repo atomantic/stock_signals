@@ -7,7 +7,8 @@ const request = require('request')
 const routes = require('./routes')
 const {each, merge} = require('lodash')
 const outpad = require('./lib/log/outpad')
-const runner = require('./lib/runner')
+const runnerSingle = require('./lib/runner.single')
+const runnerAll = require('./lib/runner.all')
 var results = require('./data/latest')
 const reloadTickers = require('./lib/reload.tickers')
 // Create a server with a host and port
@@ -44,7 +45,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 			console.log('could not find last run ticker in config; starting random.')
 		}else{
 			// start here
-			runner.data.i = i
+			runnerSingle.data.i = i
 		}
 		results = merge(results, remoteCache)
 	}
@@ -53,8 +54,8 @@ request(process.env.JSON_CACHE, function(err, response, body){
 			// only run crypto
 			// console.log(config.tickers.filter(function(a){return a.indexOf('crypto:')===0}))
 			config.tickers = config.tickers.filter(function(a){return a.indexOf('crypto:')===0})
-			runner.data.i = config.tickers.length-1
-			results.last = config.tickers[runner.data.i]
+			runnerSingle.data.i = config.tickers.length-1
+			results.last = config.tickers[runnerSingle.data.i]
 		}
 		server.register([{
 			plugin: require('hapi-and-healthy'),
@@ -76,7 +77,8 @@ request(process.env.JSON_CACHE, function(err, response, body){
 		.then(() => routes.forEach(route => server.route(route)))
 		.then(() => server.start())
 		.then(() => log('Server running at:', server.info.uri ))
-		.then(() => runner.run() )
+		.then(() => runnerSingle.run() )
+		.then(() => runnerAll.run() )
 		.catch(err => {
 			console.error(`Error starting server: ${err}`)
 		})

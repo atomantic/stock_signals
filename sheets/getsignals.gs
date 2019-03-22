@@ -135,6 +135,11 @@ function resultsToArray(){
           getValue(o[5]),
           getDirection(o[5])
         );
+      }else{
+        row.push(
+         '',
+         ''
+        );
       }
     });
     results[t].ma.forEach(function(o){
@@ -205,6 +210,11 @@ function swapsToArray(){
     row.push(swaps[t].rsi[0] > swaps[t].rsi[1] ? 1 : -1);
     swaps[t].cci.forEach(function(o){row.push(o)});
     row.push(swaps[t].cci[0] > swaps[t].cci[1] ? 1 : -1);
+    if(swaps[t].avg){
+      swaps[t].avg.forEach(function(o){row.push(o)});
+    }else{
+      row.push('','','')
+    }
     arr.push(row)
   }
   return arr;

@@ -1,5 +1,11 @@
 module.exports = {
   maps: require('./maps'),
+  periods: [
+    '60', // 1 hour
+    false, // 1 day
+    '1W',
+    '1M'
+  ],
   tickerSchema: {
     ma: [
       [
@@ -68,5 +74,5 @@ module.exports = {
   skip: require('./skip'),
   tickers: require('./tickers'),
   //userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
-  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:65.0) Gecko/20100101 Firefox/65.0'
 }

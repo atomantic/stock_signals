@@ -5,6 +5,7 @@ node_modules
 .ipython
 .jupyter
 .local
+.vscode
 data/*.localstorage
 data/cookies*
 data/*.html
