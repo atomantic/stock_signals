@@ -45,6 +45,17 @@ function resultsToArray(){
     '1': 'Buy',
     '2': 'Strong Buy'
  };
+ var normalize = function(num){
+    if(num < 0){
+        if(num > -0.5) return '-1'
+        return '-2'
+    }
+    if(num > 0){
+        if(num < 0.5) return '1'
+        return '2'
+    }
+    return '0'
+ }
  // map results to an array
   var res = [];
   var res_crypto = [];
@@ -55,11 +66,11 @@ function resultsToArray(){
       t,
       dateToHuman(results[t].time),
       Math.round(results[t].meta - results[t].from),
-      reverseValues[results[t].meta],
-      results[t].sum[0], // hourly
-      results[t].sum[1], // daily
-      results[t].sum[2], // weekly
-      results[t].sum[3] // monthly
+      reverseValues[normalize(results[t].meta)],
+      normalize(results[t].sum[0]), // hourly
+      normalize(results[t].sum[1]), // daily
+      normalize(results[t].sum[2]), // weekly
+      normalize(results[t].sum[3]) // monthly
     );
     // Relative Strength Index (14)
     results[t].osc.forEach(function(o){

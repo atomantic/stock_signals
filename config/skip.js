@@ -17,6 +17,7 @@ module.exports = [
     "NYSE-BABA",
     "NYSE-BAC",
     "NYSE-BEP",
+    "ASX-BHP",
     "AMEX-BTG",
     "NYSE-C",
     "NYSE-CCI",

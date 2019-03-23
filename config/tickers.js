@@ -6,7 +6,6 @@ module.exports = [
     "NYSE-AUY",
     "NASDAQ-BA",
     "ASX-BBL",
-    "ASX-BHP",
     "NASDAQ-BIIB",
     "NASDAQ-BOTZ",
     "NASDAQ-BPY",
