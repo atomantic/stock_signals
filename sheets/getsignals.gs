@@ -67,10 +67,10 @@ function resultsToArray(){
       dateToHuman(results[t].time),
       Math.round(results[t].meta - results[t].from),
       reverseValues[normalize(results[t].meta)],
-      normalize(results[t].sum[0]), // hourly
-      normalize(results[t].sum[1]), // daily
-      normalize(results[t].sum[2]), // weekly
-      normalize(results[t].sum[3]) // monthly
+      Number(normalize(results[t].sum[0])), // hourly
+      Number(normalize(results[t].sum[1])), // daily
+      Number(normalize(results[t].sum[2])), // weekly
+      Number(normalize(results[t].sum[3])) // monthly
     );
     // Relative Strength Index (14)
     results[t].osc.forEach(function(o){
