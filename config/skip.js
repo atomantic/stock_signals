@@ -31,6 +31,7 @@ module.exports = [
     "NASDAQ-CMCSA",
     "AMEX-COPX",
     "NASDAQ-CRSP",
+    "NYSE-CWEN.A",
     "NYSE-CWT",
     "NASDAQ-CY",
     "NYSE-D",
