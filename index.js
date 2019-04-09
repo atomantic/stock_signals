@@ -9,6 +9,7 @@ const {each, merge} = require('lodash')
 const outpad = require('./lib/log/outpad')
 const runnerSingle = require('./lib/runner.single')
 const runnerAll = require('./lib/runner.all')
+const sync = require('./lib/sync')
 var results = require('./data/latest')
 const reloadTickers = require('./lib/reload.tickers')
 // Create a server with a host and port
@@ -77,6 +78,7 @@ request(process.env.JSON_CACHE, function(err, response, body){
 		.then(() => routes.forEach(route => server.route(route)))
 		.then(() => server.start())
 		.then(() => log('Server running at:', server.info.uri ))
+		.then(() => sync() )
 		.then(() => runnerSingle.run() )
 		.then(() => runnerAll.run() )
 		.catch(err => {
