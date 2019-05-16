@@ -1,1 +1,0 @@
-e.g. GET `/timeseries/AAPL/STOCH/daily`
