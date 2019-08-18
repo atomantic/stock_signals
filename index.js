@@ -1,4 +1,5 @@
 'use strict'
+// ignore invalid certs (not concerned with this in the way we are using it)
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
 const config = require('./config')
 const Hapi = require('hapi')

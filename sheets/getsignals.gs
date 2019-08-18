@@ -17,6 +17,7 @@ var resultsArray = resultsToArray();
 var swapsArray = swapsToArray();
 var time = cache.get('time');
 var fetchCounter = 0;
+var today = new Date();
 
 function getValue(v){
   return (v && typeof v === 'object') ? v[v.length-1] : v
@@ -60,20 +61,29 @@ function resultsToArray(){
   var res = [];
   var res_crypto = [];
   for(t in results){
-    var row = []
+    var row = [];
+    var r = results[t];
     row.push(
-      results[t].price,
+      r.price,
       t,
-      dateToHuman(results[t].time),
-      Math.round(results[t].meta - results[t].from),
-      reverseValues[normalize(results[t].meta)],
-      Number(normalize(results[t].sum[0])), // hourly
-      Number(normalize(results[t].sum[1])), // daily
-      Number(normalize(results[t].sum[2])), // weekly
-      Number(normalize(results[t].sum[3])) // monthly
+      dateToHuman(r.time),
+      // next dividend date
+      r.nextDiv,
+      // days to next dividend
+      r.nextDiv ? getWorkingDays(today, new Date(r.nextDiv)) : '',
+      // next earnings date
+      r.nextEarn,
+      // days to next earnings
+      r.nextEarn ? getWorkingDays(today, new Date(r.nextDiv)) : '',
+      Math.round(r.meta - r.from),
+      reverseValues[normalize(r.meta)],
+      Number(normalize(r.sum[0])), // hourly
+      Number(normalize(r.sum[1])), // daily
+      Number(normalize(r.sum[2])), // weekly
+      Number(normalize(r.sum[3])) // monthly
     );
     // Relative Strength Index (14)
-    results[t].osc.forEach(function(o){
+    r.osc.forEach(function(o){
       row.push(
         getValue(o[0]),
         getDirection(o[0])
@@ -82,15 +92,15 @@ function resultsToArray(){
     // is the RSI weak or strong on the short/long 
     var rsi_short = Math.round((
       // [h][RSI]
-      getStrongOrWeak(results[t].osc[0][0]) +
+      getStrongOrWeak(r.osc[0][0]) +
       // [d][RSI]
-      getStrongOrWeak(results[t].osc[1][0]) 
+      getStrongOrWeak(r.osc[1][0]) 
       )/2);
     var rsi_long = Math.round((
       // [w][RSI]
-      getStrongOrWeak(results[t].osc[2][0]) +
+      getStrongOrWeak(r.osc[2][0]) +
       // [m][RSI]
-      getStrongOrWeak(results[t].osc[3][0]) 
+      getStrongOrWeak(r.osc[3][0]) 
       )/2)
     row.push(
       rsi_short,
@@ -100,14 +110,14 @@ function resultsToArray(){
     );
 
     // Stochastic RSI Fast (3, 3, 14, 14)
-    results[t].osc.forEach(function(o){
+    r.osc.forEach(function(o){
       row.push(
         getValue(o[1]),
         getDirection(o[1])
       );
     });
     // Stochastic %K (14, 3, 3)
-    results[t].osc.forEach(function(o){
+    r.osc.forEach(function(o){
       row.push(
         getValue(o[2]),
         getDirection(o[2])
@@ -115,32 +125,32 @@ function resultsToArray(){
     });
     // strong or week stochastic 
     var stoch_short = Math.round((
-      getStrongOrWeak(results[t].osc[0][2]) +
-      getStrongOrWeak(results[t].osc[1][2]) 
+      getStrongOrWeak(r.osc[0][2]) +
+      getStrongOrWeak(r.osc[1][2]) 
       )/2);
     var stoch_long = Math.round((
-      getStrongOrWeak(results[t].osc[2][2]) +
-      getStrongOrWeak(results[t].osc[3][2]) 
+      getStrongOrWeak(r.osc[2][2]) +
+      getStrongOrWeak(r.osc[3][2]) 
       )/2)
     row.push(
       Math.round((stoch_short+stoch_long)/2)
     );
     // Ultimate Oscillator (7, 14, 28)
-    results[t].osc.forEach(function(o){
+    r.osc.forEach(function(o){
       row.push(
         getValue(o[3]),
         getDirection(o[3])
       );
     });
     // MACD Level (12, 27) - numeric indicator (-2, -1, 0, 1, 2)
-    results[t].osc.forEach(function(o){
+    r.osc.forEach(function(o){
       row.push(
         getValue(o[4]),
         getDirection(o[4])
       );
     });
     // CCI (20)
-    results[t].osc.forEach(function(o){
+    r.osc.forEach(function(o){
       if(o[5]){
         row.push(
           getValue(o[5]),
@@ -153,16 +163,16 @@ function resultsToArray(){
         );
       }
     });
-    results[t].ma.forEach(function(o){
+    r.ma.forEach(function(o){
       row.push(
         getValue(o[0]),
         getDirection(o[0])
       );
     });
     row = row.concat(
-      results[t].divergence
+      r.divergence
     );
-    results[t].oversold.state.forEach(function(o){
+    r.oversold.state.forEach(function(o){
       if(o.length===0){
         row.push('','','','')
       }
@@ -173,7 +183,7 @@ function resultsToArray(){
         row.push(o[0][0],o[0][1],o[1][0],o[1][1])
       }
     });
-    results[t].overbought.state.forEach(function(o){
+    r.overbought.state.forEach(function(o){
       if(o.length===0){
         row.push('','','','')
       }
@@ -235,7 +245,7 @@ function fillCache(force){
     return time;
   }
   fetchCounter++;
-  var url = 'https://api.myjson.com/bins/1eh1ls';
+  var url = 'http://api.myjson.com/bins/1eh1ls';
   var response = UrlFetchApp.fetch(url, {
     'method': 'get',
     'muteHttpExceptions': false
@@ -281,6 +291,17 @@ function fillCache(force){
 }
 fillCache()
 
+function getWorkingDays(startDate, endDate){
+  var result = 0;
+  var currentDate = startDate;
+  while (currentDate <= endDate)  {  
+    var weekDay = currentDate.getDay();
+    if(weekDay !== 0 && weekDay !== 6) result++;
+    currentDate.setDate(currentDate.getDate()+1); 
+  }
+  return result;
+}
+
 function dateToHuman(timestamp){
   var d = new Date(timestamp);
   return (d.getMonth()+1)+'/'+d.getDate()+' '+d.toLocaleTimeString()
@@ -304,7 +325,6 @@ function GET_LAST_RUN(){
 function GET_LAST_TICKER(){
   return "Last: "+cache.get("last");
 }
-
 // alphabetize ticker list by suffix (to match sheet)
 // return an array of cells showing 
 // [signal, direction, hour.Summary, day.Summary, week.Summary, month.Summary, h.rsi, h.stoch, h.macd, ...]
