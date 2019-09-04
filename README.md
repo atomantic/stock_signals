@@ -24,38 +24,11 @@ I might post the Google Sheets template logic later...
 # run setup
 npm run setup
 ```
-this will:
-* ensure casper/phantom are installed globally via `npm i -g phantomjs-prebuilt casperjs`
-
 ## Local Run
 ```
 npm start
 ```
 ![running](img/running.png)
-
-## Testing
-You can run a single ticker test like so:
-```
-TICKER=AMEX-SPY SNAPSHOT_ENABLED=1 casperjs test --fail-fast --verbose --web-security=no --ignore-ssl-errors=true --load-images=false lib/casper.scrape.technicals.js
-
-TICKER=NYSE-CMP SNAPSHOT_ENABLED=1 casperjs test --fail-fast --verbose --web-security=no --ignore-ssl-errors=true --load-images=false lib/casper.scrape.technicals.js
-```
-This will store a screencapture in `./snaps/` and output verbose data
-
-## Deploy
-This runs on now.sh very easily, but I am in the process of moving it to either AWS or Google Cloud so I can store the data long term and run backtesting/ML on the data.
-
-### Now.sh
-```
-# deploy to now.sh (as https://signals.now.sh)
-./deploy
-```
-#### Keeping now.sh alive
-now.sh will expire a container if it isn't being hit regularly
-hit it by leaving a running job like this:
-```
-watch -n 120 curl https://signals.now.sh/
-```
 
 # Data
 For all logs and db files, the following legend maps TradingView Summary Signal status to numeric values:
@@ -68,7 +41,7 @@ For all logs and db files, the following legend maps TradingView Summary Signal 
 
 ## Results
 
-`latest.json` is a snapshot of the latest runs for each ticker. It is only the most recent run without historical context. This is used by the Google Sheet to determine the current state. This set maintains the last different state each summary was in:
+`data/latest.json` is a snapshot of the latest runs for each ticker. It is only the most recent run without historical context. This is used by the Google Sheet to determine the current state. This set maintains the last different state each summary was in:
 ```javascript
 {
     "tickers": {

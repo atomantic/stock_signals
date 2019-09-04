@@ -17,8 +17,17 @@ var resultsArray = resultsToArray();
 var swapsArray = swapsToArray();
 var time = cache.get('time');
 var fetchCounter = 0;
-var today = new Date();
 
+function getWorkingDays(startDate, endDate){
+  var result = 0;
+  var currentDate = startDate;
+  while (currentDate <= endDate)  {  
+    var weekDay = currentDate.getDay();
+    if(weekDay !== 0 && weekDay !== 6) result++;
+    currentDate.setDate(currentDate.getDate()+1); 
+  }
+  return result;
+}
 function getValue(v){
   return (v && typeof v === 'object') ? v[v.length-1] : v
 }
@@ -70,11 +79,11 @@ function resultsToArray(){
       // next dividend date
       r.nextDiv,
       // days to next dividend
-      r.nextDiv ? getWorkingDays(today, new Date(r.nextDiv)) : '',
+      r.nextDiv ? getWorkingDays(new Date(), new Date(r.nextDiv)) : '',
       // next earnings date
       r.nextEarn,
       // days to next earnings
-      r.nextEarn ? getWorkingDays(today, new Date(r.nextDiv)) : '',
+      r.nextEarn ? getWorkingDays(new Date(), new Date(r.nextDiv)) : '',
       Math.round(r.meta - r.from),
       reverseValues[normalize(r.meta)],
       Number(normalize(r.sum[0])), // hourly
@@ -245,7 +254,7 @@ function fillCache(force){
     return time;
   }
   fetchCounter++;
-  var url = 'http://api.myjson.com/bins/1eh1ls';
+  var url = 'https://raw.githubusercontent.com/atomantic/stock_signals/master/data/latest.json';
   var response = UrlFetchApp.fetch(url, {
     'method': 'get',
     'muteHttpExceptions': false
@@ -291,16 +300,6 @@ function fillCache(force){
 }
 fillCache()
 
-function getWorkingDays(startDate, endDate){
-  var result = 0;
-  var currentDate = startDate;
-  while (currentDate <= endDate)  {  
-    var weekDay = currentDate.getDay();
-    if(weekDay !== 0 && weekDay !== 6) result++;
-    currentDate.setDate(currentDate.getDate()+1); 
-  }
-  return result;
-}
 
 function dateToHuman(timestamp){
   var d = new Date(timestamp);
