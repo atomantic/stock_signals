@@ -253,7 +253,7 @@ function fillCache(force){
     return time;
   }
   fetchCounter++;
-  var url = 'https://raw.githubusercontent.com/atomantic/stock_signals/master/data/latest.json';
+  var url = 'https://raw.githubusercontent.com/atomantic/stock_signals/master/data/latest.json?'+(new Date().getTime());
   var response = UrlFetchApp.fetch(url, {
     'method': 'get',
     'muteHttpExceptions': false
