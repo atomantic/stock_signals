@@ -1,6 +1,5 @@
 /*
- * on page load, we will grab the cached signal results
- * we use a myjson backup in case the now.sh instance goes down (e.g. power down to low hit activity)
+ * on page load, we will grab the cached signal results from github
  */
 var cache = CacheService.getUserCache();
 //var cache = CacheService.getScriptCache();
