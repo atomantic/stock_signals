@@ -1,7 +1,6 @@
 module.exports = [
     "NASDAQ-ARCC",
     "NYSE-BA",
-    "NYSE-CCI",
     "NASDAQ-CY",
     "AMEX-EWA",
     "NYSE-F",
