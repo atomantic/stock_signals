@@ -4,7 +4,7 @@
 	"description": "private stock signal runner for feeding a Google Spreadsheet with trading data",
 	"main": "index.js",
 	"scripts": {
-		"start": "RELOAD_DISABLED=true SNAPSHOT_ENABLED=true ABORT_SECONDS=20 PAUSE_SECONDS=30 JSON_CACHE=https://raw.githubusercontent.com/atomantic/stock_signals/master/data/latest.json TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/stock_signals/master/config/tickers.js node .",
+		"start": "RELOAD_DISABLED=true SNAPSHOT_ENABLED=true ABORT_SECONDS=20 PAUSE_SECONDS=45 JSON_CACHE=https://raw.githubusercontent.com/atomantic/stock_signals/master/data/latest.json TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/stock_signals/master/config/tickers.js node .",
 		"crypto": "ABORT_SECONDS=20 PAUSE_SECONDS=30 CRYPTO_MODE=1 JSON_CACHE=https://raw.githubusercontent.com/atomantic/stock_signals/master/data/latest.json TICKER_SOURCE_FILE=https://raw.githubusercontent.com/atomantic/stock_signals/master/config/tickers.js node .",
 		"setup": "npm i"
 	},
@@ -25,6 +25,7 @@
 		"hapi": "18.1.0",
 		"hapi-and-healthy": "7.0.4",
 		"lodash": "4.17.11",
+		"mathjs": "6.2.1",
 		"request": "2.88.0",
 		"request-to-curl": "0.1.1",
 		"rolling-file": "1.0.10"

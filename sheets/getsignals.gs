@@ -76,13 +76,32 @@ function resultsToArray(){
       t,
       dateToHuman(r.time),
       // next dividend date
-      r.nextDiv,
+      r.div_ex||r.nextDiv,
       // days to next dividend
-      r.nextDiv ? getWorkingDays(new Date(), new Date(r.nextDiv)) : '',
+      (r.div_ex||r.nextDiv) ? getWorkingDays(new Date(), new Date(r.div_ex||r.nextDiv)) : '',
+      // next dividend payout amount
+      r.div_pay||'',
       // next earnings date
       r.nextEarn,
       // days to next earnings
       r.nextEarn ? getWorkingDays(new Date(), new Date(r.nextDiv)) : '',
+      // historic calculations
+      // hourly
+      r.historics ? r.historics[0].mad : '', 
+      r.historics ? r.historics[0].mean : '', 
+      r.historics ? r.historics[0].variance : '',
+      // daily
+      r.historics ? r.historics[1].mad : '',
+      r.historics ? r.historics[1].mean : '', 
+      r.historics ? r.historics[1].variance : '', 
+      // 
+      r.historics ? r.historics[2].mad : '', 
+      r.historics ? r.historics[2].mean : '', 
+      r.historics ? r.historics[2].variance : '', 
+      // monthly
+      r.historics ? r.historics[3].mad : '', 
+      r.historics ? r.historics[3].mean : '', 
+      r.historics ? r.historics[3].variance : '', 
       Math.round(r.meta - r.from),
       reverseValues[normalize(r.meta)],
       Number(normalize(r.sum[0])), // hourly

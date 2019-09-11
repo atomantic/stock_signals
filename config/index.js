@@ -1,8 +1,10 @@
 module.exports = {
+  linreg_periods: 100, // how many periods linear regression will examine
   maps: require('./maps'),
+  historic_intervals: ['60min', 'daily', 'weekly', 'monthly'],
   periods: [
     '60', // 1 hour
-    false, // 1 day
+    '1D', // 1 day
     '1W',
     '1M'
   ],
@@ -54,6 +56,20 @@ module.exports = {
     divergence: [0, 0, 0, 0], // start at 0 to indicate we are not giving a divergent signal
     price: null,
     time: null,
+    historics: [ // calculations mapped to periods
+      {
+        mad: null, // median absolute deviation
+        max: null,
+        mean: null,
+        median: null,
+        min: null,
+        std: null,
+        variance: null
+      }, // hourly
+      {}, // daily
+      {}, // weekly
+      {} // monthly
+    ], 
     sum: [
       null, // 4 hour summary signal
       null, // 1 day summary signal
@@ -64,7 +80,12 @@ module.exports = {
     // so if it went from Neutral->Buy on the 1 day, sum[1] = 1 && prev[1] = 0
     prev: [null,null,null,null],
     meta: null, // the average meta signal from all time periods
-    from: null // the previous meta value
+    from: null, // the previous meta value
+    nextDiv: null, // next dividend date (from yahoo)
+    nextEarn: null, // next earnings date (yahoo)
+    div_ex: null, // next ex-dividend date (dividata)
+    div_rec: null,
+    div_pay: null // next ex-dividend payment amount (dividata)
   },
   // swaps calculate using RSI, CCI on daily only
   swapSchema: { 
@@ -73,6 +94,6 @@ module.exports = {
   },
   skip: require('./skip'),
   tickers: require('./tickers'),
-  //userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36'
+  // for casper
   userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:65.0) Gecko/20100101 Firefox/65.0'
 }
