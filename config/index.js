@@ -1,7 +1,11 @@
 module.exports = {
-  linreg_periods: 100, // how many periods linear regression will examine
+  linreg_periods: {
+    '60min': 100,
+    'daily': 100,
+    'weekly': 50
+  }, // how many periods linear regression will examine
   maps: require('./maps'),
-  historic_intervals: ['60min', 'daily', 'weekly', 'monthly'],
+  historic_intervals: ['60min', 'daily', 'weekly'],
   periods: [
     '60', // 1 hour
     '1D', // 1 day
@@ -67,8 +71,7 @@ module.exports = {
         variance: null
       }, // hourly
       {}, // daily
-      {}, // weekly
-      {} // monthly
+      {} // weekly
     ], 
     sum: [
       null, // 4 hour summary signal

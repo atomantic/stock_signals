@@ -142,7 +142,7 @@
   },
   "NASDAQ-ARTNA": {
     "RSI.daily": 1568221100942,
-    "RSI.weekly": 1568143423374,
+    "RSI.weekly": 1568235592377,
     "STOCHRSI.daily": 1540842468521,
     "STOCHRSI.weekly": 1540851492411,
     "STOCHRSI.monthly": 1540858997735,
@@ -2088,7 +2088,7 @@
     "CCI.monthly": 1566224832684
   },
   "NYSE-WPM": {
-    "RSI.daily": 1568143052377,
+    "RSI.daily": 1568296688013,
     "RSI.monthly": 1568147988459,
     "STOCHRSI.daily": 1540841311779,
     "STOCHRSI.weekly": 1540850135475,
@@ -2221,7 +2221,7 @@
   },
   "AMEX-SPY": {
     "RSI.60min": 1568217855789,
-    "RSI.daily": 1568142454014,
+    "RSI.daily": 1568234230038,
     "RSI.weekly": 1568144918169,
     "RSI.monthly": 1568147431560,
     "CCI.60min": 1568209732232,

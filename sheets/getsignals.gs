@@ -89,19 +89,18 @@ function resultsToArray(){
       // hourly
       r.historics ? r.historics[0].mad : '', 
       r.historics ? r.historics[0].mean : '', 
-      r.historics ? r.historics[0].variance : '',
+      r.historics && r.historics[0].mad ? r.historics[0].mean - r.historics[0].mad*2 : '', // lower
+      r.historics && r.historics[0].mad ? r.historics[0].mean + r.historics[0].mad*2 : '', // upper
       // daily
       r.historics ? r.historics[1].mad : '',
       r.historics ? r.historics[1].mean : '', 
-      r.historics ? r.historics[1].variance : '', 
+      r.historics && r.historics[1].mad ? r.historics[1].mean - r.historics[1].mad*2 : '', // lower
+      r.historics && r.historics[1].mad ? r.historics[1].mean + r.historics[1].mad*2 : '', // upper
       // 
       r.historics ? r.historics[2].mad : '', 
       r.historics ? r.historics[2].mean : '', 
-      r.historics ? r.historics[2].variance : '', 
-      // monthly
-      r.historics ? r.historics[3].mad : '', 
-      r.historics ? r.historics[3].mean : '', 
-      r.historics ? r.historics[3].variance : '', 
+      r.historics && r.historics[2].mad ? r.historics[2].mean - r.historics[2].mad*2 : '', // lower
+      r.historics && r.historics[2].mad ? r.historics[2].mean + r.historics[2].mad*2 : '', // upper
       Math.round(r.meta - r.from),
       reverseValues[normalize(r.meta)],
       Number(normalize(r.sum[0])), // hourly
