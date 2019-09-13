@@ -88,19 +88,22 @@ function resultsToArray(){
       // historic calculations
       // hourly
       r.historics ? r.historics[0].mad : '', 
+      r.historics ? r.historics[0].std : '', 
       r.historics ? r.historics[0].mean : '', 
-      r.historics && r.historics[0].mad ? r.historics[0].mean - r.historics[0].mad*2 : '', // lower
-      r.historics && r.historics[0].mad ? r.historics[0].mean + r.historics[0].mad*2 : '', // upper
+      r.historics && r.historics[0].std ? r.historics[0].mean - r.historics[0].std*2 : '', // lower
+      r.historics && r.historics[0].std ? r.historics[0].mean + r.historics[0].std*2 : '', // upper
       // daily
       r.historics ? r.historics[1].mad : '',
+      r.historics ? r.historics[1].std : '',
       r.historics ? r.historics[1].mean : '', 
-      r.historics && r.historics[1].mad ? r.historics[1].mean - r.historics[1].mad*2 : '', // lower
-      r.historics && r.historics[1].mad ? r.historics[1].mean + r.historics[1].mad*2 : '', // upper
+      r.historics && r.historics[1].std ? r.historics[1].mean - r.historics[1].std*2 : '', // lower
+      r.historics && r.historics[1].std ? r.historics[1].mean + r.historics[1].std*2 : '', // upper
       // 
       r.historics ? r.historics[2].mad : '', 
+      r.historics ? r.historics[2].std : '', 
       r.historics ? r.historics[2].mean : '', 
-      r.historics && r.historics[2].mad ? r.historics[2].mean - r.historics[2].mad*2 : '', // lower
-      r.historics && r.historics[2].mad ? r.historics[2].mean + r.historics[2].mad*2 : '', // upper
+      r.historics && r.historics[2].std ? r.historics[2].mean - r.historics[2].std*2 : '', // lower
+      r.historics && r.historics[2].std ? r.historics[2].mean + r.historics[2].std*2 : '', // upper
       Math.round(r.meta - r.from),
       reverseValues[normalize(r.meta)],
       Number(normalize(r.sum[0])), // hourly
