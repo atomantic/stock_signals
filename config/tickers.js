@@ -63,7 +63,6 @@ module.exports = [
     "NYSE-V",
     "AMEX-VHT",
     "AMEX-VIG",
-    "NASDAQ-VIIX",
     "NYSE-VLO",
     "AMEX-VTI",
     "NYSE-VZ",
