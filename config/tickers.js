@@ -47,7 +47,6 @@ module.exports = [
     "NASDAQ-NDAQ",
     "NASDAQ-PEP",
     "NASDAQ-QCOM",
-    "AMEX-REMX",
     "NYSE-ROK",
     "NASDAQ-SBUX",
     "NYSE-SCCO",

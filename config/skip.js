@@ -31,6 +31,7 @@ module.exports = [
     "NYSE-PFE",
     "NYSE-PM",
     "NYSE-PPG",
+    "AMEX-REMX",
     "NYSE-SQ",
     "NYSE-SXCP",
     "NYSE-SBS",
