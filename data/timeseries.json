@@ -11,7 +11,7 @@
     "STOCHRSI.60min": 1536755440651
   },
   "NASDAQ-AAPL": {
-    "RSI.daily": 1568738946752,
+    "RSI.daily": 1568899526034,
     "RSI.weekly": 1568816972114,
     "RSI.monthly": 1568145612584,
     "STOCHRSI.daily": 1540841866865,
@@ -39,7 +39,7 @@
     "CCI.monthly": 1549071187330
   },
   "NYSE-ABBV": {
-    "RSI.daily": 1568739005588,
+    "RSI.daily": 1568899575329,
     "RSI.weekly": 1568817022036,
     "RSI.monthly": 1568145645536,
     "STOCHRSI.daily": 1540841963800,
@@ -2016,7 +2016,7 @@
     "STOCHRSI.60min": 1540832200939,
     "CCI.60min": 1568820161968,
     "CCI.daily": 1568870103413,
-    "CCI.weekly": 1568220635210,
+    "CCI.weekly": 1568899669417,
     "CCI.monthly": 1567789736151
   },
   "AMEX-VYM": {
@@ -2058,7 +2058,7 @@
     "STOCHRSI.60min": 1540832366969,
     "CCI.60min": 1568820209708,
     "CCI.daily": 1568877358022,
-    "CCI.weekly": 1568220667841
+    "CCI.weekly": 1568899703000
   },
   "NYSE-WFC": {
     "RSI.daily": 1550872185862,
@@ -2098,7 +2098,7 @@
     "RSI.60min": 1568823644743,
     "STOCHRSI.60min": 1540832555097,
     "CCI.60min": 1568820303266,
-    "CCI.daily": 1568392512291,
+    "CCI.daily": 1568899359634,
     "CCI.weekly": 1568220734407,
     "CCI.monthly": 1568228171662
   },
@@ -2108,7 +2108,7 @@
     "STOCHRSI.daily": 1540841357373,
     "STOCHRSI.weekly": 1540850453027,
     "STOCHRSI.monthly": 1540858066670,
-    "RSI.daily": 1568738833033,
+    "RSI.daily": 1568899419080,
     "RSI.60min": 1568823692008,
     "STOCHRSI.60min": 1540832602368,
     "CCI.60min": 1568820350348,
@@ -2117,7 +2117,7 @@
     "CCI.monthly": 1566227898938
   },
   "NYSE-XOM": {
-    "RSI.daily": 1568738892062,
+    "RSI.daily": 1568899472373,
     "RSI.weekly": 1568816924254,
     "STOCHRSI.daily": 1540841403631,
     "STOCHRSI.weekly": 1540850486962,
@@ -2734,7 +2734,7 @@
   "NYSE-AGN": {
     "RSI.60min": 1568820542753,
     "RSI.daily": 1568823879855,
-    "RSI.weekly": 1568739058077,
+    "RSI.weekly": 1568899619593,
     "RSI.monthly": 1568145677664,
     "CCI.60min": 1568817069590,
     "CCI.daily": 1568392768331,
