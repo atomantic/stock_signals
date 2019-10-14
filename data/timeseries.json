@@ -1227,7 +1227,7 @@
   },
   "NYSE-MCD": {
     "RSI.daily": 1571068542781,
-    "RSI.weekly": 1570808256617,
+    "RSI.weekly": 1571068615388,
     "RSI.monthly": 1568147040510,
     "STOCHRSI.daily": 1540838149513,
     "STOCHRSI.weekly": 1540846228701,
@@ -1274,7 +1274,7 @@
     "CCI.monthly": 1555611552959
   },
   "NYSE-MMM": {
-    "RSI.daily": 1570804517920,
+    "RSI.daily": 1571068726528,
     "STOCHRSI.daily": 1540820601395,
     "STOCHRSI.weekly": 1540820679153,
     "STOCHRSI.monthly": 1540829578130,
@@ -2601,7 +2601,7 @@
   },
   "NYSE-MCK": {
     "RSI.60min": 1571061925587,
-    "RSI.daily": 1570804458929,
+    "RSI.daily": 1571068665409,
     "RSI.weekly": 1570808307105,
     "RSI.monthly": 1568147072976,
     "CCI.60min": 1570815125436,
@@ -2723,7 +2723,7 @@
   },
   "NYSE-MA": {
     "RSI.60min": 1571061831318,
-    "RSI.daily": 1570804343567,
+    "RSI.daily": 1571068558370,
     "RSI.weekly": 1570808207586,
     "RSI.monthly": 1568147007953,
     "CCI.60min": 1570815031332,
