@@ -17,7 +17,6 @@ module.exports = [
     "NYSE-CMP",
     "NYSE-CWT",
     "NYSE-D",
-    "NYSE-DAL",
     "NYSE-DIS",
     "NYSE-DUK",
     "NYSE-ENB",

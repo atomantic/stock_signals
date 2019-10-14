@@ -1137,7 +1137,7 @@
     "CCI.monthly": 1568219681041
   },
   "NYSE-JPM": {
-    "RSI.daily": 1570804220163,
+    "RSI.daily": 1571068424305,
     "RSI.weekly": 1570808108007,
     "STOCHRSI.daily": 1540837777379,
     "STOCHRSI.weekly": 1540845903845,
@@ -2171,7 +2171,7 @@
   },
   "NYSE-KO": {
     "RSI.60min": 1571061784485,
-    "RSI.daily": 1570804279936,
+    "RSI.daily": 1571068483562,
     "RSI.weekly": 1570808157709,
     "RSI.monthly": 1568146975532,
     "STOCHRSI.60min": 1540829163838,
