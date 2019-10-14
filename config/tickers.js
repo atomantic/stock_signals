@@ -36,7 +36,6 @@ module.exports = [
     "NYSE-ICE",
     "NYSE-IFF",
     "NASDAQ-INTC",
-    "NYSE-JNJ",
     "NYSE-JPM",
     "NYSE-KO",
     "NYSE-MA",
