@@ -1,4 +1,5 @@
 module.exports = [
+    "NYSE-AGN",
     "NASDAQ-ARCC",
     "NYSE-BA",
     "NASDAQ-CY",
