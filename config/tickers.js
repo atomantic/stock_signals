@@ -55,7 +55,6 @@ module.exports = [
     "NASDAQ-TLRY",
     "NYSE-TROX",
     "NASDAQ-TSLA",
-    "NASDAQ-TVIX",
     "NYSE-V",
     "AMEX-VHT",
     "AMEX-VIG",

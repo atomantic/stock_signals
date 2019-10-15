@@ -40,6 +40,7 @@ module.exports = [
     "NYSE-SBS",
     "AMEX-SVXY",
     "NYSE-TECK",
+    "NASDAQ-TVIX",
     "NYSE-TWTR",
     "NYSE-TX",
     "NASDAQ-TXN",
