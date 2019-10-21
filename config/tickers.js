@@ -10,7 +10,6 @@ module.exports = [
     "NYSE-AWK",
     "NYSE-BUD",
     "NYSE-CCI",
-    "NYSE-CF",
     "NASDAQ-CGNX",
     "ARCA-CGW",
     "NYSE-CLF",
