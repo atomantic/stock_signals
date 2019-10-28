@@ -52,6 +52,7 @@ module.exports = [
     "NASDAQ-TXMD",
     "NYSE-VEDL",
     "NASDAQ-VIIX",
+    "NYSE-VZ",
     "NASDAQ-WDC",
     "NYSE-WFC",
     "NYSE-WPG",

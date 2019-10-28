@@ -58,7 +58,6 @@ module.exports = [
     "AMEX-VIG",
     "NYSE-VLO",
     "AMEX-VTI",
-    "NYSE-VZ",
     "NYSE-WMT",
     "NYSE-WPM",
     "NYSE-WTR",
