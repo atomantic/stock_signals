@@ -5,6 +5,7 @@ module.exports = [
     "NYSE-BA",
     "NYSE-BUD",
     "NYSE-CF",
+    "NYSE-CMP",
     "NASDAQ-CY",
     "NYSE-DAL",
     "AMEX-EWA",

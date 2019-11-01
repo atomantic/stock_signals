@@ -12,7 +12,6 @@ module.exports = [
     "NASDAQ-CGNX",
     "ARCA-CGW",
     "NYSE-CLF",
-    "NYSE-CMP",
     "NYSE-CWT",
     "NYSE-D",
     "NYSE-DIS",
