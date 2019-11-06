@@ -12,7 +12,7 @@
   },
   "NASDAQ-AAPL": {
     "RSI.daily": 1572979064893,
-    "RSI.weekly": 1572895032172,
+    "RSI.weekly": 1573057804065,
     "RSI.monthly": 1568145612584,
     "STOCHRSI.daily": 1540841866865,
     "STOCHRSI.weekly": 1540850960899,
@@ -40,7 +40,7 @@
   },
   "NYSE-ABBV": {
     "RSI.daily": 1572979138889,
-    "RSI.weekly": 1572895083544,
+    "RSI.weekly": 1573057860236,
     "RSI.monthly": 1568145645536,
     "STOCHRSI.daily": 1540841963800,
     "STOCHRSI.weekly": 1540851036597,
@@ -57,7 +57,7 @@
     "STOCHRSI.daily": 1540842103437,
     "STOCHRSI.weekly": 1540851176959,
     "STOCHRSI.monthly": 1540858734116,
-    "RSI.weekly": 1572895131742,
+    "RSI.weekly": 1573057914055,
     "RSI.60min": 1572975430273,
     "STOCHRSI.60min": 1540833352168,
     "CCI.60min": 1572898218219,
@@ -67,7 +67,7 @@
   },
   "NYSE-ALB": {
     "RSI.daily": 1572979263747,
-    "RSI.weekly": 1572895182825,
+    "RSI.weekly": 1573057979067,
     "RSI.monthly": 1568145774534,
     "STOCHRSI.daily": 1540842150228,
     "STOCHRSI.weekly": 1540851223055,
@@ -81,7 +81,7 @@
   },
   "NASDAQ-AMAT": {
     "RSI.daily": 1572979338129,
-    "RSI.weekly": 1572895236651,
+    "RSI.weekly": 1573058044229,
     "RSI.monthly": 1568145806897,
     "STOCHRSI.daily": 1540842196355,
     "STOCHRSI.weekly": 1540851270719,
@@ -117,7 +117,7 @@
   },
   "NASDAQ-AMZN": {
     "RSI.daily": 1572979411355,
-    "RSI.weekly": 1572895297228,
+    "RSI.weekly": 1573058102459,
     "RSI.monthly": 1568145839353,
     "STOCHRSI.daily": 1540842361746,
     "STOCHRSI.weekly": 1540851413116,
@@ -142,7 +142,7 @@
   },
   "NASDAQ-ARTNA": {
     "RSI.daily": 1572979481799,
-    "RSI.weekly": 1572895351410,
+    "RSI.weekly": 1573058155942,
     "STOCHRSI.daily": 1540842468521,
     "STOCHRSI.weekly": 1540851492411,
     "STOCHRSI.monthly": 1540858997735,
@@ -191,8 +191,8 @@
     "RSI.weekly": 1573052328671,
     "RSI.60min": 1572975669118,
     "STOCHRSI.60min": 1540825643777,
-    "CCI.60min": 1572898457740,
-    "CCI.daily": 1572966287415,
+    "CCI.60min": 1573058214092,
+    "CCI.daily": 1573059262187,
     "CCI.weekly": 1572969608857,
     "CCI.monthly": 1566233482890
   },
@@ -683,7 +683,7 @@
     "CCI.monthly": 1547102038348
   },
   "NYSE-FNF": {
-    "RSI.daily": 1572892722828,
+    "RSI.daily": 1573053709635,
     "RSI.weekly": 1572896033886,
     "RSI.monthly": 1568146454496,
     "STOCHRSI.daily": 1540836294707,
@@ -697,7 +697,7 @@
     "CCI.monthly": 1547102116409
   },
   "TSX-FTS": {
-    "RSI.daily": 1572892780614,
+    "RSI.daily": 1573053826567,
     "RSI.weekly": 1572896083793,
     "STOCHRSI.daily": 1540836341460,
     "STOCHRSI.weekly": 1540844451348,
@@ -734,7 +734,7 @@
     "CCI.monthly": 1543483164667
   },
   "AMEX-GDX": {
-    "RSI.daily": 1572892839852,
+    "RSI.daily": 1573053942033,
     "STOCHRSI.daily": 1540836447234,
     "STOCHRSI.weekly": 1540844556342,
     "STOCHRSI.monthly": 1540853496063,
@@ -748,7 +748,7 @@
     "CCI.monthly": 1566223311384
   },
   "AMEX-GDXJ": {
-    "RSI.daily": 1572892898946,
+    "RSI.daily": 1573054049551,
     "RSI.weekly": 1572896187568,
     "RSI.monthly": 1568146554029,
     "STOCHRSI.daily": 1540836506860,
@@ -810,7 +810,7 @@
     "STOCHRSI.60min": 1536628400369
   },
   "NASDAQ-GILD": {
-    "RSI.daily": 1572892955391,
+    "RSI.daily": 1573054156962,
     "STOCHRSI.daily": 1536751911955,
     "STOCHRSI.weekly": 1536757483074,
     "STOCHRSI.monthly": 1536762927778,
@@ -838,7 +838,7 @@
   },
   "NASDAQ-GOOG": {
     "RSI.daily": 1572976536732,
-    "RSI.weekly": 1572893026181,
+    "RSI.weekly": 1573054290570,
     "RSI.monthly": 1568146650864,
     "STOCHRSI.daily": 1540836706681,
     "STOCHRSI.weekly": 1540844816198,
@@ -855,7 +855,7 @@
     "STOCHRSI.daily": 1540836753092,
     "STOCHRSI.weekly": 1540844874886,
     "STOCHRSI.monthly": 1540853806415,
-    "RSI.weekly": 1572893076312,
+    "RSI.weekly": 1573054378918,
     "RSI.monthly": 1568146683339,
     "RSI.60min": 1572973544592,
     "STOCHRSI.60min": 1540827985093,
@@ -890,7 +890,7 @@
     "STOCHRSI.daily": 1540836858839,
     "STOCHRSI.weekly": 1540845014700,
     "STOCHRSI.monthly": 1540853897638,
-    "RSI.weekly": 1572893131884,
+    "RSI.weekly": 1573054472303,
     "RSI.60min": 1572973594175,
     "STOCHRSI.60min": 1540828093768,
     "CCI.60min": 1572896384978,
@@ -985,7 +985,7 @@
   },
   "NYSE-IBM": {
     "RSI.daily": 1572976731705,
-    "RSI.weekly": 1572893180826,
+    "RSI.weekly": 1573054567968,
     "STOCHRSI.daily": 1540837249404,
     "STOCHRSI.weekly": 1540845418051,
     "STOCHRSI.monthly": 1540854270089,
@@ -1003,7 +1003,7 @@
     "STOCHRSI.daily": 1540837293751,
     "STOCHRSI.weekly": 1540845463546,
     "STOCHRSI.monthly": 1540854317293,
-    "RSI.weekly": 1572893233786,
+    "RSI.weekly": 1573054627572,
     "RSI.60min": 1572973690055,
     "STOCHRSI.60min": 1540828580870,
     "CCI.60min": 1572896486376,
@@ -1037,7 +1037,7 @@
   },
   "NYSE-IFF": {
     "RSI.daily": 1572976862152,
-    "RSI.weekly": 1572893284685,
+    "RSI.weekly": 1573054715180,
     "RSI.monthly": 1568146813159,
     "STOCHRSI.daily": 1540837445269,
     "STOCHRSI.weekly": 1540845611903,
@@ -1064,7 +1064,7 @@
   },
   "NASDAQ-INTC": {
     "RSI.daily": 1572976930863,
-    "RSI.weekly": 1572893338450,
+    "RSI.weekly": 1573054801553,
     "STOCHRSI.daily": 1540837551124,
     "STOCHRSI.weekly": 1540845717435,
     "STOCHRSI.monthly": 1540854581551,
@@ -1138,7 +1138,7 @@
   },
   "NYSE-JPM": {
     "RSI.daily": 1572977021224,
-    "RSI.weekly": 1572893389394,
+    "RSI.weekly": 1573054866356,
     "STOCHRSI.daily": 1540837777379,
     "STOCHRSI.weekly": 1540845903845,
     "STOCHRSI.monthly": 1540854787362,
@@ -1227,7 +1227,7 @@
   },
   "NYSE-MCD": {
     "RSI.daily": 1572977221356,
-    "RSI.weekly": 1572893552378,
+    "RSI.weekly": 1573055104631,
     "RSI.monthly": 1568147040510,
     "STOCHRSI.daily": 1540838149513,
     "STOCHRSI.weekly": 1540846228701,
@@ -1278,7 +1278,7 @@
     "STOCHRSI.daily": 1540820601395,
     "STOCHRSI.weekly": 1540820679153,
     "STOCHRSI.monthly": 1540829578130,
-    "RSI.weekly": 1572893660389,
+    "RSI.weekly": 1573055285537,
     "RSI.monthly": 1568147105635,
     "RSI.60min": 1572974078164,
     "STOCHRSI.60min": 1540820523641,
@@ -1314,7 +1314,7 @@
     "STOCHRSI.daily": 1540821476914,
     "STOCHRSI.weekly": 1540821554663,
     "STOCHRSI.monthly": 1540829733137,
-    "RSI.weekly": 1572893710973,
+    "RSI.weekly": 1573055374767,
     "RSI.monthly": 1568147138249,
     "RSI.60min": 1572974126786,
     "STOCHRSI.60min": 1540821399178,
@@ -1446,7 +1446,7 @@
   },
   "NASDAQ-PEP": {
     "RSI.daily": 1572977566472,
-    "RSI.weekly": 1572893814887,
+    "RSI.weekly": 1573055564765,
     "RSI.monthly": 1568147203139,
     "STOCHRSI.daily": 1540838978527,
     "STOCHRSI.weekly": 1540846949455,
@@ -1526,7 +1526,7 @@
     "RSI.daily": 1572977632120,
     "STOCHRSI.daily": 1540839143199,
     "STOCHRSI.weekly": 1540847088202,
-    "RSI.weekly": 1572893865938,
+    "RSI.weekly": 1573055642189,
     "RSI.60min": 1572974272088,
     "RSI.monthly": 1568147235519,
     "STOCHRSI.60min": 1540830343677,
@@ -1589,7 +1589,7 @@
   },
   "NYSE-ROK": {
     "RSI.daily": 1572977702497,
-    "RSI.weekly": 1572893918094,
+    "RSI.weekly": 1573055724073,
     "RSI.monthly": 1568147300095,
     "STOCHRSI.daily": 1540839349578,
     "STOCHRSI.weekly": 1540847290041,
@@ -1645,7 +1645,7 @@
   },
   "NASDAQ-SBUX": {
     "RSI.daily": 1572977765453,
-    "RSI.weekly": 1572893973281,
+    "RSI.weekly": 1573055833507,
     "RSI.monthly": 1568147332481,
     "STOCHRSI.daily": 1540839488998,
     "STOCHRSI.weekly": 1540847429630,
@@ -1659,7 +1659,7 @@
   },
   "NYSE-SCCO": {
     "RSI.daily": 1572977828289,
-    "RSI.weekly": 1572894030779,
+    "RSI.weekly": 1573056003319,
     "STOCHRSI.daily": 1540813449931,
     "STOCHRSI.weekly": 1540822512955,
     "STOCHRSI.monthly": 1540830771034,
@@ -1712,7 +1712,7 @@
   },
   "NYSE-SO": {
     "RSI.daily": 1572977977957,
-    "RSI.weekly": 1572894151455,
+    "RSI.weekly": 1573056183676,
     "RSI.monthly": 1568147398618,
     "STOCHRSI.daily": 1540813640961,
     "STOCHRSI.weekly": 1540822712125,
@@ -1769,7 +1769,7 @@
     "STOCHRSI.daily": 1540813832836,
     "STOCHRSI.weekly": 1540822906756,
     "STOCHRSI.monthly": 1540831200977,
-    "RSI.weekly": 1572894306204,
+    "RSI.weekly": 1573056458050,
     "RSI.60min": 1572974659910,
     "STOCHRSI.60min": 1540801574153,
     "CCI.60min": 1572897447929,
@@ -1793,7 +1793,7 @@
   },
   "NYSE-T": {
     "RSI.daily": 1572978258501,
-    "RSI.weekly": 1572894358942,
+    "RSI.weekly": 1573056605164,
     "RSI.monthly": 1568147497517,
     "STOCHRSI.daily": 1540813923086,
     "STOCHRSI.weekly": 1540822994990,
@@ -1857,7 +1857,7 @@
   },
   "NYSE-TROX": {
     "RSI.daily": 1572978371475,
-    "RSI.weekly": 1572894459327,
+    "RSI.weekly": 1573056766325,
     "RSI.monthly": 1568147596882,
     "STOCHRSI.daily": 1540814195256,
     "STOCHRSI.weekly": 1540823288575,
@@ -1871,7 +1871,7 @@
   },
   "NASDAQ-TSLA": {
     "RSI.daily": 1572978425684,
-    "RSI.weekly": 1572894508799,
+    "RSI.weekly": 1573056856327,
     "RSI.monthly": 1568147660716,
     "STOCHRSI.daily": 1540814239216,
     "STOCHRSI.weekly": 1540823337273,
@@ -1935,7 +1935,7 @@
     "STOCHRSI.daily": 1540814416232,
     "STOCHRSI.weekly": 1540823544753,
     "STOCHRSI.monthly": 1540831868042,
-    "RSI.weekly": 1572894558472,
+    "RSI.weekly": 1573056939303,
     "RSI.60min": 1572974899969,
     "STOCHRSI.60min": 1540805615982,
     "CCI.60min": 1572897690237,
@@ -1956,7 +1956,7 @@
   },
   "AMEX-VHT": {
     "RSI.daily": 1572978540060,
-    "RSI.weekly": 1572894607199,
+    "RSI.weekly": 1573057018901,
     "STOCHRSI.daily": 1540814510131,
     "STOCHRSI.weekly": 1540823643772,
     "STOCHRSI.monthly": 1540831974670,
@@ -1974,7 +1974,7 @@
     "STOCHRSI.daily": 1540814568087,
     "STOCHRSI.weekly": 1540823708865,
     "STOCHRSI.monthly": 1540832035547,
-    "RSI.weekly": 1572894657623,
+    "RSI.weekly": 1573057094160,
     "RSI.60min": 1572974995057,
     "STOCHRSI.60min": 1540806548509,
     "CCI.60min": 1572897786956,
@@ -2011,7 +2011,7 @@
     "STOCHRSI.daily": 1540840829764,
     "STOCHRSI.weekly": 1540848785746,
     "STOCHRSI.monthly": 1540857657410,
-    "RSI.weekly": 1572894761361,
+    "RSI.weekly": 1573057231457,
     "RSI.60min": 1572975094648,
     "STOCHRSI.60min": 1540832200939,
     "CCI.60min": 1572897882766,
@@ -2094,7 +2094,7 @@
     "STOCHRSI.daily": 1540841311779,
     "STOCHRSI.weekly": 1540850135475,
     "STOCHRSI.monthly": 1540850215519,
-    "RSI.weekly": 1572894872947,
+    "RSI.weekly": 1573057415109,
     "RSI.60min": 1572975189755,
     "STOCHRSI.60min": 1540832555097,
     "CCI.60min": 1572897977801,
@@ -2103,7 +2103,7 @@
     "CCI.monthly": 1568228171662
   },
   "NYSE-WTR": {
-    "RSI.weekly": 1572894926820,
+    "RSI.weekly": 1573057542697,
     "RSI.monthly": 1568145547096,
     "STOCHRSI.daily": 1540841357373,
     "STOCHRSI.weekly": 1540850453027,
@@ -2118,7 +2118,7 @@
   },
   "NYSE-XOM": {
     "RSI.daily": 1572978997843,
-    "RSI.weekly": 1572894978494,
+    "RSI.weekly": 1573057718064,
     "STOCHRSI.daily": 1540841403631,
     "STOCHRSI.weekly": 1540850486962,
     "STOCHRSI.monthly": 1540858113882,
@@ -2146,7 +2146,7 @@
   "NASDAQ-TLRY": {
     "RSI.60min": 1572974755059,
     "RSI.daily": 1572978323629,
-    "RSI.weekly": 1572894411607,
+    "RSI.weekly": 1573056691979,
     "RSI.monthly": 1568147564727,
     "STOCHRSI.60min": 1540803439392,
     "STOCHRSI.daily": 1540814105403,
@@ -2172,7 +2172,7 @@
   "NYSE-KO": {
     "RSI.60min": 1572973886544,
     "RSI.daily": 1572977091112,
-    "RSI.weekly": 1572893440208,
+    "RSI.weekly": 1573054946169,
     "RSI.monthly": 1568146975532,
     "STOCHRSI.60min": 1540829163838,
     "STOCHRSI.daily": 1540837868320,
@@ -2224,7 +2224,7 @@
   "AMEX-SPY": {
     "RSI.60min": 1572974561786,
     "RSI.daily": 1572978056494,
-    "RSI.weekly": 1572894202381,
+    "RSI.weekly": 1573056257880,
     "RSI.monthly": 1568147431560,
     "CCI.60min": 1572897351333,
     "CCI.daily": 1572964776639,
@@ -2293,7 +2293,7 @@
   "NYSE-WMT": {
     "RSI.60min": 1572975142231,
     "RSI.daily": 1572978802284,
-    "RSI.weekly": 1572894817069,
+    "RSI.weekly": 1573057319605,
     "RSI.monthly": 1568147955907,
     "STOCHRSI.60min": 1540832461167,
     "STOCHRSI.daily": 1540841136144,
@@ -2602,7 +2602,7 @@
   "NYSE-MCK": {
     "RSI.60min": 1572974030502,
     "RSI.daily": 1572977289739,
-    "RSI.weekly": 1572893609498,
+    "RSI.weekly": 1573055193433,
     "RSI.monthly": 1568147072976,
     "CCI.60min": 1572896821950,
     "CCI.daily": 1572900068413,
@@ -2622,7 +2622,7 @@
   "NYSE-VLO": {
     "RSI.60min": 1572975042398,
     "RSI.daily": 1572978661390,
-    "RSI.weekly": 1572894706933,
+    "RSI.weekly": 1573057148315,
     "RSI.monthly": 1568147857547,
     "CCI.60min": 1572897834587,
     "CCI.daily": 1572965393413,
@@ -2724,7 +2724,7 @@
   "NYSE-MA": {
     "RSI.60min": 1572973935924,
     "RSI.daily": 1572977160646,
-    "RSI.weekly": 1572893495398,
+    "RSI.weekly": 1573055019230,
     "RSI.monthly": 1568147007953,
     "CCI.60min": 1572896726399,
     "CCI.daily": 1572899928660,
@@ -2744,7 +2744,7 @@
   "NASDAQ-NDAQ": {
     "RSI.60min": 1572974177018,
     "RSI.daily": 1572977498514,
-    "RSI.weekly": 1572893762270,
+    "RSI.weekly": 1573055472489,
     "RSI.monthly": 1568147170664,
     "CCI.60min": 1572896966782,
     "CCI.daily": 1572900295751,
@@ -2784,7 +2784,7 @@
   "NYSE-SJW": {
     "RSI.60min": 1572974463892,
     "RSI.daily": 1572977903924,
-    "RSI.weekly": 1572894093023,
+    "RSI.weekly": 1573056103768,
     "CCI.60min": 1572897254747,
     "CCI.daily": 1572900709956,
     "CCI.weekly": 1572964673214
@@ -2800,7 +2800,7 @@
   "NASDAQ-STX": {
     "RSI.60min": 1572974609811,
     "RSI.daily": 1572978127745,
-    "RSI.weekly": 1572894255585,
+    "RSI.weekly": 1573056361500,
     "CCI.60min": 1572897399057,
     "CCI.daily": 1572964843978,
     "CCI.weekly": 1572968471909
