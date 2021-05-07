@@ -24,7 +24,7 @@
 		"cheerio": "1.0.0-rc.2",
 		"hapi": "18.1.0",
 		"hapi-and-healthy": "7.0.4",
-		"lodash": "4.17.11",
+		"lodash": "4.17.21",
 		"mathjs": "6.2.1",
 		"request": "2.88.0",
 		"request-to-curl": "0.1.1",
